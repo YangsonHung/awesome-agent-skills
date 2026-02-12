@@ -20,7 +20,21 @@ A Claude Code skill for novel writing, providing professional support from ideat
 
 ## Installation
 
-Copy this skill to your Claude Code skills directory:
+Install with one of the following commands:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+bunx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+pnpm dlx skills add YangsonHung/awesome-agent-skills
+```
+
+Or copy this skill to your Claude Code skills directory:
 
 ```bash
 cp -r . ~/.claude/skills/novel-writer

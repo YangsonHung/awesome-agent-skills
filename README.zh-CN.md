@@ -39,16 +39,24 @@ Professional novel writing assistant.
 
 ### 安装
 
-将 `skills` 目录复制到 Claude Code 配置目录：
+使用以下任一命令安装：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+bunx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+pnpm dlx skills add YangsonHung/awesome-agent-skills
+```
+
+也可以手动复制 `skills` 目录到 Claude Code 配置目录：
 
 ```bash
 cp -r skills/ ~/.claude/skills/
-```
-
-或克隆本仓库：
-
-```bash
-git clone https://github.com/yangson/awesome-agent-skills.git
 ```
 
 ### 使用

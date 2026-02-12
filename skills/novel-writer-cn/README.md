@@ -20,10 +20,24 @@
 
 ## 安装
 
-将此技能复制到 Claude Code 的 skills 目录：
+使用以下任一命令安装：
 
 ```bash
-cp -r . ~/.claude/skills/novel-writer
+npx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+bunx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+pnpm dlx skills add YangsonHung/awesome-agent-skills
+```
+
+或将此技能复制到 Claude Code 的 skills 目录：
+
+```bash
+cp -r . ~/.claude/skills/novel-writer-cn
 ```
 
 或者下载 `.skill` 文件并导入。

@@ -59,16 +59,24 @@ A writing assistant designed for Chinese novel creation.
 
 ### Installation
 
-Copy the `skills` directory to your Claude Code configuration directory:
+Install with one of the following commands:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+bunx skills add YangsonHung/awesome-agent-skills
+```
+
+```bash
+pnpm dlx skills add YangsonHung/awesome-agent-skills
+```
+
+Or install manually by copying the `skills` directory:
 
 ```bash
 cp -r skills/ ~/.claude/skills/
-```
-
-Or clone this repository:
-
-```bash
-git clone https://github.com/yangson/awesome-agent-skills.git
 ```
 
 ### Usage
