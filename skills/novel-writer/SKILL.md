@@ -1,11 +1,49 @@
 ---
 name: novel-writer
-description: Novel writing assistant supporting creating novels from scratch, continuing chapters, character design, and worldbuilding. Works with all genres (sci-fi, fantasy, mystery, romance, wuxia, etc.). Triggers: (1) User requests to write a novel, e.g., "help me write a sci-fi novel", "create a mystery story"; (2) Continue or modify existing content, e.g., "write the next chapter", "modify this character"; (3) Character-related tasks, e.g., "design a villain", "create a love interest for the protagonist"; (4) Worldbuilding, e.g., "design a magic system", "build a cyberpunk world".
+description: >-
+  Novel writing assistant supporting creating novels from scratch, continuing
+  chapters, character design, and worldbuilding. Works with all genres
+  (sci-fi, fantasy, mystery, romance, wuxia, etc.). Triggers: (1) User
+  requests to write a novel, e.g., "help me write a sci-fi novel", "create a
+  mystery story"; (2) Continue or modify existing content, e.g., "write the
+  next chapter", "modify this character"; (3) Character-related tasks, e.g.,
+  "design a villain", "create a love interest for the protagonist"; (4)
+  Worldbuilding, e.g., "design a magic system", "build a cyberpunk world".
+risk: safe
+source: YangsonHung/awesome-agent-skills
 ---
 
 # Novel Writer
 
 Professional novel writing support covering ideation, planning, writing, and revision.
+
+---
+
+## When to Use
+
+Use this skill when the user asks for:
+- New novel creation from an idea or genre prompt
+- Continuing existing chapters or scenes
+- Character creation and character arc design
+- Worldbuilding (magic systems, factions, settings, lore)
+- Revising story content for clarity, tension, pacing, or emotional impact
+
+## Do not use
+
+Do not use this skill for:
+- Factual Q&A tasks that are not creative writing tasks
+- Legal, medical, or financial advice requests
+- Requests to produce plagiarism or direct imitation of copyrighted works
+- Harmful or disallowed content that violates platform safety policies
+
+## Instructions
+
+1. Identify request type first (new novel, continuation, character, worldbuilding, revision).
+2. Ask only the minimum required questions before drafting.
+3. Follow the matching workflow section in this file.
+4. Reuse references and templates under `references/` and `assets/templates/`.
+5. Keep tone, POV, and character logic consistent with prior content.
+6. Before final output, quickly self-check plot coherence and language quality.
 
 ---
 
