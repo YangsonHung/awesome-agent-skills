@@ -44,10 +44,26 @@ const USE_SECTION_PATTERNS = [
   /^##\s+When\s+to\s+Use/im,
   /^##\s+Use\s+this\s+skill\s+when/im,
   /^##\s+When\s+to\s+Use\s+This\s+Skill/im,
+  /^##\s+何时使用/m,
+  /^##\s+使用场景/m,
 ];
 
 function hasUseSection(content) {
   return USE_SECTION_PATTERNS.some(pattern => pattern.test(content));
+}
+
+const DO_NOT_USE_SECTION_PATTERNS = [
+  /^##\s+Do\s+not\s+use/im,
+  /^##\s+不要使用/m,
+];
+
+const INSTRUCTIONS_SECTION_PATTERNS = [
+  /^##\s+Instructions/im,
+  /^##\s+使用说明/m,
+];
+
+function hasSection(content, patterns) {
+  return patterns.some(pattern => pattern.test(content));
 }
 
 function isPlainObject(value) {
@@ -219,11 +235,11 @@ function run() {
       missingUseSection.push(skillId);
     }
 
-    if (!content.includes('## Do not use')) {
+    if (!hasSection(content, DO_NOT_USE_SECTION_PATTERNS)) {
       missingDoNotUseSection.push(skillId);
     }
 
-    if (!content.includes('## Instructions')) {
+    if (!hasSection(content, INSTRUCTIONS_SECTION_PATTERNS)) {
       missingInstructionsSection.push(skillId);
     }
   }

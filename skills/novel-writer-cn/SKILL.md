@@ -11,7 +11,7 @@ source: YangsonHung/awesome-agent-skills
 
 ---
 
-## When to Use
+## 何时使用
 
 当用户提出以下需求时使用本技能：
 - 从想法或类型出发，新建小说
@@ -20,7 +20,7 @@ source: YangsonHung/awesome-agent-skills
 - 构建世界观（势力、规则、魔法体系、时代背景）
 - 对已有内容做润色、重写或节奏优化
 
-## Do not use
+## 不要使用
 
 以下场景不应使用本技能：
 - 非创作类事实问答（如百科、实时资讯查询）
@@ -28,7 +28,7 @@ source: YangsonHung/awesome-agent-skills
 - 抄袭或要求复制受版权保护作品风格的请求
 - 违反平台安全规则的有害内容请求
 
-## Instructions
+## 使用说明
 
 1. 先判断任务类型（新建、续写、角色、世界观、修改）。
 2. 先问最少必要信息，再开始输出。

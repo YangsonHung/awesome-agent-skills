@@ -33,7 +33,7 @@ Professional novel writing assistant supporting the entire creative process.
 - "design a villain character"
 - "build a cyberpunk world"
 
-[View Details](skills/novel-writer/README.md)
+[View Details](skills/novel-writer/SKILL.md)
 
 ### novel-writer-cn (中文)
 
@@ -53,7 +53,7 @@ A writing assistant designed for Chinese novel creation.
 - "design an antagonist character"
 - "build a cyberpunk world in Chinese"
 
-[View Details](skills/novel-writer-cn/README.md)
+[View Details](skills/novel-writer-cn/SKILL.md)
 
 ## Quick Start
 

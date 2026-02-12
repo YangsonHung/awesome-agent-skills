@@ -7,6 +7,8 @@ WHEN_TO_USE_PATTERNS = [
     re.compile(r"^##\s+When\s+to\s+Use", re.MULTILINE | re.IGNORECASE),
     re.compile(r"^##\s+Use\s+this\s+skill\s+when", re.MULTILINE | re.IGNORECASE),
     re.compile(r"^##\s+When\s+to\s+Use\s+This\s+Skill", re.MULTILINE | re.IGNORECASE),
+    re.compile(r"^##\s+何时使用", re.MULTILINE),
+    re.compile(r"^##\s+使用场景", re.MULTILINE),
 ]
 
 def has_when_to_use_section(content):
@@ -89,7 +91,7 @@ def validate_skills(skills_dir, strict_mode=False):
 
             # 3. Content Checks (Triggers)
             if not has_when_to_use_section(content):
-                msg = f"⚠️  {rel_path}: Missing '## When to Use' section"
+                msg = f"⚠️  {rel_path}: Missing '## When to Use' / '## 何时使用' section"
                 if strict_mode: errors.append(msg.replace("⚠️", "❌"))
                 else: warnings.append(msg)
 

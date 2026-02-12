@@ -27,13 +27,13 @@
 - 角色设计与塑造
 - 世界观构建
 
-[查看详情](skills/novel-writer-cn/README.md)
+[查看详情](skills/novel-writer-cn/SKILL.md)
 
 ### novel-writer (English)
 
 Professional novel writing assistant.
 
-[View Details](skills/novel-writer/README.md)
+[View Details](skills/novel-writer/SKILL.md)
 
 ## 快速开始
 
