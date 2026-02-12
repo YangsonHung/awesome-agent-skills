@@ -15,6 +15,26 @@
 
 ## 包含的技能
 
+### novel-writer (English)
+
+专业小说写作助手，支持完整创作流程。
+
+**支持类型：** 科幻、奇幻、悬疑、言情、武侠等
+
+**核心功能：**
+- 从零开始创作小说
+- 续写现有章节
+- 角色设计与塑造
+- 世界观构建
+
+**触发示例：**
+- "帮我写一部科幻小说"
+- "给这个故事续写一章"
+- "设计一个反派角色"
+- "构建一个赛博朋克世界"
+
+[查看详情](skills/novel-writer/SKILL.md)
+
 ### novel-writer-cn (中文版)
 
 专为中文小说创作设计的专业写作助手。
@@ -27,13 +47,13 @@
 - 角色设计与塑造
 - 世界观构建
 
+**触发示例：**
+- "帮我写一部中文科幻小说"
+- "继续这个故事，再写一章"
+- "设计一个反派角色"
+- "用中文构建一个赛博朋克世界"
+
 [查看详情](skills/novel-writer-cn/SKILL.md)
-
-### novel-writer (English)
-
-Professional novel writing assistant.
-
-[View Details](skills/novel-writer/SKILL.md)
 
 ## 快速开始
 
@@ -63,25 +83,48 @@ cp -r skills/ ~/.claude/skills/
 
 安装后，技能将自动在 Claude Code 中可用。只需向 Claude 提出与技能相关的任务请求，它会自动使用相应的技能。
 
-## 目录结构
-
-```
-awesome-agent-skills/
-├── skills/
-│   ├── novel-writer/           # 英文版
-│   └── novel-writer-cn/        # 中文版
-├── LICENSE
-└── README.md
-```
-
 ## 贡献指南
 
 欢迎贡献新技能！步骤如下：
 
 1. Fork 本仓库
 2. 在 `skills/` 下创建新目录
-3. 包含必要文件：`SKILL.md`、`README.md`
+3. 包含以下文件：
+   - `SKILL.md` - 带 frontmatter 的技能主定义文件
+   - `references/` - 参考资料（可选）
+   - `assets/` - 模板与资源（可选）
 4. 提交 Pull Request
+
+### 测试 SKILL.md
+
+提交 PR 前，请先在本地校验技能文件：
+
+```bash
+python3 scripts/validate_skills.py
+node scripts/validate-skills.js
+```
+
+如需按 CI 标准（warning 也失败）检查，请运行严格模式：
+
+```bash
+python3 scripts/validate_skills.py --strict
+node scripts/validate-skills.js --strict
+```
+
+以上命令都应返回退出码 `0`。
+
+### Skill Format
+
+```markdown
+---
+name: skill-name
+description: Brief description of the skill and trigger examples
+---
+
+# Skill Name
+
+Detailed skill instructions...
+```
 
 ## 许可证
 

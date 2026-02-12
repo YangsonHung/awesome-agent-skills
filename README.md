@@ -83,32 +83,6 @@ cp -r skills/ ~/.claude/skills/
 
 Once installed, the skills will be automatically available in Claude Code. Simply ask Claude to perform a task related to a skill, and it will use the appropriate skill automatically.
 
-## Project Structure
-
-```
-awesome-agent-skills/
-├── skills/
-│   ├── novel-writer/           # English version
-│   │   ├── SKILL.md            # Skill definition
-│   │   ├── README.md           # Documentation
-│   │   ├── references/         # Reference materials
-│   │   │   ├── story-structure.md
-│   │   │   ├── character-development.md
-│   │   │   ├── worldbuilding.md
-│   │   │   ├── writing-techniques.md
-│   │   │   └── genre-guides.md
-│   │   └── assets/
-│   │       └── templates/      # Writing templates
-│   │           ├── outline.md
-│   │           ├── character-card.md
-│   │           ├── world-bible.md
-│   │           └── chapter.md
-│   └── novel-writer-cn/        # Chinese version
-│       └── ... (same structure)
-├── LICENSE
-└── README.md
-```
-
 ## Contributing
 
 Contributions are welcome! To add a new skill:
@@ -117,10 +91,27 @@ Contributions are welcome! To add a new skill:
 2. Create a new directory under `skills/`
 3. Include the following files:
    - `SKILL.md` - Main skill definition with frontmatter
-   - `README.md` - Documentation
    - `references/` - Reference materials (optional)
    - `assets/` - Templates and resources (optional)
 4. Submit a pull request
+
+### Test SKILL.md
+
+Before opening a PR, validate skill files locally:
+
+```bash
+python3 scripts/validate_skills.py
+node scripts/validate-skills.js
+```
+
+For CI-level checks (fail on warnings), run strict mode:
+
+```bash
+python3 scripts/validate_skills.py --strict
+node scripts/validate-skills.js --strict
+```
+
+Both commands must exit with code `0`.
 
 ### Skill Format
 
