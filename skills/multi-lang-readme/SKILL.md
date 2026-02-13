@@ -36,9 +36,14 @@ Read the full content of README.md, including:
 
 ### Step 3: Confirm Target Language
 
-Ask user which language to translate to. If user says "create bilingual README" without specifying, assume:
-- If current README is in Chinese → translate to English
-- If current README is in English → translate to Chinese
+Ask user which language to translate to. Default assumption:
+- **README.md should always be in English** as the canonical version
+- If current README is in Chinese (or any non-English), translate it to English first
+- After English version is established, add other language versions as requested
+
+If user says "create bilingual README" without specifying, assume:
+- Translate existing README to English first (replace or create README.md)
+- Then add Chinese version (README.zh-CN.md)
 
 ### Step 4: Translate with AI
 
@@ -51,12 +56,15 @@ Translate content using Claude's built-in translation capability:
 
 ### Step 5: Create Translated README
 
-Create new file with locale suffix:
-- English: README.md (or keep existing)
+**Important**: README.md should always be the English version (canonical).
+
+- English: README.md (create or replace with English version)
 - German: README.de.md
 - Japanese: README.ja.md
 - Korean: README.ko.md
 - Chinese: README.zh-CN.md
+
+If the original README was non-English, replace it with the English translation.
 
 ### Step 6: Add Language Switcher
 
