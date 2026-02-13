@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-2-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-3-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -13,47 +13,33 @@
 - **中英双语** - 同时提供中文和英文版本
 - **资源丰富** - 每个技能都有完整的参考资料和模板
 
-## 包含的技能
+## 可用技能
 
-### novel-writer (English)
+| 技能 | 语言 | 描述 | 核心功能 |
+|------|------|------|----------|
+| [novel-writer](skills/novel-writer/SKILL.md) | English | 专业小说写作助手，支持完整创作流程 | 创作小说、续写章节、角色设计、世界观构建 |
+| [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | 专为中文小说创作设计的写作助手 | 创作中文小说、续写章节、角色设计、世界观构建 |
+| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | 多语言 | 创建多语言 README 翻译 | 将 README 翻译成英文、德语、日语、韩语、中文 |
 
-专业小说写作助手，支持完整创作流程。
+### 触发示例
 
-**支持类型：** 科幻、奇幻、悬疑、言情、武侠等
-
-**核心功能：**
-- 从零开始创作小说
-- 续写现有章节
-- 角色设计与塑造
-- 世界观构建
-
-**触发示例：**
+**novel-writer:**
 - "帮我写一部科幻小说"
 - "给这个故事续写一章"
 - "设计一个反派角色"
 - "构建一个赛博朋克世界"
 
-[查看详情](skills/novel-writer/SKILL.md)
-
-### novel-writer-cn (中文版)
-
-专为中文小说创作设计的专业写作助手。
-
-**支持类型：** 科幻、奇幻、悬疑、言情、武侠等
-
-**核心功能：**
-- 从零开始创作小说
-- 续写现有章节
-- 角色设计与塑造
-- 世界观构建
-
-**触发示例：**
+**novel-writer-cn:**
 - "帮我写一部中文科幻小说"
 - "继续这个故事，再写一章"
 - "设计一个反派角色"
 - "用中文构建一个赛博朋克世界"
 
-[查看详情](skills/novel-writer-cn/SKILL.md)
+**multi-lang-readme:**
+- "帮我创建中英 README"
+- "帮我创建多语言 README"
+- "create bilingual README"
+- "translate README to Japanese"
 
 ## 快速开始
 

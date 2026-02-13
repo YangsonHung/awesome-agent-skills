@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-2-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-3-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -15,45 +15,31 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 
 ## Available Skills
 
-### novel-writer (English)
+| Skill | Language | Description | Capabilities |
+|-------|----------|-------------|--------------|
+| [novel-writer](skills/novel-writer/SKILL.md) | English | Professional novel writing assistant for the entire creative process | Create novels, Continue chapters, Character design, Worldbuilding |
+| [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | Chinese novel writing assistant | Create Chinese novels, Continue chapters, Character design, Worldbuilding |
+| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | Multilingual | Create multilingual README translations | Translate README to English, German, Japanese, Korean, Chinese |
 
-Professional novel writing assistant supporting the entire creative process.
+### Trigger Examples
 
-**Supported Genres:** Sci-Fi, Fantasy, Mystery, Romance, Wuxia, and more
-
-**Capabilities:**
-- Create novels from scratch
-- Continue existing chapters
-- Character design and development
-- Worldbuilding
-
-**Trigger Examples:**
+**novel-writer:**
 - "help me write a sci-fi novel"
 - "write the next chapter"
 - "design a villain character"
 - "build a cyberpunk world"
 
-[View Details](skills/novel-writer/SKILL.md)
-
-### novel-writer-cn (中文)
-
-A writing assistant designed for Chinese novel creation.
-
-**Supported Genres:** Sci-Fi, Fantasy, Mystery, Romance, Wuxia, and more
-
-**Capabilities:**
-- Create Chinese novels from scratch
-- Continue existing chapters
-- Character design and development
-- Worldbuilding
-
-**Trigger Examples:**
+**novel-writer-cn:**
 - "help me write a Chinese sci-fi novel"
 - "continue this story with one more chapter"
 - "design an antagonist character"
 - "build a cyberpunk world in Chinese"
 
-[View Details](skills/novel-writer-cn/SKILL.md)
+**multi-lang-readme:**
+- "帮我创建中英 README"
+- "帮我创建多语言 README"
+- "create bilingual README"
+- "translate README to Japanese"
 
 ## Quick Start
 
