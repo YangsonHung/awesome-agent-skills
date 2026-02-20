@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-3-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-6-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -19,7 +19,10 @@
 |------|------|------|----------|
 | [novel-writer](skills/novel-writer/SKILL.md) | English | 专业小说写作助手，支持完整创作流程 | 创作小说、续写章节、角色设计、世界观构建 |
 | [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | 专为中文小说创作设计的写作助手 | 创作中文小说、续写章节、角色设计、世界观构建 |
-| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | 多语言 | 创建多语言 README 翻译 | 将 README 翻译成英文、德语、日语、韩语、中文 |
+| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | English | 英文版多语言 README 翻译技能 | 将 README 翻译成多语言并保持结构 |
+| [multi-lang-readme-cn](skills/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版多语言 README 翻译技能 | 创建中英/多语言 README，统一命名与链接 |
+| [conversation-json-to-md](skills/conversation-json-to-md/SKILL.md) | English | 将聊天导出 JSON 转换为一会话一文件的 Markdown | 自动识别格式、问答提取、标题规范化、导出后二次格式化 |
+| [conversation-json-to-md-cn](skills/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
 
 ### 触发示例
 
@@ -36,10 +39,27 @@
 - "用中文构建一个赛博朋克世界"
 
 **multi-lang-readme:**
-- "帮我创建中英 README"
-- "帮我创建多语言 README"
 - "create bilingual README"
 - "translate README to Japanese"
+- "add German README version"
+
+**multi-lang-readme-cn:**
+- "帮我创建中英 README"
+- "帮我创建多语言 README"
+- "把 README 翻译成日语"
+- "新增 README.zh-CN.md"
+
+**conversation-json-to-md:**
+- "convert this chat-export json to markdown files"
+- "one conversation per md file"
+- "keep only user and assistant Q/A"
+- "normalize output headings after export"
+
+**conversation-json-to-md-cn:**
+- "把这个聊天导出 json 转成多个 md"
+- "一个会话一个 markdown 文件"
+- "只保留用户和助手问答"
+- "导出后再做一次二次格式化"
 
 ## 快速开始
 

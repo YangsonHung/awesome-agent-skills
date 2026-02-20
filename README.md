@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-3-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-6-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -19,7 +19,10 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 |-------|----------|-------------|--------------|
 | [novel-writer](skills/novel-writer/SKILL.md) | English | Professional novel writing assistant for the entire creative process | Create novels, Continue chapters, Character design, Worldbuilding |
 | [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | Chinese novel writing assistant | Create Chinese novels, Continue chapters, Character design, Worldbuilding |
-| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | Multilingual | Create multilingual README translations | Translate README to English, German, Japanese, Korean, Chinese |
+| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | English | Create multilingual README translations | Translate README to English, German, Japanese, Korean, Chinese |
+| [multi-lang-readme-cn](skills/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版 README 多语言翻译技能 | 创建中英/多语言 README，保持 Markdown 结构与链接一致 |
+| [conversation-json-to-md](skills/conversation-json-to-md/SKILL.md) | English | Convert chat-export JSON into one-conversation-per-file Markdown | Auto-detect formats, Q/A extraction, heading normalization, second-pass formatting |
+| [conversation-json-to-md-cn](skills/conversation-json-to-md-cn/SKILL.md) | 中文 | 将聊天导出 JSON 转为一会话一 Markdown 文件 | 自动识别结构、问答提取、标题规范化、二次格式化 |
 
 ### Trigger Examples
 
@@ -36,10 +39,27 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "build a cyberpunk world in Chinese"
 
 **multi-lang-readme:**
-- "帮我创建中英 README"
-- "帮我创建多语言 README"
 - "create bilingual README"
 - "translate README to Japanese"
+- "add German README version"
+
+**multi-lang-readme-cn:**
+- "帮我创建中英 README"
+- "帮我创建多语言 README"
+- "把 README 翻译成日语"
+- "新增 README.zh-CN.md"
+
+**conversation-json-to-md:**
+- "convert this chat-export json to markdown files"
+- "one conversation per md file"
+- "keep only user and assistant Q/A"
+- "normalize output headings after export"
+
+**conversation-json-to-md-cn:**
+- "把这个聊天导出 json 转成多个 md"
+- "一个会话一个 markdown 文件"
+- "只保留用户和助手问答"
+- "导出后再做一次二次格式化"
 
 ## Quick Start
 

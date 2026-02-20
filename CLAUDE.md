@@ -10,7 +10,10 @@ This is a collection of AI Agent Skills for Claude Code. Each skill provides spe
 
 - **novel-writer**: English novel-writing assistant (Sci-Fi, Fantasy, Mystery, Romance, Wuxia, etc.)
 - **novel-writer-cn**: Chinese novel-writing assistant
-- **multi-lang-readme**: Creates multilingual README translations
+- **multi-lang-readme**: English multilingual README translation skill
+- **multi-lang-readme-cn**: Chinese multilingual README translation skill
+- **conversation-json-to-md**: Convert chat-export JSON to one-conversation-per-file Markdown
+- **conversation-json-to-md-cn**: Chinese version of chat-export JSON to Markdown conversion skill
 
 ## Commands
 
@@ -45,12 +48,17 @@ skills/
 │   ├── references/        # Optional: reference documentation
 │   └── assets/            # Optional: templates
 ├── novel-writer-cn/
-└── multi-lang-readme/
+├── multi-lang-readme/
+├── multi-lang-readme-cn/
+├── conversation-json-to-md/
+│   ├── SKILL.md           # Required
+│   └── scripts/           # Optional: executable helpers
+└── conversation-json-to-md-cn/
 ```
 
 ## Skill Format
 
-Every skill requires `SKILL.md` with YAML frontmatter:
+Every skill requires only `SKILL.md` with YAML frontmatter:
 
 ```markdown
 ---
@@ -64,7 +72,7 @@ Instructions...
 ```
 
 - Folder names: `kebab-case`
-- Optional folders: `references/`, `assets/`
+- Optional files/folders (add only when needed): `README.md`, `scripts/`, `references/`, `assets/`
 - Keep bilingual docs separate (English in `README.md`, Chinese in `README.zh-CN.md`)
 
 ## Contributing

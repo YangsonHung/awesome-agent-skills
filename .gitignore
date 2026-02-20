@@ -1,1 +1,69 @@
+# =========================
+# OS-generated files
+# =========================
 .DS_Store
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# =========================
+# Python
+# =========================
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py,cover
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Node.js / JavaScript
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# =========================
+# Editor / IDE
+# =========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# =========================
+# Build / temp / logs
+# =========================
+dist/
+build/
+tmp/
+temp/
+*.log
+*.tmp
+*.bak
+
+# =========================
+# Local env / secrets
+# =========================
+.env
+.env.*
+!.env.example
