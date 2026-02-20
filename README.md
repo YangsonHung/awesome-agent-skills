@@ -17,12 +17,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 
 | Skill | Language | Description | Capabilities |
 |-------|----------|-------------|--------------|
-| [novel-writer](skills/novel-writer/SKILL.md) | English | Professional novel writing assistant for the entire creative process | Create novels, Continue chapters, Character design, Worldbuilding |
-| [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | Chinese novel writing assistant | Create Chinese novels, Continue chapters, Character design, Worldbuilding |
-| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | English | Create multilingual README translations | Translate README to English, German, Japanese, Korean, Chinese |
-| [multi-lang-readme-cn](skills/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版 README 多语言翻译技能 | 创建中英/多语言 README，保持 Markdown 结构与链接一致 |
-| [conversation-json-to-md](skills/conversation-json-to-md/SKILL.md) | English | Convert chat-export JSON into one-conversation-per-file Markdown | Auto-detect formats, Q/A extraction, heading normalization, second-pass formatting |
-| [conversation-json-to-md-cn](skills/conversation-json-to-md-cn/SKILL.md) | 中文 | 将聊天导出 JSON 转为一会话一 Markdown 文件 | 自动识别结构、问答提取、标题规范化、二次格式化 |
+| [novel-writer](skills/en/novel-writer/SKILL.md) | English | Professional novel writing assistant for the entire creative process | Create novels, Continue chapters, Character design, Worldbuilding |
+| [novel-writer-cn](skills/zh-cn/novel-writer-cn/SKILL.md) | 中文 | Chinese novel writing assistant | Create Chinese novels, Continue chapters, Character design, Worldbuilding |
+| [multi-lang-readme](skills/en/multi-lang-readme/SKILL.md) | English | Create multilingual README translations | Translate README to English, German, Japanese, Korean, Chinese |
+| [multi-lang-readme-cn](skills/zh-cn/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版 README 多语言翻译技能 | 创建中英/多语言 README，保持 Markdown 结构与链接一致 |
+| [conversation-json-to-md](skills/en/conversation-json-to-md/SKILL.md) | English | Convert chat-export JSON into one-conversation-per-file Markdown | Auto-detect formats, Q/A extraction, heading normalization, second-pass formatting |
+| [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 将聊天导出 JSON 转为一会话一 Markdown 文件 | 自动识别结构、问答提取、标题规范化、二次格式化 |
 
 ### Trigger Examples
 
@@ -94,11 +94,13 @@ Once installed, the skills will be automatically available in Claude Code. Simpl
 Contributions are welcome! To add a new skill:
 
 1. Fork this repository
-2. Create a new directory under `skills/`
+2. Create a new directory under `skills/en/` or `skills/zh-cn/`
 3. Include the following files:
    - `SKILL.md` - Main skill definition with frontmatter
-   - `references/` - Reference materials (optional)
-   - `assets/` - Templates and resources (optional)
+   - `README.md` - Optional skill-level notes
+   - `scripts/` - Optional helper scripts
+   - `references/` - Optional reference materials
+   - `assets/` - Optional templates and resources
 4. Submit a pull request
 
 ### Test SKILL.md

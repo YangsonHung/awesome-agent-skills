@@ -43,17 +43,14 @@ cp -r skills/ ~/.claude/skills/
 
 ```
 skills/
-├── novel-writer/
-│   ├── SKILL.md           # Required: skill definition with YAML frontmatter
-│   ├── references/        # Optional: reference documentation
-│   └── assets/            # Optional: templates
-├── novel-writer-cn/
-├── multi-lang-readme/
-├── multi-lang-readme-cn/
-├── conversation-json-to-md/
-│   ├── SKILL.md           # Required
-│   └── scripts/           # Optional: executable helpers
-└── conversation-json-to-md-cn/
+├── en/
+│   ├── novel-writer/
+│   ├── multi-lang-readme/
+│   └── conversation-json-to-md/
+└── zh-cn/
+    ├── novel-writer-cn/
+    ├── multi-lang-readme-cn/
+    └── conversation-json-to-md-cn/
 ```
 
 ## Skill Format
@@ -82,4 +79,4 @@ Follow Conventional Commits:
 - `docs(readme): update documentation`
 - `chore: maintenance task`
 
-Each skill should be self-contained under `skills/<skill-name>/`.
+Each skill should be self-contained under `skills/en/<skill-name>/` or `skills/zh-cn/<skill-name>/`.

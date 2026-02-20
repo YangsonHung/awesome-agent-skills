@@ -17,12 +17,12 @@
 
 | 技能 | 语言 | 描述 | 核心功能 |
 |------|------|------|----------|
-| [novel-writer](skills/novel-writer/SKILL.md) | English | 专业小说写作助手，支持完整创作流程 | 创作小说、续写章节、角色设计、世界观构建 |
-| [novel-writer-cn](skills/novel-writer-cn/SKILL.md) | 中文 | 专为中文小说创作设计的写作助手 | 创作中文小说、续写章节、角色设计、世界观构建 |
-| [multi-lang-readme](skills/multi-lang-readme/SKILL.md) | English | 英文版多语言 README 翻译技能 | 将 README 翻译成多语言并保持结构 |
-| [multi-lang-readme-cn](skills/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版多语言 README 翻译技能 | 创建中英/多语言 README，统一命名与链接 |
-| [conversation-json-to-md](skills/conversation-json-to-md/SKILL.md) | English | 将聊天导出 JSON 转换为一会话一文件的 Markdown | 自动识别格式、问答提取、标题规范化、导出后二次格式化 |
-| [conversation-json-to-md-cn](skills/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
+| [novel-writer](skills/en/novel-writer/SKILL.md) | English | 专业小说写作助手，支持完整创作流程 | 创作小说、续写章节、角色设计、世界观构建 |
+| [novel-writer-cn](skills/zh-cn/novel-writer-cn/SKILL.md) | 中文 | 专为中文小说创作设计的写作助手 | 创作中文小说、续写章节、角色设计、世界观构建 |
+| [multi-lang-readme](skills/en/multi-lang-readme/SKILL.md) | English | 英文版多语言 README 翻译技能 | 将 README 翻译成多语言并保持结构 |
+| [multi-lang-readme-cn](skills/zh-cn/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版多语言 README 翻译技能 | 创建中英/多语言 README，统一命名与链接 |
+| [conversation-json-to-md](skills/en/conversation-json-to-md/SKILL.md) | English | 将聊天导出 JSON 转换为一会话一文件的 Markdown | 自动识别格式、问答提取、标题规范化、导出后二次格式化 |
+| [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
 
 ### 触发示例
 
@@ -94,9 +94,11 @@ cp -r skills/ ~/.claude/skills/
 欢迎贡献新技能！步骤如下：
 
 1. Fork 本仓库
-2. 在 `skills/` 下创建新目录
+2. 在 `skills/en/` 或 `skills/zh-cn/` 下创建新目录
 3. 包含以下文件：
    - `SKILL.md` - 带 frontmatter 的技能主定义文件
+   - `README.md` - 技能说明（可选）
+   - `scripts/` - 辅助脚本（可选）
    - `references/` - 参考资料（可选）
    - `assets/` - 模板与资源（可选）
 4. 提交 Pull Request

@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { listSkillIds, parseFrontmatter } = require('../lib/skill-utils');
+const { listSkillIdsRecursive, parseFrontmatter } = require('../lib/skill-utils');
 
 const ROOT = path.resolve(__dirname, '..');
 const SKILLS_DIR = path.join(ROOT, 'skills');
@@ -127,8 +127,21 @@ function addStrictSectionErrors(label, missing, baselineSet) {
   }
 }
 
+function isValidSkillPath(skillId) {
+  const normalized = skillId.split(path.sep).join('/');
+  const parts = normalized.split('/').filter(Boolean);
+  if (!parts.length) return false;
+  return parts.every(part => NAME_PATTERN.test(part));
+}
+
+function getSkillFolderName(skillId) {
+  const normalized = skillId.split(path.sep).join('/');
+  const parts = normalized.split('/').filter(Boolean);
+  return parts.length ? parts[parts.length - 1] : skillId;
+}
+
 function run() {
-  const skillIds = listSkillIds(SKILLS_DIR);
+  const skillIds = listSkillIdsRecursive(SKILLS_DIR);
   const baseline = loadBaseline();
   const baselineUse = new Set(baseline.useSection || []);
   const baselineDoNotUse = new Set(baseline.doNotUseSection || []);
@@ -155,8 +168,8 @@ function run() {
       fmErrors.forEach(error => addError(`Frontmatter parse error (${skillId}): ${error}`));
     }
 
-    if (!NAME_PATTERN.test(skillId)) {
-      addError(`Folder name must match ${NAME_PATTERN}: ${skillId}`);
+    if (!isValidSkillPath(skillId)) {
+      addError(`Folder path must use kebab-case segments ${NAME_PATTERN}: ${skillId}`);
     }
 
     if (data.name !== undefined) {
@@ -168,8 +181,9 @@ function run() {
         if (!NAME_PATTERN.test(nameValue)) {
           addError(`name must match ${NAME_PATTERN}: ${skillId}`);
         }
-        if (nameValue !== skillId) {
-          addError(`name must match folder name: ${skillId} -> ${nameValue}`);
+        const folderName = getSkillFolderName(skillId);
+        if (nameValue !== folderName) {
+          addError(`name must match leaf folder name: ${skillId} -> ${nameValue}`);
         }
       }
     }

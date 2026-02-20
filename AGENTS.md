@@ -3,17 +3,19 @@
 ## Project Structure & Module Organization
 This repository is a skill pack for AI agents, organized by skill directories under `skills/`.
 
-- `skills/novel-writer/`: English novel-writing skill (`SKILL.md`, `references/`, `assets/templates/`)
-- `skills/novel-writer-cn/`: Chinese counterpart
-- `skills/multi-lang-readme/`: English multilingual README translation skill
-- `skills/multi-lang-readme-cn/`: Chinese counterpart
-- `skills/conversation-json-to-md/`: English chat-export JSON to Markdown skill (`SKILL.md`, `scripts/`)
-- `skills/conversation-json-to-md-cn/`: Chinese counterpart
+- `skills/en/`: all English skills
+  - `skills/en/novel-writer/`
+  - `skills/en/multi-lang-readme/`
+  - `skills/en/conversation-json-to-md/`
+- `skills/zh-cn/`: all Chinese skills
+  - `skills/zh-cn/novel-writer-cn/`
+  - `skills/zh-cn/multi-lang-readme-cn/`
+  - `skills/zh-cn/conversation-json-to-md-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata
 
-When adding a new skill, keep a self-contained folder under `skills/<skill-name>/` and follow the minimal-file structure.
+When adding a new skill, place it under `skills/en/<skill-name>/` or `skills/zh-cn/<skill-name>/` and keep a minimal self-contained structure.
 
 ## Build, Test, and Development Commands
 This repository has no compile/build pipeline. Typical contributor commands are:
@@ -51,7 +53,7 @@ Follow Conventional Commits as seen in project history:
 PRs should include:
 
 - A short summary of what changed and why
-- Affected paths (for example, `skills/novel-writer/SKILL.md`)
+- Affected paths (for example, `skills/en/novel-writer/SKILL.md`)
 - Screenshots only when visual docs/rendering are relevant
 - Linked issue/task if available
 
