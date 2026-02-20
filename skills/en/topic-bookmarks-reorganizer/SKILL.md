@@ -1,6 +1,6 @@
 ---
 name: topic-bookmarks-reorganizer
-description: Reorganize exported browser bookmarks under one target topic folder (for example AI) into cleaner categories, remove duplicate URLs, and generate an importable Netscape HTML file. Use when users ask to analyze a bookmarks export, extract one topic directory, regroup links/subfolders, and output a browser-importable HTML file.
+description: Reorganize exported browser bookmarks under one user-specified topic folder into cleaner categories, remove duplicate URLs, and generate an importable Netscape HTML file. Use when users ask to analyze a bookmarks export, extract one topic directory, regroup links and subfolders, and output a browser-importable HTML file.
 risk: safe
 source: YangsonHung/awesome-agent-skills
 license: MIT
@@ -13,7 +13,7 @@ Reorganize one topic folder from a browser bookmarks export into a cleaner impor
 ## When to Use
 
 Use this skill when the user asks for one or more of these tasks:
-- Analyze one bookmarks export file and find a topic folder (for example `AI`)
+- Analyze one bookmarks export file and find a user-specified topic folder
 - Re-classify links and subfolders under that topic
 - Remove duplicate links by URL
 - Output a new HTML file that can be imported into a browser
@@ -30,7 +30,7 @@ Do not use this skill when:
 
 1. Ask for required input:
 - Export file path
-- Target topic folder name (default `AI`)
+- Target topic folder name
 - Output file path
 
 2. Run the script in report mode first:
@@ -39,7 +39,7 @@ Do not use this skill when:
 python3 scripts/reorganize_topic_bookmarks.py \
   --input /path/to/bookmarks.html \
   --output /tmp/topic-preview.html \
-  --topic-folder "AI" \
+  --topic-folder "<topic-folder-name>" \
   --mode auto \
   --lang en \
   --report /tmp/topic-report.json \
@@ -47,8 +47,8 @@ python3 scripts/reorganize_topic_bookmarks.py \
 ```
 
 3. Confirm final options with user only if needed:
-- `--mode ai` for AI-focused mapping
-- `--mode generic` for general-topic mapping
+- `--mode auto` for automatic strategy selection
+- `--mode generic` for generic strategy
 - `--no-dedupe-url` to keep duplicate URLs
 
 4. Generate final output:
@@ -57,7 +57,7 @@ python3 scripts/reorganize_topic_bookmarks.py \
 python3 scripts/reorganize_topic_bookmarks.py \
   --input /path/to/bookmarks.html \
   --output /path/to/topic-bookmarks-reorganized.html \
-  --topic-folder "AI" \
+  --topic-folder "<topic-folder-name>" \
   --mode auto \
   --lang en
 ```

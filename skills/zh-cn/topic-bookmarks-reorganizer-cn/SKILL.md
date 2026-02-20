@@ -1,6 +1,6 @@
 ---
 name: topic-bookmarks-reorganizer-cn
-description: 将浏览器导出的书签 HTML 中某个主题目录（如 AI）重新分类整理，按 URL 去重，并导出可直接导入浏览器的 Netscape 书签文件。用于用户要求分析书签导出、提取一个主题目录、重分组链接与子目录并生成可导入 HTML 的场景。
+description: 将浏览器导出的书签 HTML 中用户指定的主题目录重新分类整理，按 URL 去重，并导出可直接导入浏览器的 Netscape 书签文件。用于用户要求分析书签导出、提取一个主题目录、重分组链接与子目录并生成可导入 HTML 的场景。
 risk: safe
 source: YangsonHung/awesome-agent-skills
 license: MIT
@@ -13,7 +13,7 @@ license: MIT
 ## 何时使用
 
 当用户有以下需求时使用本技能：
-- 分析一个书签导出 HTML，并定位某个主题目录（例如 `AI`）
+- 分析一个书签导出 HTML，并定位用户指定的主题目录
 - 重新分门别类该目录下的链接与子目录
 - 按 URL 去重
 - 输出只包含该主题目录的可导入 HTML
@@ -29,7 +29,7 @@ license: MIT
 
 1. 先向用户确认必要参数：
 - 输入书签文件路径
-- 主题目录名称（默认 `AI`）
+- 主题目录名称
 - 输出文件路径
 
 2. 先跑分析与预览：
@@ -38,7 +38,7 @@ license: MIT
 python3 scripts/reorganize_topic_bookmarks.py \
   --input /path/to/bookmarks.html \
   --output /tmp/topic-preview.html \
-  --topic-folder "AI" \
+  --topic-folder "<topic-folder-name>" \
   --mode auto \
   --lang zh \
   --report /tmp/topic-report.json \
@@ -46,8 +46,8 @@ python3 scripts/reorganize_topic_bookmarks.py \
 ```
 
 3. 视情况调整参数：
-- `--mode ai`：使用 AI 专项分类规则
-- `--mode generic`：使用通用分类规则
+- `--mode auto`：自动选择分类策略
+- `--mode generic`：使用通用分类策略
 - `--no-dedupe-url`：不做 URL 去重
 
 4. 生成最终文件：
@@ -56,7 +56,7 @@ python3 scripts/reorganize_topic_bookmarks.py \
 python3 scripts/reorganize_topic_bookmarks.py \
   --input /path/to/bookmarks.html \
   --output /path/to/topic-bookmarks-reorganized.html \
-  --topic-folder "AI" \
+  --topic-folder "<topic-folder-name>" \
   --mode auto \
   --lang zh
 ```
