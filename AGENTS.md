@@ -7,10 +7,12 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/novel-writer/`
   - `skills/en/multi-lang-readme/`
   - `skills/en/conversation-json-to-md/`
+  - `skills/en/topic-bookmarks-reorganizer/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
   - `skills/zh-cn/conversation-json-to-md-cn/`
+  - `skills/zh-cn/topic-bookmarks-reorganizer-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata

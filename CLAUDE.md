@@ -14,6 +14,8 @@ This is a collection of AI Agent Skills for Claude Code. Each skill provides spe
 - **multi-lang-readme-cn**: Chinese multilingual README translation skill
 - **conversation-json-to-md**: Convert chat-export JSON to one-conversation-per-file Markdown
 - **conversation-json-to-md-cn**: Chinese version of chat-export JSON to Markdown conversion skill
+- **topic-bookmarks-reorganizer**: Reorganize one topic folder from bookmarks export into importable HTML
+- **topic-bookmarks-reorganizer-cn**: Chinese version of topic bookmarks reorganization skill
 
 ## Commands
 
@@ -46,11 +48,13 @@ skills/
 ├── en/
 │   ├── novel-writer/
 │   ├── multi-lang-readme/
-│   └── conversation-json-to-md/
+│   ├── conversation-json-to-md/
+│   └── topic-bookmarks-reorganizer/
 └── zh-cn/
     ├── novel-writer-cn/
     ├── multi-lang-readme-cn/
-    └── conversation-json-to-md-cn/
+    ├── conversation-json-to-md-cn/
+    └── topic-bookmarks-reorganizer-cn/
 ```
 
 ## Skill Format

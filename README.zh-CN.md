@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-6-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-8-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -23,6 +23,8 @@
 | [multi-lang-readme-cn](skills/zh-cn/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版多语言 README 翻译技能 | 创建中英/多语言 README，统一命名与链接 |
 | [conversation-json-to-md](skills/en/conversation-json-to-md/SKILL.md) | English | 将聊天导出 JSON 转换为一会话一文件的 Markdown | 自动识别格式、问答提取、标题规范化、导出后二次格式化 |
 | [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
+| [topic-bookmarks-reorganizer](skills/en/topic-bookmarks-reorganizer/SKILL.md) | English | 主题书签重整技能（英文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
+| [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 主题书签重整技能（中文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
 
 ### 触发示例
 
@@ -60,6 +62,16 @@
 - "一个会话一个 markdown 文件"
 - "只保留用户和助手问答"
 - "导出后再做一次二次格式化"
+
+**topic-bookmarks-reorganizer:**
+- "reorganize this bookmarks export and keep only the AI folder"
+- "analyze links under one topic folder and regroup them"
+- "dedupe repeated bookmark URLs and export importable html"
+
+**topic-bookmarks-reorganizer-cn:**
+- "把这个书签导出里的 AI 目录重新分门别类并导出 html"
+- "只保留某个主题目录并整理链接结构"
+- "去重重复书签链接并输出可导入浏览器的文件"
 
 ## 快速开始
 
