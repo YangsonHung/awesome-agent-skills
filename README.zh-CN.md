@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-8-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-10-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -25,6 +25,8 @@
 | [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
 | [topic-bookmarks-reorganizer](skills/en/topic-bookmarks-reorganizer/SKILL.md) | English | 主题书签重整技能（英文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 主题书签重整技能（中文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
+| [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | 从微信文章中提取样式并更新主题配置（英文版） | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
+| [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | 从微信公众号文章中提取样式并生成主题配置 | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
 
 ### 触发示例
 
@@ -72,6 +74,16 @@
 - "把这个书签导出里的 AI 目录重新分门别类并导出 html"
 - "只保留某个主题目录并整理链接结构"
 - "去重重复书签链接并输出可导入浏览器的文件"
+
+**wechat-theme-extractor-cn:**
+- "从这个微信公众号文章链接提取主题样式"
+- "帮我生成一个 markdown-wechat-converter 主题"
+- "把这个微信文章风格写入 markdown-to-wechat.html"
+
+**wechat-theme-extractor:**
+- "extract a theme from this WeChat article URL"
+- "generate a markdown-wechat-converter theme from this article"
+- "write the extracted style into markdown-to-wechat.html"
 
 ## 快速开始
 

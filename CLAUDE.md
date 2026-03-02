@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a collection of AI Agent Skills for Claude Code. Each skill provides specialized domain capabilities (e.g., novel writing, multilingual README creation).
 
+## Naming Convention
+
+- English skill commands use the base name only and must not add `-en`
+- Chinese skill commands append `-cn`
+- Keep the skill folder name and the `name` field in `SKILL.md` aligned with the command name
+- Use `skills/en/<skill-name>/` for English skills and `skills/zh-cn/<skill-name>-cn/` for Chinese skills
+
 ## Available Skills
 
 - **novel-writer**: English novel-writing assistant (Sci-Fi, Fantasy, Mystery, Romance, Wuxia, etc.)
@@ -73,6 +80,8 @@ Instructions...
 ```
 
 - Folder names: `kebab-case`
+- English commands do not use an `-en` suffix; Chinese commands use `-cn`
+- Keep the folder name and frontmatter `name` consistent
 - Optional files/folders (add only when needed): `README.md`, `scripts/`, `references/`, `assets/`
 - Keep bilingual docs separate (English in `README.md`, Chinese in `README.zh-CN.md`)
 
@@ -83,4 +92,4 @@ Follow Conventional Commits:
 - `docs(readme): update documentation`
 - `chore: maintenance task`
 
-Each skill should be self-contained under `skills/en/<skill-name>/` or `skills/zh-cn/<skill-name>/`.
+Each skill should be self-contained under `skills/en/<skill-name>/` or `skills/zh-cn/<skill-name>-cn/`.

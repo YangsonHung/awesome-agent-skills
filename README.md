@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-8-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-10-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -25,6 +25,8 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 将聊天导出 JSON 转为一会话一 Markdown 文件 | 自动识别结构、问答提取、标题规范化、二次格式化 |
 | [topic-bookmarks-reorganizer](skills/en/topic-bookmarks-reorganizer/SKILL.md) | English | Reorganize one topic folder from bookmarks export into clean importable HTML | Topic extraction, link regrouping, URL dedupe, browser-importable output |
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 将书签导出中的主题目录重整为可导入 HTML | 主题提取、重分类、URL 去重、输出可导入文件 |
+| [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | Extract theme styles from WeChat articles and update converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
+| [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | Extract theme styles from WeChat articles and generate converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
 
 ### Trigger Examples
 
@@ -72,6 +74,16 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "把这个书签导出里的 AI 目录重新分门别类并导出 html"
 - "只保留某个主题目录并整理链接结构"
 - "去重重复书签链接并输出可导入浏览器的文件"
+
+**wechat-theme-extractor-cn:**
+- "从这个微信公众号文章链接提取主题样式"
+- "帮我生成一个 markdown-wechat-converter 主题"
+- "把这个微信文章风格写入 markdown-to-wechat.html"
+
+**wechat-theme-extractor:**
+- "extract a theme from this WeChat article URL"
+- "generate a markdown-wechat-converter theme from this article"
+- "write the extracted style into markdown-to-wechat.html"
 
 ## Quick Start
 

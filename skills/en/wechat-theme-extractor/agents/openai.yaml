@@ -1,0 +1,7 @@
+interface:
+  display_name: "WeChat Theme Extractor"
+  short_description: "Extract WeChat article styles into converter themes."
+  default_prompt: "Use $wechat-theme-extractor to extract a theme from this WeChat article URL and write it into markdown-to-wechat.html."
+
+policy:
+  allow_implicit_invocation: true

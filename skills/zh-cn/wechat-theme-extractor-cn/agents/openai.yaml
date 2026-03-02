@@ -1,0 +1,7 @@
+interface:
+  display_name: "微信主题提取器"
+  short_description: "提取微信文章样式并生成可写入的主题配置。"
+  default_prompt: "使用 $wechat-theme-extractor-cn 从这个微信公众号链接提取样式，并写入 markdown-to-wechat.html。"
+
+policy:
+  allow_implicit_invocation: true
