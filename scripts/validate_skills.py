@@ -14,6 +14,23 @@ WHEN_TO_USE_PATTERNS = [
 def has_when_to_use_section(content):
     return any(pattern.search(content) for pattern in WHEN_TO_USE_PATTERNS)
 
+def counterpart_skill_relpath(rel_dir):
+    normalized = rel_dir.replace(os.sep, '/')
+    parts = normalized.split('/')
+    if len(parts) < 2:
+        return None
+    lang = parts[0]
+    leaf = parts[-1]
+    parent_parts = parts[1:-1]
+
+    if lang == 'en':
+        return '/'.join(['zh-cn', *parent_parts, f'{leaf}-cn'])
+    if lang == 'zh-cn':
+        if not leaf.endswith('-cn'):
+            return None
+        return '/'.join(['en', *parent_parts, leaf[:-3]])
+    return None
+
 def parse_frontmatter(content):
     """
     Simple frontmatter parser using regex to avoid external dependencies.
@@ -38,6 +55,7 @@ def validate_skills(skills_dir, strict_mode=False):
     errors = []
     warnings = []
     skill_count = 0
+    skill_dirs = []
     
     # Pre-compiled regex
     security_disclaimer_pattern = re.compile(r"AUTHORIZED USE ONLY", re.IGNORECASE)
@@ -52,6 +70,8 @@ def validate_skills(skills_dir, strict_mode=False):
             skill_count += 1
             skill_path = os.path.join(root, "SKILL.md")
             rel_path = os.path.relpath(skill_path, skills_dir)
+            rel_dir = os.path.relpath(root, skills_dir)
+            skill_dirs.append(rel_dir.replace(os.sep, '/'))
             
             try:
                 with open(skill_path, 'r', encoding='utf-8') as f:
@@ -99,6 +119,12 @@ def validate_skills(skills_dir, strict_mode=False):
             if metadata.get("risk") == "offensive":
                 if not security_disclaimer_pattern.search(content):
                     errors.append(f"🚨 {rel_path}: OFFENSIVE SKILL MISSING SECURITY DISCLAIMER! (Must contain 'AUTHORIZED USE ONLY')")
+
+    skill_dir_set = set(skill_dirs)
+    for rel_dir in sorted(skill_dir_set):
+        counterpart = counterpart_skill_relpath(rel_dir)
+        if counterpart and counterpart not in skill_dir_set:
+            errors.append(f"❌ {rel_dir}/SKILL.md: Missing required bilingual counterpart '{counterpart}/SKILL.md'")
 
     # Reporting
     print(f"\n📊 Checked {skill_count} skills.")

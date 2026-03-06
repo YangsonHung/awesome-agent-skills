@@ -17,7 +17,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata
 
-When adding a new skill, place it under `skills/en/<skill-name>/` or `skills/zh-cn/<skill-name>-cn/` and keep a minimal self-contained structure.
+When adding a new skill, you must add both language variants together: `skills/en/<skill-name>/` and `skills/zh-cn/<skill-name>-cn/`. Single-language submissions are not accepted.
 
 ## Build, Test, and Development Commands
 This repository has no compile/build pipeline. Typical contributor commands are:
@@ -35,6 +35,7 @@ Use concise, instructional Markdown with clear headings.
   - English skills use the base command name with no `-en` suffix
   - Chinese skills append `-cn`
   - Keep the folder name and `SKILL.md` frontmatter `name` aligned with the command name
+  - Every skill must have both English and Chinese variants, and the pair must stay aligned in purpose, structure, and trigger coverage
 - Required skill file: `SKILL.md`
 - Optional files/folders (add only when needed): `README.md`, `scripts/`, `references/`, `assets/`
 - Keep bilingual docs separated (English default in `README.md`, Chinese in `README.zh-CN.md`)

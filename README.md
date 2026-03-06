@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-10-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-12-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -10,7 +10,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 ## Features
 
 - **Modular Design** - Load skills on demand
-- **Bilingual Support** - Available in both English and Chinese
+- **Bilingual Support** - Every skill is maintained as an English and Chinese pair
 - **Rich Resources** - Complete references and templates for each skill
 
 ## Available Skills
@@ -27,6 +27,8 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 将书签导出中的主题目录重整为可导入 HTML | 主题提取、重分类、URL 去重、输出可导入文件 |
 | [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | Extract theme styles from WeChat articles and update converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | Extract theme styles from WeChat articles and generate converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
+| [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
+| [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
 
 ### Trigger Examples
 
@@ -85,6 +87,16 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "generate a markdown-wechat-converter theme from this article"
 - "write the extracted style into markdown-to-wechat.html"
 
+**mac-software-storage-cleanup-cn:**
+- "检查我 Mac 上安装的软件都占了多少空间"
+- "列出可以优先清理的缓存和模拟器数据"
+- "给我一个 macOS 软件存储清理建议"
+
+**mac-software-storage-cleanup:**
+- "audit installed software sizes on my Mac"
+- "show safe cache and simulator cleanup candidates"
+- "give me a macOS storage cleanup plan"
+
 ## Quick Start
 
 ### Installation
@@ -118,14 +130,15 @@ Once installed, the skills will be automatically available in Claude Code. Simpl
 Contributions are welcome! To add a new skill:
 
 1. Fork this repository
-2. Create a new directory under `skills/en/` or `skills/zh-cn/`
+2. Create both paired directories under `skills/en/` and `skills/zh-cn/`
 3. Include the following files:
    - `SKILL.md` - Main skill definition with frontmatter
    - `README.md` - Optional skill-level notes
    - `scripts/` - Optional helper scripts
    - `references/` - Optional reference materials
    - `assets/` - Optional templates and resources
-4. Submit a pull request
+4. Ensure both language variants are added together and kept in sync
+5. Submit a pull request
 
 ### Test SKILL.md
 

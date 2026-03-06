@@ -140,6 +140,26 @@ function getSkillFolderName(skillId) {
   return parts.length ? parts[parts.length - 1] : skillId;
 }
 
+function getCounterpartSkillId(skillId) {
+  const normalized = skillId.split(path.sep).join('/');
+  const parts = normalized.split('/').filter(Boolean);
+  if (parts.length < 2) return null;
+  const lang = parts[0];
+  const leaf = parts[parts.length - 1];
+  const middle = parts.slice(1, -1);
+
+  if (lang === 'en') {
+    return ['zh-cn', ...middle, `${leaf}-cn`].join('/');
+  }
+
+  if (lang === 'zh-cn') {
+    if (!leaf.endsWith('-cn')) return null;
+    return ['en', ...middle, leaf.slice(0, -3)].join('/');
+  }
+
+  return null;
+}
+
 function run() {
   const skillIds = listSkillIdsRecursive(SKILLS_DIR);
   const baseline = loadBaseline();
@@ -147,6 +167,7 @@ function run() {
   const baselineDoNotUse = new Set(baseline.doNotUseSection || []);
   const baselineInstructions = new Set(baseline.instructionsSection || []);
   const baselineLongFile = new Set(baseline.longFile || []);
+  const skillIdSet = new Set(skillIds.map(skillId => skillId.split(path.sep).join('/')));
 
   for (const skillId of skillIds) {
     const skillPath = path.join(SKILLS_DIR, skillId, 'SKILL.md');
@@ -255,6 +276,11 @@ function run() {
 
     if (!hasSection(content, INSTRUCTIONS_SECTION_PATTERNS)) {
       missingInstructionsSection.push(skillId);
+    }
+
+    const counterpart = getCounterpartSkillId(skillId);
+    if (counterpart && !skillIdSet.has(counterpart)) {
+      addError(`Missing required bilingual counterpart: ${skillId} -> ${counterpart}`);
     }
   }
 

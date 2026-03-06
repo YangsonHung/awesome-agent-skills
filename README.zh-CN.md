@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-10-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-12-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -10,7 +10,7 @@
 ## 特性
 
 - **模块化设计** - 按需加载技能
-- **中英双语** - 同时提供中文和英文版本
+- **中英双语** - 每个技能都必须同时提供英文版和中文版
 - **资源丰富** - 每个技能都有完整的参考资料和模板
 
 ## 可用技能
@@ -27,6 +27,8 @@
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 主题书签重整技能（中文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
 | [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | 从微信文章中提取样式并更新主题配置（英文版） | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | 从微信公众号文章中提取样式并生成主题配置 | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
+| [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | 审计 macOS 软件占用并执行分级清理（英文版） | 软件清单盘点、空间统计、安全清理、回收建议 |
+| [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | 审计 macOS 软件占用并执行分级清理 | 软件清单盘点、空间统计、安全清理、回收建议 |
 
 ### 触发示例
 
@@ -85,6 +87,16 @@
 - "generate a markdown-wechat-converter theme from this article"
 - "write the extracted style into markdown-to-wechat.html"
 
+**mac-software-storage-cleanup-cn:**
+- "检查我 Mac 上安装的软件都占了多少空间"
+- "列出可以优先清理的缓存和模拟器数据"
+- "给我一个 macOS 软件存储清理建议"
+
+**mac-software-storage-cleanup:**
+- "audit installed software sizes on my Mac"
+- "show safe cache and simulator cleanup candidates"
+- "give me a macOS storage cleanup plan"
+
 ## 快速开始
 
 ### 安装
@@ -118,14 +130,15 @@ cp -r skills/ ~/.claude/skills/
 欢迎贡献新技能！步骤如下：
 
 1. Fork 本仓库
-2. 在 `skills/en/` 或 `skills/zh-cn/` 下创建新目录
+2. 同时在 `skills/en/` 和 `skills/zh-cn/` 下创建成对的新目录
 3. 包含以下文件：
    - `SKILL.md` - 带 frontmatter 的技能主定义文件
    - `README.md` - 技能说明（可选）
    - `scripts/` - 辅助脚本（可选）
    - `references/` - 参考资料（可选）
    - `assets/` - 模板与资源（可选）
-4. 提交 Pull Request
+4. 确保中英文两个技能一起提交，且内容和触发场景保持同步
+5. 提交 Pull Request
 
 ### 测试 SKILL.md
 
