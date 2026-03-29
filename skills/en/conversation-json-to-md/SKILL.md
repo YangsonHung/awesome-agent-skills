@@ -1,8 +1,6 @@
 ---
 name: conversation-json-to-md
 description: Convert chat export JSON files into multiple Markdown files (one conversation per file). Use when users ask to split AI chat logs, preserve only user-assistant Q/A, format question as heading, keep response Markdown, and normalize filenames/headings after export.
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # Conversation JSON To MD

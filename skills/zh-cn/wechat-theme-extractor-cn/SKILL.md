@@ -1,8 +1,6 @@
 ---
 name: wechat-theme-extractor-cn
 description: 从微信公众号文章中提取样式，AI 智能分析并生成主题配置。当用户提供微信公众号文章链接，希望提取文章视觉风格、生成 markdown-wechat-converter 可用主题，或自动写入 markdown-to-wechat.html 时使用。
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # 微信文章主题提取器

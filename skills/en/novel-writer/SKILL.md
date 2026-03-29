@@ -9,8 +9,6 @@ description: >-
   next chapter", "modify this character"; (3) Character-related tasks, e.g.,
   "design a villain", "create a love interest for the protagonist"; (4)
   Worldbuilding, e.g., "design a magic system", "build a cyberpunk world".
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # Novel Writer

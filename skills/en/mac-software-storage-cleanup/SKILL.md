@@ -1,8 +1,6 @@
 ---
 name: mac-software-storage-cleanup
 description: Audit installed macOS software storage usage and run prioritized cleanup. Use when the user asks to inspect installed apps, list storage-heavy software, clean priority-1 caches and simulator data, or get reclaim recommendations.
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # Mac Software Storage Cleanup

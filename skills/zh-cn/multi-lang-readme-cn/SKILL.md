@@ -1,7 +1,5 @@
 ---
 name: multi-lang-readme-cn
-risk: safe
-source: YangsonHung/awesome-agent-skills
 description: 创建多语言 README。用于用户要求“中英 README”“多语言 README”“把 README 翻译成某语言”等场景。支持英文、德语、日语、韩语、中文，并保持 Markdown 结构与链接一致。
 ---
 

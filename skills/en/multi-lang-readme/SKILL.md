@@ -1,7 +1,5 @@
 ---
 name: multi-lang-readme
-risk: safe
-source: YangsonHung/awesome-agent-skills
 description: Create multilingual README files by translating an existing README into target languages. Use when users ask for bilingual or multilingual README output, such as "create bilingual README", "translate README to Japanese", or "add Chinese README". Supports English, German (de), Japanese (ja), Korean (ko), and Chinese (zh-CN).
 ---
 

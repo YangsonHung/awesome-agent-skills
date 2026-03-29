@@ -1,8 +1,6 @@
 ---
 name: topic-bookmarks-reorganizer-cn
 description: 将浏览器导出的书签 HTML 中用户指定的主题目录重新分类整理，按 URL 去重，并导出可直接导入浏览器的 Netscape 书签文件。用于用户要求分析书签导出、提取一个主题目录、重分组链接与子目录并生成可导入 HTML 的场景。
-risk: safe
-source: YangsonHung/awesome-agent-skills
 license: MIT
 ---
 

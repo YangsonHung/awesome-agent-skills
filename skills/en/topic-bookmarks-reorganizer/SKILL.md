@@ -1,8 +1,6 @@
 ---
 name: topic-bookmarks-reorganizer
 description: Reorganize exported browser bookmarks under one user-specified topic folder into cleaner categories, remove duplicate URLs, and generate an importable Netscape HTML file. Use when users ask to analyze a bookmarks export, extract one topic directory, regroup links and subfolders, and output a browser-importable HTML file.
-risk: safe
-source: YangsonHung/awesome-agent-skills
 license: MIT
 ---
 

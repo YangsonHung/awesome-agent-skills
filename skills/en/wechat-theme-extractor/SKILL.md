@@ -1,8 +1,6 @@
 ---
 name: wechat-theme-extractor
 description: Extract visual styles from WeChat Official Account articles and generate theme configuration. Use when the user provides a WeChat article URL and wants to derive a markdown-wechat-converter theme, inject it into markdown-to-wechat.html, or preview the generated result.
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # WeChat Theme Extractor

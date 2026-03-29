@@ -57,11 +57,6 @@ def validate_skills(skills_dir, strict_mode=False):
     skill_count = 0
     skill_dirs = []
     
-    # Pre-compiled regex
-    security_disclaimer_pattern = re.compile(r"AUTHORIZED USE ONLY", re.IGNORECASE)
-
-    valid_risk_levels = ["none", "safe", "critical", "offensive"]
-
     for root, dirs, files in os.walk(skills_dir):
         # Skip .disabled or hidden directories
         dirs[:] = [d for d in dirs if not d.startswith('.')]
@@ -95,30 +90,12 @@ def validate_skills(skills_dir, strict_mode=False):
             if "description" not in metadata:
                 errors.append(f"❌ {rel_path}: Missing 'description' in frontmatter")
 
-            # Risk Validation (Quality Bar)
-            if "risk" not in metadata:
-                msg = f"⚠️  {rel_path}: Missing 'risk' label (defaulting to 'unknown')"
-                if strict_mode: errors.append(msg.replace("⚠️", "❌"))
-                else: warnings.append(msg)
-            elif metadata["risk"] not in valid_risk_levels:
-                errors.append(f"❌ {rel_path}: Invalid risk level '{metadata['risk']}'. Must be one of {valid_risk_levels}")
-
-            # Source Validation
-            if "source" not in metadata:
-                msg = f"⚠️  {rel_path}: Missing 'source' attribution"
-                if strict_mode: errors.append(msg.replace("⚠️", "❌"))
-                else: warnings.append(msg)
-
             # 3. Content Checks (Triggers)
             if not has_when_to_use_section(content):
                 msg = f"⚠️  {rel_path}: Missing '## When to Use' / '## 何时使用' section"
                 if strict_mode: errors.append(msg.replace("⚠️", "❌"))
                 else: warnings.append(msg)
 
-            # 4. Security Guardrails
-            if metadata.get("risk") == "offensive":
-                if not security_disclaimer_pattern.search(content):
-                    errors.append(f"🚨 {rel_path}: OFFENSIVE SKILL MISSING SECURITY DISCLAIMER! (Must contain 'AUTHORIZED USE ONLY')")
 
     skill_dir_set = set(skill_dirs)
     for rel_dir in sorted(skill_dir_set):

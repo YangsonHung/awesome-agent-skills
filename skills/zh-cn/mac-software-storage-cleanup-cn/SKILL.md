@@ -1,8 +1,6 @@
 ---
 name: mac-software-storage-cleanup-cn
 description: 审计 macOS 已安装软件占用并执行分级清理。当用户提出“检查安装了哪些软件”“列出软件占用大小”“清理优先级 1 缓存和模拟器数据”或“给出可回收空间建议”等磁盘治理需求时使用。
-risk: safe
-source: YangsonHung/awesome-agent-skills
 ---
 
 # Mac Software Storage Cleanup
