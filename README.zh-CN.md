@@ -119,11 +119,39 @@ bunx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-c
 pnpm dlx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
 ```
 
+全局安装某一个技能：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn -g
+```
+
+将某一个技能安装到指定 Agent：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn -a claude-code
+```
+
+安装某一个技能并跳过确认：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn -y
+```
+
+全局安装到指定 Agent 并跳过确认：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn -g -a claude-code -y
+```
+
 也可以只手动复制中文技能到 Claude Code 配置目录：
 
 ```bash
 cp -r skills/zh-cn/* ~/.claude/skills/
 ```
+
+更多命令使用方式参考：
+
+https://github.com/vercel-labs/skills/blob/main/README.md
 
 ### 使用
 

@@ -118,11 +118,39 @@ bunx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
 pnpm dlx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
 ```
 
+Install a specific skill globally:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export -g
+```
+
+Install a specific skill to a specific agent:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export -a claude-code
+```
+
+Install a specific skill without confirmation prompts:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export -y
+```
+
+Install a specific skill globally for a specific agent without prompts:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export -g -a claude-code -y
+```
+
 Or install manually by copying the English skills only:
 
 ```bash
 cp -r skills/en/* ~/.claude/skills/
 ```
+
+More command usage examples:
+
+https://github.com/vercel-labs/skills/blob/main/README.md
 
 ### Usage
 
