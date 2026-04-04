@@ -104,7 +104,7 @@ bunx skills add YangsonHung/awesome-agent-skills --list
 pnpm dlx skills add YangsonHung/awesome-agent-skills --list
 ```
 
-Install a specific English skill only:
+Install a specific skill:
 
 ```bash
 npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
@@ -116,20 +116,6 @@ bunx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
 
 ```bash
 pnpm dlx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
-```
-
-Install a specific Chinese skill only:
-
-```bash
-npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
-```
-
-```bash
-bunx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
-```
-
-```bash
-pnpm dlx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
 ```
 
 Or install manually by copying the English skills only:

@@ -105,21 +105,7 @@ bunx skills add YangsonHung/awesome-agent-skills --list
 pnpm dlx skills add YangsonHung/awesome-agent-skills --list
 ```
 
-只安装某一个英文技能：
-
-```bash
-npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
-```
-
-```bash
-bunx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
-```
-
-```bash
-pnpm dlx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
-```
-
-只安装某一个中文技能：
+只安装某一个技能：
 
 ```bash
 npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
