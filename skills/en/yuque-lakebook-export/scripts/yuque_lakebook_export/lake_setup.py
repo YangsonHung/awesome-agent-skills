@@ -249,9 +249,23 @@ class LakeToMd:
     def __body_html(self):
         fp = open(file=self.filename, mode='r', encoding='utf-8')
         file_json = json.load(fp)
-        body_html = file_json["doc"]['body_draft_asl']
         fp.close()
-        self.body_html = body_html
+        self.body_html = self._extract_body(file_json)
+
+    @staticmethod
+    def _extract_body(file_json):
+        doc_json = file_json.get("doc") or {}
+        body_fields = (
+            "body_draft_asl",
+            "body_asl",
+            "body_draft",
+            "body",
+        )
+        for field in body_fields:
+            body = doc_json.get(field)
+            if isinstance(body, str) and body.strip():
+                return body
+        return ""
 
     def to_md(self, global_context):
         mp = MyParser(self.body_html)
@@ -272,6 +286,8 @@ class LakeToMd:
         res = normalize_markdown(res)
         self.image_download_failure += context.failure_images
         self.target = remove_invalid_characters(self.target)
+        if not res.strip():
+            print(f"\n警告: 文档导出结果为空 -> {self.filename}")
         with open(self.target + ".md", 'w+', encoding='utf-8') as fp:
             fp.writelines(res)
             fp.flush()

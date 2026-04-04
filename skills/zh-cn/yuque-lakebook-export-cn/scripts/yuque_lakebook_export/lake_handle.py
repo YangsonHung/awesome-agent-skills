@@ -393,9 +393,10 @@ class MyParser:
         temp_str = ""
         for _tag in tag.contents:
             if isinstance(_tag, NavigableString):
-                if tag.name == '[document]':
+                text = str(_tag)
+                if not text:
                     continue
-                temp_str = temp_str + _tag
+                temp_str = temp_str + text
                 continue
             temp_str += self.handle_descent(_tag, context1)
         return temp_str
