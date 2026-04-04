@@ -28,63 +28,65 @@ Do not use this skill for:
 ## Instructions
 
 1. Prefer non-interactive execution so the agent can run deterministically.
-2. If the system Python is blocked by PEP 668 or cannot install dependencies directly, use a fixed cache virtual environment instead of creating a task-local environment.
-3. Reuse this environment when it already exists:
+2. Before any non-interactive export, the agent must confirm the output root directory with the user. Do not choose an output directory on the user's behalf.
+3. If the user has not provided an output directory, ask a concise question and wait for the user's answer before running the export command.
+4. If the system Python is blocked by PEP 668 or cannot install dependencies directly, use a fixed cache virtual environment instead of creating a task-local environment.
+5. Reuse this environment when it already exists:
 
 ```bash
 ~/.agents/cache/yuque-lakebook-export/.venv
 ```
 
-4. Create it only when missing, then install dependencies into it:
+6. Create it only when missing, then install dependencies into it:
 
 ```bash
 python3 -m venv ~/.agents/cache/yuque-lakebook-export/.venv
 ~/.agents/cache/yuque-lakebook-export/.venv/bin/python -m pip install -r scripts/requirements.txt
 ```
 
-5. Prefer using the wrapper script below. It handles the cached virtual environment automatically:
+7. Prefer using the wrapper script below. It handles the cached virtual environment automatically:
 
 ```bash
 python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-6. If direct installation is allowed, installing dependencies into the active Python environment is acceptable:
+8. If direct installation is allowed, installing dependencies into the active Python environment is acceptable:
 
 ```bash
 python3 -m pip install -r scripts/requirements.txt
 ```
 
-7. Do not create `.venv`, `.yuque-export-venv`, or similar temporary environments inside the current working directory, the user's download directory, or the skill directory.
-8. Standard single-file execution:
+9. Do not create `.venv`, `.yuque-export-venv`, or similar temporary environments inside the current working directory, the user's download directory, or the skill directory.
+10. Standard single-file execution:
 
 ```bash
 python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-9. Standard batch execution:
+11. Standard batch execution:
 
 ```bash
 python3 scripts/run_export.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-10. When using the cached virtual environment directly, invoke the script with that interpreter:
+12. When using the cached virtual environment directly, invoke the script with that interpreter:
 
 ```bash
 ~/.agents/cache/yuque-lakebook-export/.venv/bin/python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-11. Only use interactive mode when the user explicitly wants terminal selection:
+13. Only use interactive mode when the user explicitly wants terminal selection:
 
 ```bash
 python3 scripts/run_export.py
 ```
 
-12. After export, verify:
+14. After export, verify:
 - `.md` files exist
 - sibling `.assets` folders exist
 - internal links are relative Markdown paths
 - images render in Obsidian
 
-13. If export fails, inspect the batch log written next to the input `.lakebook` files.
+15. If export fails, inspect the batch log written next to the input `.lakebook` files.
 
 For detailed behavior, troubleshooting, and output rules, read `references/usage.md`.
