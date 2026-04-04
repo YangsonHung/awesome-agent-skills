@@ -30,62 +30,52 @@ Do not use this skill for:
 1. Prefer non-interactive execution so the agent can run deterministically.
 2. Before any non-interactive export, the agent must confirm the output root directory with the user. Do not choose an output directory on the user's behalf.
 3. If the user has not provided an output directory, ask a concise question and wait for the user's answer before running the export command.
-4. If the system Python is blocked by PEP 668 or cannot install dependencies directly, use a fixed cache virtual environment instead of creating a task-local environment.
-5. Reuse this environment when it already exists:
+4. Prefer `uv` consistently. Do not create temporary `.venv` or similar task-local environments in the working directory.
+5. Prefer this entrypoint:
 
 ```bash
-~/.agents/cache/yuque-lakebook-export/.venv
+uv run python scripts/cli.py
 ```
 
-6. Create it only when missing, then install dependencies into it:
+6. Sync dependencies before first use:
 
 ```bash
-python3 -m venv ~/.agents/cache/yuque-lakebook-export/.venv
-~/.agents/cache/yuque-lakebook-export/.venv/bin/python -m pip install -r scripts/requirements.txt
+uv sync
 ```
 
-7. Prefer using the wrapper script below. It handles the cached virtual environment automatically:
+7. Standard single-file execution:
+
+```bash
+uv run python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
+```
+
+8. Standard batch execution:
+
+```bash
+uv run python scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
+```
+
+9. Only use interactive mode when the user explicitly wants terminal selection:
+
+```bash
+uv run python scripts/cli.py
+```
+
+10. If `uv` is unavailable in the environment, fall back to the bundled wrapper script:
 
 ```bash
 python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-8. If direct installation is allowed, installing dependencies into the active Python environment is acceptable:
-
-```bash
-python3 -m pip install -r scripts/requirements.txt
-```
-
-9. Do not create `.venv`, `.yuque-export-venv`, or similar temporary environments inside the current working directory, the user's download directory, or the skill directory.
-10. Standard single-file execution:
-
-```bash
-python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
-```
-
-11. Standard batch execution:
-
-```bash
-python3 scripts/run_export.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
-```
-
-12. When using the cached virtual environment directly, invoke the script with that interpreter:
-
-```bash
-~/.agents/cache/yuque-lakebook-export/.venv/bin/python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
-```
-
-13. Only use interactive mode when the user explicitly wants terminal selection:
-
-```bash
-python3 scripts/run_export.py
-```
-
+11. The wrapper script manages its own cached environment, so use it only as a fallback when `uv` cannot be used.
+12. Do not manually create temporary virtual environments in the current working directory, the user's download directory, or the skill directory.
+13. Some Yuque exports include `<!doctype lake>` at the start of the document body; older implementations could render this as a stray `lake##` prefix in Markdown. The current skill implementation already handles this case.
 14. After export, verify:
 - `.md` files exist
 - sibling `.assets` folders exist
 - internal links are relative Markdown paths
 - images render in Obsidian
+- exported documents do not start with an erroneous `lake##` prefix
 
 15. If export fails, inspect the batch log written next to the input `.lakebook` files.
 

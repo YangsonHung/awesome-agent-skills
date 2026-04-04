@@ -39,12 +39,16 @@ HEADING_RE = re.compile(r'^\s{0,3}#{1,6}\s+')
 HR_RE = re.compile(r'^\s{0,3}([-*_])(\s*\1){2,}\s*$')
 TABLE_ROW_RE = re.compile(r'^\s*\|.*\|\s*$')
 LIST_RE = re.compile(r'^\s*(?:[-+*]|\d+\.)\s+')
+LAKE_PREFIX_RE = re.compile(r'^\ufeff?lake(?=\s*<)', re.IGNORECASE)
+LAKE_MD_PREFIX_RE = re.compile(r'^\ufeff?lake(?=\s{0,3}#{1,6}\s)', re.IGNORECASE)
 
 
 def normalize_markdown(text):
     """
     统一整理块级元素之间的空行，提升 Obsidian 等 Markdown 渲染兼容性。
     """
+    text = text.lstrip("\ufeff")
+    text = LAKE_MD_PREFIX_RE.sub("", text, count=1)
     lines = text.splitlines()
     if not lines:
         return text
@@ -264,8 +268,19 @@ class LakeToMd:
         for field in body_fields:
             body = doc_json.get(field)
             if isinstance(body, str) and body.strip():
-                return body
+                return LakeToMd._normalize_body(body)
         return ""
+
+    @staticmethod
+    def _normalize_body(body):
+        """
+        Some lakebook documents retain a Yuque Lake format marker at the beginning,
+        for example `lake<h2>...`. Strip the accidental prefix so it does not render
+        as `lake##` in the exported Markdown.
+        """
+        cleaned = body.lstrip("\ufeff")
+        cleaned = LAKE_PREFIX_RE.sub("", cleaned, count=1)
+        return cleaned
 
     def to_md(self, global_context):
         mp = MyParser(self.body_html)

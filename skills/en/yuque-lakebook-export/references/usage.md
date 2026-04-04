@@ -4,7 +4,7 @@
 
 - One or more `.lakebook` files
 - One output root directory
-- Preferred entry point: `python3 scripts/run_export.py ...`
+- Preferred entry point: `uv run python scripts/cli.py ...`
 
 ## Outputs
 
@@ -29,10 +29,10 @@ your_document.assets/
 
 ## Troubleshooting
 
-- If system Python is blocked by PEP 668, use `~/.agents/cache/yuque-lakebook-export/.venv`
+- Sync dependencies with `uv sync`
 - Avoid creating task-local virtual environments under the user's working directory or download directory
-- Prefer `scripts/run_export.py` over calling `scripts/cli.py` directly
-- Missing `bs4`: install `scripts/requirements.txt`
+- `python3 scripts/run_export.py ...` is only a wrapper around `uv`
+- Missing `bs4`: run `uv sync`
 - Missing images in Obsidian: check generated `.assets` paths and URL encoding
 - Wrong table rendering: re-export with the bundled parser because it normalizes Markdown spacing
 - Broken internal links: ensure the source `.lakebook` includes complete toc metadata

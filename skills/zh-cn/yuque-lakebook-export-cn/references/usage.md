@@ -4,7 +4,7 @@
 
 - 一个或多个 `.lakebook` 文件
 - 一个目标根目录
-- 优先使用入口：`python3 scripts/run_export.py ...`
+- 优先使用入口：`uv run python scripts/cli.py ...`
 
 ## 输出
 
@@ -29,10 +29,10 @@ your_document.assets/
 
 ## 排查
 
-- 如果系统 Python 被 PEP 668 限制，使用 `~/.agents/cache/yuque-lakebook-export/.venv`
+- 先执行 `uv sync` 同步依赖
 - 不要在用户当前工作目录或下载目录下创建临时虚拟环境
-- 优先通过 `scripts/run_export.py` 调用，而不是直接执行 `scripts/cli.py`
-- 缺少 `bs4`：先安装 `scripts/requirements.txt`
+- `python3 scripts/run_export.py ...` 仅作为 `uv` 的包装入口
+- 缺少 `bs4`：执行 `uv sync`
 - Obsidian 图片不显示：检查 `.assets` 路径和链接编码
 - 表格渲染异常：重新导出，脚本会做 Markdown 规范化
 - 内部链接失效：确认源 `.lakebook` 包含完整目录元数据
