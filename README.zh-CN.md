@@ -91,10 +91,10 @@ bunx skills add YangsonHung/awesome-agent-skills
 pnpm dlx skills add YangsonHung/awesome-agent-skills
 ```
 
-也可以手动复制 `skills` 目录到 Claude Code 配置目录：
+也可以只手动复制中文技能到 Claude Code 配置目录：
 
 ```bash
-cp -r skills/ ~/.claude/skills/
+cp -r skills/zh-cn/* ~/.claude/skills/
 ```
 
 ### 使用

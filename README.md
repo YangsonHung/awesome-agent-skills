@@ -90,10 +90,10 @@ bunx skills add YangsonHung/awesome-agent-skills
 pnpm dlx skills add YangsonHung/awesome-agent-skills
 ```
 
-Or install manually by copying the `skills` directory:
+Or install manually by copying the English skills only:
 
 ```bash
-cp -r skills/ ~/.claude/skills/
+cp -r skills/en/* ~/.claude/skills/
 ```
 
 ### Usage
