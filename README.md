@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-12-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-16-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -29,6 +29,8 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | Extract theme styles from WeChat articles and generate converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
 | [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
 | [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
+| [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
+| [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
 
 ### Trigger Examples
 
@@ -96,6 +98,18 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "audit installed software sizes on my Mac"
 - "show safe cache and simulator cleanup candidates"
 - "give me a macOS storage cleanup plan"
+
+**yuque-lakebook-export:**
+- "export this Yuque .lakebook to markdown"
+- "convert my lakebook into an Obsidian folder"
+- "batch convert multiple .lakebook files"
+- "fix missing images and broken internal links from Yuque export"
+
+**yuque-lakebook-export-cn:**
+- "把这个语雀 lakebook 导出成 markdown"
+- "把语雀知识库迁移到 Obsidian"
+- "批量转换多个 .lakebook 文件"
+- "修复语雀导出后的图片、裁剪图和内部链接问题"
 
 ## Quick Start
 

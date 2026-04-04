@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-12-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-16-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -29,6 +29,8 @@
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | 从微信公众号文章中提取样式并生成主题配置 | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
 | [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | 审计 macOS 软件占用并执行分级清理（英文版） | 软件清单盘点、空间统计、安全清理、回收建议 |
 | [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | 审计 macOS 软件占用并执行分级清理 | 软件清单盘点、空间统计、安全清理、回收建议 |
+| [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录（英文版） | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
+| [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
 
 ### 触发示例
 
@@ -96,6 +98,18 @@
 - "audit installed software sizes on my Mac"
 - "show safe cache and simulator cleanup candidates"
 - "give me a macOS storage cleanup plan"
+
+**yuque-lakebook-export:**
+- "export this Yuque .lakebook to markdown"
+- "convert my lakebook into an Obsidian folder"
+- "batch convert multiple .lakebook files"
+- "fix missing images and broken internal links from Yuque export"
+
+**yuque-lakebook-export-cn:**
+- "把这个语雀 lakebook 导出成 markdown"
+- "把语雀知识库迁移到 Obsidian"
+- "批量转换多个 .lakebook 文件"
+- "修复语雀导出后的图片、裁剪图和内部链接问题"
 
 ## 快速开始
 

@@ -1,0 +1,63 @@
+---
+name: yuque-lakebook-export-cn
+description: 将语雀知识库、语雀文档或 .lakebook 文件导出并转换为本地 Markdown 目录，适配 Obsidian 使用。适用于导出语雀、把 lakebook 转成 Markdown、迁移语雀知识库到 Obsidian、批量转换多个 .lakebook、处理语雀导出后的图片与附件、裁剪图片、内部文档链接、目录结构、Markdown 表格渲染等问题。当用户提到 语雀、lakebook、导出 Markdown、导入 Obsidian、知识库迁移、批量转换、图片不显示、链接丢失、裁剪失效、目录层级不对、表格显示异常 等场景时触发。
+license: MIT
+---
+
+# 语雀 Lakebook 导出
+
+将一个或多个语雀 `.lakebook` 文件导出为本地 Markdown 目录，并优先适配 Obsidian。
+
+## 何时使用
+
+当用户需要以下能力时使用本技能：
+
+- 导出一个或多个语雀 `.lakebook`
+- 将语雀知识库转换为 Markdown
+- 将语雀内容迁移到 Obsidian
+- 修复语雀导出后的图片、裁剪图、内部链接、目录层级、表格渲染问题
+
+## 不要使用
+
+不要将本技能用于：
+
+- 与语雀或 `.lakebook` 无关的普通 Markdown 编辑
+- 网页抓取任务
+- 非语雀来源的导出转换任务
+
+## 使用说明
+
+1. 优先使用非交互模式，便于 Agent 稳定执行。
+2. 首次使用前先安装依赖：
+
+```bash
+python3 -m pip install -r scripts/requirements.txt
+```
+
+3. 单文件执行：
+
+```bash
+python3 scripts/cli.py -l "/path/to/AI.lakebook" -o "/target/root"
+```
+
+4. 批量执行：
+
+```bash
+python3 scripts/cli.py -l "/path/to/AI.lakebook" "/path/to/FrontEnd.lakebook" -o "/target/root"
+```
+
+5. 只有在用户明确要求终端交互选择时，才运行：
+
+```bash
+python3 scripts/cli.py
+```
+
+6. 导出完成后检查：
+- `.md` 文件是否生成
+- 同名 `.assets` 目录是否生成
+- 内部链接是否转为相对 Markdown 路径
+- 图片是否能在 Obsidian 中正常显示
+
+7. 如果导出失败，优先查看输入 `.lakebook` 同目录下生成的批量日志。
+
+详细行为、输出规则和排查说明见 `references/usage.md`。
