@@ -90,6 +90,24 @@ bunx skills add YangsonHung/awesome-agent-skills
 pnpm dlx skills add YangsonHung/awesome-agent-skills
 ```
 
+List available skills in this repository:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --list
+```
+
+Install a specific English skill only:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
+```
+
+Install a specific Chinese skill only:
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
+```
+
 Or install manually by copying the English skills only:
 
 ```bash

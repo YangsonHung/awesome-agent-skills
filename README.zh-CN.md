@@ -91,6 +91,24 @@ bunx skills add YangsonHung/awesome-agent-skills
 pnpm dlx skills add YangsonHung/awesome-agent-skills
 ```
 
+列出本仓库可安装的技能：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --list
+```
+
+只安装某一个英文技能：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export
+```
+
+只安装某一个中文技能：
+
+```bash
+npx skills add YangsonHung/awesome-agent-skills --skill yuque-lakebook-export-cn
+```
+
 也可以只手动复制中文技能到 Claude Code 配置目录：
 
 ```bash
