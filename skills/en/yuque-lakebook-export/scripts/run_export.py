@@ -48,7 +48,23 @@ def ensure_dependencies(python_path: Path) -> None:
     subprocess.run(install_cmd, check=True)
 
 
+def ensure_output_argument() -> None:
+    args = sys.argv[1:]
+    for index, arg in enumerate(args):
+        if arg in {"-o", "--output"}:
+            if index + 1 < len(args) and args[index + 1].strip():
+                return
+            break
+        if arg.startswith("--output="):
+            if arg.split("=", 1)[1].strip():
+                return
+            break
+    print("Error: output root is required. Confirm the destination with the user and pass -o/--output.", file=sys.stderr)
+    raise SystemExit(2)
+
+
 def main() -> int:
+    ensure_output_argument()
     python_path = ensure_venv()
     ensure_dependencies(python_path)
     os.execv(str(python_path), [str(python_path), str(CLI_PATH), *sys.argv[1:]])
