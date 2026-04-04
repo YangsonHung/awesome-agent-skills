@@ -397,7 +397,9 @@ if __name__ == '__main__':
     else:
         lakebooks = [Path(item).expanduser().resolve() for item in args.lake]
         if len(lakebooks) == 1 and args.output:
-            start_convert(None, str(lakebooks[0]), args.output, args.downloadImage, args.skip_existing_resources,
+            output_root = Path(args.output).expanduser()
+            target_dir = build_output_dir(output_root, lakebooks[0])
+            start_convert(None, str(lakebooks[0]), str(target_dir), args.downloadImage, args.skip_existing_resources,
                           open_output=args.open_output)
         else:
             output_root = Path(args.output).expanduser() if args.output else Path("~/Doc").expanduser()
