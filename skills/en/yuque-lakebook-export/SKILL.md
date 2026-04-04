@@ -28,36 +28,63 @@ Do not use this skill for:
 ## Instructions
 
 1. Prefer non-interactive execution so the agent can run deterministically.
-2. Before first use, install dependencies:
+2. If the system Python is blocked by PEP 668 or cannot install dependencies directly, use a fixed cache virtual environment instead of creating a task-local environment.
+3. Reuse this environment when it already exists:
+
+```bash
+~/.agents/cache/yuque-lakebook-export/.venv
+```
+
+4. Create it only when missing, then install dependencies into it:
+
+```bash
+python3 -m venv ~/.agents/cache/yuque-lakebook-export/.venv
+~/.agents/cache/yuque-lakebook-export/.venv/bin/python -m pip install -r scripts/requirements.txt
+```
+
+5. Prefer using the wrapper script below. It handles the cached virtual environment automatically:
+
+```bash
+python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
+```
+
+6. If direct installation is allowed, installing dependencies into the active Python environment is acceptable:
 
 ```bash
 python3 -m pip install -r scripts/requirements.txt
 ```
 
-3. Standard single-file execution:
+7. Do not create `.venv`, `.yuque-export-venv`, or similar temporary environments inside the current working directory, the user's download directory, or the skill directory.
+8. Standard single-file execution:
 
 ```bash
-python3 scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
+python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-4. Standard batch execution:
+9. Standard batch execution:
 
 ```bash
-python3 scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
+python3 scripts/run_export.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-5. Only use interactive mode when the user explicitly wants terminal selection:
+10. When using the cached virtual environment directly, invoke the script with that interpreter:
 
 ```bash
-python3 scripts/cli.py
+~/.agents/cache/yuque-lakebook-export/.venv/bin/python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-6. After export, verify:
+11. Only use interactive mode when the user explicitly wants terminal selection:
+
+```bash
+python3 scripts/run_export.py
+```
+
+12. After export, verify:
 - `.md` files exist
 - sibling `.assets` folders exist
 - internal links are relative Markdown paths
 - images render in Obsidian
 
-7. If export fails, inspect the batch log written next to the input `.lakebook` files.
+13. If export fails, inspect the batch log written next to the input `.lakebook` files.
 
 For detailed behavior, troubleshooting, and output rules, read `references/usage.md`.

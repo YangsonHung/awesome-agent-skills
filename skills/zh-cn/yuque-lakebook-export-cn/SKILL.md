@@ -28,36 +28,63 @@ license: MIT
 ## 使用说明
 
 1. 优先使用非交互模式，便于 Agent 稳定执行。
-2. 首次使用前先安装依赖：
+2. 如果系统 Python 被 PEP 668 限制，或无法直接安装依赖，统一使用固定缓存虚拟环境，不要在任务目录里临时创建环境。
+3. 优先复用下面这个固定环境：
+
+```bash
+~/.agents/cache/yuque-lakebook-export/.venv
+```
+
+4. 只有在它不存在时才创建，并把依赖装进去：
+
+```bash
+python3 -m venv ~/.agents/cache/yuque-lakebook-export/.venv
+~/.agents/cache/yuque-lakebook-export/.venv/bin/python -m pip install -r scripts/requirements.txt
+```
+
+5. 优先使用下面这个包装入口，它会自动处理固定缓存虚拟环境：
+
+```bash
+python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
+```
+
+6. 如果当前 Python 环境允许直接安装依赖，也可以直接执行：
 
 ```bash
 python3 -m pip install -r scripts/requirements.txt
 ```
 
-3. 单文件执行：
+7. 不要在当前工作目录、用户下载目录、或 skill 目录下创建 `.venv`、`.yuque-export-venv` 这类临时环境。
+8. 单文件执行：
 
 ```bash
-python3 scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
+python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-4. 批量执行：
+9. 批量执行：
 
 ```bash
-python3 scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
+python3 scripts/run_export.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-5. 只有在用户明确要求终端交互选择时，才运行：
+10. 如果使用固定缓存虚拟环境直接执行，就用它的 Python 来运行：
 
 ```bash
-python3 scripts/cli.py
+~/.agents/cache/yuque-lakebook-export/.venv/bin/python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-6. 导出完成后检查：
+11. 只有在用户明确要求终端交互选择时，才运行：
+
+```bash
+python3 scripts/run_export.py
+```
+
+12. 导出完成后检查：
 - `.md` 文件是否生成
 - 同名 `.assets` 目录是否生成
 - 内部链接是否转为相对 Markdown 路径
 - 图片是否能在 Obsidian 中正常显示
 
-7. 如果导出失败，优先查看输入 `.lakebook` 同目录下生成的批量日志。
+13. 如果导出失败，优先查看输入 `.lakebook` 同目录下生成的批量日志。
 
 详细行为、输出规则和排查说明见 `references/usage.md`。
