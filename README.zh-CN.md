@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-16-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-8-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -17,28 +17,16 @@
 
 | 技能 | 语言 | 描述 | 核心功能 |
 |------|------|------|----------|
-| [novel-writer](skills/en/novel-writer/SKILL.md) | English | 专业小说写作助手，支持完整创作流程 | 创作小说、续写章节、角色设计、世界观构建 |
 | [novel-writer-cn](skills/zh-cn/novel-writer-cn/SKILL.md) | 中文 | 专为中文小说创作设计的写作助手 | 创作中文小说、续写章节、角色设计、世界观构建 |
-| [multi-lang-readme](skills/en/multi-lang-readme/SKILL.md) | English | 英文版多语言 README 翻译技能 | 将 README 翻译成多语言并保持结构 |
 | [multi-lang-readme-cn](skills/zh-cn/multi-lang-readme-cn/SKILL.md) | 中文 | 中文版多语言 README 翻译技能 | 创建中英/多语言 README，统一命名与链接 |
-| [conversation-json-to-md](skills/en/conversation-json-to-md/SKILL.md) | English | 将聊天导出 JSON 转换为一会话一文件的 Markdown | 自动识别格式、问答提取、标题规范化、导出后二次格式化 |
 | [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
-| [topic-bookmarks-reorganizer](skills/en/topic-bookmarks-reorganizer/SKILL.md) | English | 主题书签重整技能（英文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 主题书签重整技能（中文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
-| [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | 从微信文章中提取样式并更新主题配置（英文版） | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | 从微信公众号文章中提取样式并生成主题配置 | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
-| [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | 审计 macOS 软件占用并执行分级清理（英文版） | 软件清单盘点、空间统计、安全清理、回收建议 |
 | [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | 审计 macOS 软件占用并执行分级清理 | 软件清单盘点、空间统计、安全清理、回收建议 |
-| [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录（英文版） | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
+| [ui-layout-analyzer-cn](skills/zh-cn/ui-layout-analyzer-cn/SKILL.md) | 中文 | 分析界面截图并输出布局与功能说明 | 界面结构识别、交互分析、元素清单、布局说明 |
 | [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
 
 ### 触发示例
-
-**novel-writer:**
-- "帮我写一部科幻小说"
-- "给这个故事续写一章"
-- "设计一个反派角色"
-- "构建一个赛博朋克世界"
 
 **novel-writer-cn:**
 - "帮我写一部中文科幻小说"
@@ -46,33 +34,17 @@
 - "设计一个反派角色"
 - "用中文构建一个赛博朋克世界"
 
-**multi-lang-readme:**
-- "create bilingual README"
-- "translate README to Japanese"
-- "add German README version"
-
 **multi-lang-readme-cn:**
 - "帮我创建中英 README"
 - "帮我创建多语言 README"
 - "把 README 翻译成日语"
 - "新增 README.zh-CN.md"
 
-**conversation-json-to-md:**
-- "convert this chat-export json to markdown files"
-- "one conversation per md file"
-- "keep only user and assistant Q/A"
-- "normalize output headings after export"
-
 **conversation-json-to-md-cn:**
 - "把这个聊天导出 json 转成多个 md"
 - "一个会话一个 markdown 文件"
 - "只保留用户和助手问答"
 - "导出后再做一次二次格式化"
-
-**topic-bookmarks-reorganizer:**
-- "reorganize this bookmarks export and keep only the AI folder"
-- "analyze links under one topic folder and regroup them"
-- "dedupe repeated bookmark URLs and export importable html"
 
 **topic-bookmarks-reorganizer-cn:**
 - "把这个书签导出里的 AI 目录重新分门别类并导出 html"
@@ -84,26 +56,16 @@
 - "帮我生成一个 markdown-wechat-converter 主题"
 - "把这个微信文章风格写入 markdown-to-wechat.html"
 
-**wechat-theme-extractor:**
-- "extract a theme from this WeChat article URL"
-- "generate a markdown-wechat-converter theme from this article"
-- "write the extracted style into markdown-to-wechat.html"
-
 **mac-software-storage-cleanup-cn:**
 - "检查我 Mac 上安装的软件都占了多少空间"
 - "列出可以优先清理的缓存和模拟器数据"
 - "给我一个 macOS 软件存储清理建议"
 
-**mac-software-storage-cleanup:**
-- "audit installed software sizes on my Mac"
-- "show safe cache and simulator cleanup candidates"
-- "give me a macOS storage cleanup plan"
-
-**yuque-lakebook-export:**
-- "export this Yuque .lakebook to markdown"
-- "convert my lakebook into an Obsidian folder"
-- "batch convert multiple .lakebook files"
-- "fix missing images and broken internal links from Yuque export"
+**ui-layout-analyzer-cn:**
+- "分析这个界面截图"
+- "描述这个界面的布局结构"
+- "这个 UI 是做什么的"
+- "输出这个界面的布局和功能说明"
 
 **yuque-lakebook-export-cn:**
 - "把这个语雀 lakebook 导出成 markdown"
