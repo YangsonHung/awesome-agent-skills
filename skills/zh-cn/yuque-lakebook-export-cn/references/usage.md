@@ -7,15 +7,15 @@
 
 ## 输出
 
-假设文档名为 `My Fair Lady`，输出结构为：
+假设文档名为 `your_document`，输出结构为：
 
 ```text
-My Fair Lady.md
-My Fair Lady.assets/
+your_document.md
+your_document.assets/
 ```
 
-- `My Fair Lady.md` 保存正文
-- `My Fair Lady.assets/` 保存图片和附件
+- `your_document.md` 保存正文
+- `your_document.assets/` 保存图片和附件
 
 ## 支持行为
 

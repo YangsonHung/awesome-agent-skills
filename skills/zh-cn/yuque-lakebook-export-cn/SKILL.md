@@ -37,13 +37,13 @@ python3 -m pip install -r scripts/requirements.txt
 3. 单文件执行：
 
 ```bash
-python3 scripts/cli.py -l "/path/to/AI.lakebook" -o "/target/root"
+python3 scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
 4. 批量执行：
 
 ```bash
-python3 scripts/cli.py -l "/path/to/AI.lakebook" "/path/to/FrontEnd.lakebook" -o "/target/root"
+python3 scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
 5. 只有在用户明确要求终端交互选择时，才运行：

@@ -7,15 +7,15 @@
 
 ## Outputs
 
-For a document named `My Fair Lady`:
+For a document named `your_document`:
 
 ```text
-My Fair Lady.md
-My Fair Lady.assets/
+your_document.md
+your_document.assets/
 ```
 
-- `My Fair Lady.md` contains the Markdown body
-- `My Fair Lady.assets/` stores downloaded images and attachments
+- `your_document.md` contains the Markdown body
+- `your_document.assets/` stores downloaded images and attachments
 
 ## Supported behavior
 

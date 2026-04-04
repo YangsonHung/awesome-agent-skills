@@ -402,6 +402,7 @@ if __name__ == '__main__':
             start_convert(None, str(lakebooks[0]), str(target_dir), args.downloadImage, args.skip_existing_resources,
                           open_output=args.open_output)
         else:
-            output_root = Path(args.output).expanduser() if args.output else Path("~/Doc").expanduser()
+            default_output_root = lakebooks[0].parent if lakebooks else Path.cwd()
+            output_root = Path(args.output).expanduser() if args.output else default_output_root
             run_batch(lakebooks, output_root, args.downloadImage, args.skip_existing_resources,
                       open_output=args.open_output)
