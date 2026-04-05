@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-@Time ： 2023年11月13日 13点41分
-@Auth ： zhoup
-@File ：lake_setup.py
-"""
 import json
 import re
 import traceback
@@ -39,16 +33,36 @@ HEADING_RE = re.compile(r'^\s{0,3}#{1,6}\s+')
 HR_RE = re.compile(r'^\s{0,3}([-*_])(\s*\1){2,}\s*$')
 TABLE_ROW_RE = re.compile(r'^\s*\|.*\|\s*$')
 LIST_RE = re.compile(r'^\s*(?:[-+*]|\d+\.)\s+')
-LAKE_PREFIX_RE = re.compile(r'^\ufeff?lake(?=\s*<)', re.IGNORECASE)
-LAKE_MD_PREFIX_RE = re.compile(r'^\ufeff?lake(?=\s{0,3}#{1,6}\s)', re.IGNORECASE)
+LAKE_DOCTYPE_RE = re.compile(r'^\ufeff?(?:<!doctype\s+lake>\s*)?', re.IGNORECASE)
+
+
+def strip_lake_prefix_artifact(text):
+    normalized = text.lstrip("\ufeff")
+    normalized = LAKE_DOCTYPE_RE.sub("", normalized, count=1)
+    if not normalized[:4].lower() == "lake":
+        return normalized
+
+    remainder = normalized[4:]
+    stripped_remainder = remainder.lstrip()
+    if not stripped_remainder:
+        return ""
+
+    marker = stripped_remainder[0]
+    if (
+        marker.isupper()
+        or not marker.isascii()
+        or marker in {"!", "#", "*", "-", "_", "`", "~", ">", "[", "(", "{", "|", ":"}
+    ):
+        return stripped_remainder
+
+    return normalized
 
 
 def normalize_markdown(text):
     """
     统一整理块级元素之间的空行，提升 Obsidian 等 Markdown 渲染兼容性。
     """
-    text = text.lstrip("\ufeff")
-    text = LAKE_MD_PREFIX_RE.sub("", text, count=1)
+    text = strip_lake_prefix_artifact(text)
     lines = text.splitlines()
     if not lines:
         return text
@@ -277,9 +291,7 @@ class LakeToMd:
         某些 lakebook 文档正文会把语雀 Lake 格式标记残留在开头，例如 `lake<h2>...`。
         这里在保留原有 ASL/Lake 解析能力的前提下，去掉这个误前缀，避免导出 `lake##`。
         """
-        cleaned = body.lstrip("\ufeff")
-        cleaned = LAKE_PREFIX_RE.sub("", cleaned, count=1)
-        return cleaned
+        return strip_lake_prefix_artifact(body)
 
     def to_md(self, global_context):
         mp = MyParser(self.body_html)
