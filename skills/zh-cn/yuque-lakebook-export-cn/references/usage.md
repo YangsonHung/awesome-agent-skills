@@ -29,8 +29,9 @@ your_document.assets/
 
 ## 排查
 
-- 先执行 `uv sync` 同步依赖
-- 不要在用户当前工作目录或下载目录下创建临时虚拟环境
+- 先切换到当前已安装 skill 的工具目录，再执行 `uv sync` 同步依赖；这个目录应包含 `SKILL.md`、`pyproject.toml`、`uv.lock` 和 `scripts/`
+- `uv sync` 和 `uv run python scripts/cli.py ...` 都必须在该 skill 工具目录执行，不要在 `.lakebook` 所在目录、输出目录或用户当前工作区根目录执行
+- 不要在用户当前工作目录、下载目录或任意任务目录下手动创建临时虚拟环境
 - 缺少 `bs4`：执行 `uv sync`
 - Obsidian 图片不显示：检查 `.assets` 路径和链接编码
 - 表格渲染异常：重新导出，脚本会做 Markdown 规范化

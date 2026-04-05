@@ -33,40 +33,49 @@ Do not use this skill for:
 4. Prefer `uv` consistently. Do not create temporary `.venv` or similar task-local environments in the working directory.
 5. Before running any `uv` command, first check whether `uv` is available in the environment.
 6. If `uv` is not installed or not available in `PATH`, the agent must ask the user for confirmation before installing `uv`. Do not install it silently.
-7. Use this entrypoint for agent execution:
+7. Before running `uv sync` or `uv run python scripts/cli.py ...`, the agent must first switch into the installed skill tool directory, meaning the directory that contains this `SKILL.md`, `pyproject.toml`, `uv.lock`, and `scripts/`. Do not run these commands directly from the `.lakebook` source directory, the output directory, or the user's current workspace root.
+8. Use this entrypoint for agent execution:
 
 ```bash
 uv run python scripts/cli.py
 ```
 
-8. Sync dependencies before first use:
+9. Sync dependencies before first use:
 
 ```bash
 uv sync
 ```
 
-9. Standard single-file execution:
+10. Recommended command order:
+
+```bash
+cd /path/to/installed-skill-root
+uv sync
+uv run python scripts/cli.py ...
+```
+
+11. Standard single-file execution:
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-10. Standard batch execution:
+12. Standard batch execution:
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-11. Although `scripts/cli.py` still supports interactive terminal selection for manual human use, agents must not rely on interactive mode because they cannot reliably capture terminal interaction state. Always pass explicit `-l` and `-o` arguments.
-12. Do not manually create temporary virtual environments in the current working directory, the user's download directory, or the skill directory.
-13. Some Yuque exports include `<!doctype lake>` at the start of the document body; older implementations could render this as a stray `lake##` prefix in Markdown. The current skill implementation already handles this case.
-14. After export, verify:
+13. Although `scripts/cli.py` still supports interactive terminal selection for manual human use, agents must not rely on interactive mode because they cannot reliably capture terminal interaction state. Always pass explicit `-l` and `-o` arguments.
+14. Do not manually create temporary virtual environments in the current working directory, the user's download directory, or any task directory; dependencies should be managed by `uv` from the skill tool directory.
+15. Some Yuque exports include `<!doctype lake>` at the start of the document body; older implementations could render this as a stray `lake##` prefix in Markdown. The current skill implementation already handles this case.
+16. After export, verify:
 - `.md` files exist
 - sibling `.assets` folders exist
 - internal links are relative Markdown paths
 - images render in Obsidian
 - exported documents do not start with an erroneous `lake##` prefix
 
-15. If export fails, inspect the batch log written next to the input `.lakebook` files.
+17. If export fails, inspect the batch log written next to the input `.lakebook` files.
 
 For detailed behavior, troubleshooting, and output rules, read `references/usage.md`.
