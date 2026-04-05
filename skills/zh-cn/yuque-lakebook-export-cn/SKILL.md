@@ -33,7 +33,7 @@ license: MIT
 4. 统一优先使用 `uv`，不要在任务目录里临时创建 `.venv`、`.yuque-export-venv` 这类环境。
 5. 在执行任何 `uv` 命令前，先检查当前环境是否可用 `uv`。
 6. 如果 `uv` 未安装，或者不在 `PATH` 中，Agent 必须先征求用户确认是否安装 `uv`，不能直接静默安装。
-7. 优先使用下面这个入口：
+7. Agent 执行时使用下面这个入口：
 
 ```bash
 uv run python scripts/cli.py
@@ -57,12 +57,7 @@ uv run python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 uv run python scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-11. 只有在用户明确要求终端交互选择时，才运行：
-
-```bash
-uv run python scripts/cli.py
-```
-
+11. 虽然 `scripts/cli.py` 仍然保留了给人类终端手工使用的交互选择能力，但 Agent 不应依赖交互模式，因为无法稳定获取终端交互状态。执行时始终显式传入 `-l` 和 `-o` 参数。
 12. 不要在当前工作目录、用户下载目录、或 skill 目录下手动创建临时虚拟环境。
 13. 已知有些语雀导出的文档正文会包含 `<!doctype lake>`，旧实现可能导出成 `lake## 标题`；当前技能内置实现已经处理这个问题。
 14. 导出完成后检查：
