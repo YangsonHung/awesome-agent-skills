@@ -31,43 +31,38 @@ license: MIT
 2. Agent 在执行任何非交互导出前，必须先向用户确认输出根目录，不能自行决定输出目录。
 3. 如果用户还没有明确给出输出目录，就先用一句简短问题询问，等用户答复后再执行导出。
 4. 统一优先使用 `uv`，不要在任务目录里临时创建 `.venv`、`.yuque-export-venv` 这类环境。
-5. 优先使用下面这个包装入口：
+5. 在执行任何 `uv` 命令前，先检查当前环境是否可用 `uv`。
+6. 如果 `uv` 未安装，或者不在 `PATH` 中，Agent 必须先征求用户确认是否安装 `uv`，不能直接静默安装。
+7. 优先使用下面这个入口：
 
 ```bash
 uv run python scripts/cli.py
 ```
 
-6. 首次使用前同步依赖：
+8. 首次使用前同步依赖：
 
 ```bash
 uv sync
 ```
 
-7. 单文件执行：
+9. 单文件执行：
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-8. 批量执行：
+10. 批量执行：
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-9. 只有在用户明确要求终端交互选择时，才运行：
+11. 只有在用户明确要求终端交互选择时，才运行：
 
 ```bash
 uv run python scripts/cli.py
 ```
 
-10. 如果当前环境不能直接使用 `uv` 命令，再退回 skill 自带包装脚本：
-
-```bash
-python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
-```
-
-11. 包装脚本会自行准备缓存环境，所以只有在 `uv` 不可用时才使用它。
 12. 不要在当前工作目录、用户下载目录、或 skill 目录下手动创建临时虚拟环境。
 13. 已知有些语雀导出的文档正文会包含 `<!doctype lake>`，旧实现可能导出成 `lake## 标题`；当前技能内置实现已经处理这个问题。
 14. 导出完成后检查：

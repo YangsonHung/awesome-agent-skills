@@ -31,43 +31,38 @@ Do not use this skill for:
 2. Before any non-interactive export, the agent must confirm the output root directory with the user. Do not choose an output directory on the user's behalf.
 3. If the user has not provided an output directory, ask a concise question and wait for the user's answer before running the export command.
 4. Prefer `uv` consistently. Do not create temporary `.venv` or similar task-local environments in the working directory.
-5. Prefer this entrypoint:
+5. Before running any `uv` command, first check whether `uv` is available in the environment.
+6. If `uv` is not installed or not available in `PATH`, the agent must ask the user for confirmation before installing `uv`. Do not install it silently.
+7. Prefer this entrypoint:
 
 ```bash
 uv run python scripts/cli.py
 ```
 
-6. Sync dependencies before first use:
+8. Sync dependencies before first use:
 
 ```bash
 uv sync
 ```
 
-7. Standard single-file execution:
+9. Standard single-file execution:
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file.lakebook" -o "/target/root"
 ```
 
-8. Standard batch execution:
+10. Standard batch execution:
 
 ```bash
 uv run python scripts/cli.py -l "/path/to/your_file_1.lakebook" "/path/to/your_file_2.lakebook" -o "/target/root"
 ```
 
-9. Only use interactive mode when the user explicitly wants terminal selection:
+11. Only use interactive mode when the user explicitly wants terminal selection:
 
 ```bash
 uv run python scripts/cli.py
 ```
 
-10. If `uv` is unavailable in the environment, fall back to the bundled wrapper script:
-
-```bash
-python3 scripts/run_export.py -l "/path/to/your_file.lakebook" -o "/target/root"
-```
-
-11. The wrapper script manages its own cached environment, so use it only as a fallback when `uv` cannot be used.
 12. Do not manually create temporary virtual environments in the current working directory, the user's download directory, or the skill directory.
 13. Some Yuque exports include `<!doctype lake>` at the start of the document body; older implementations could render this as a stray `lake##` prefix in Markdown. The current skill implementation already handles this case.
 14. After export, verify:

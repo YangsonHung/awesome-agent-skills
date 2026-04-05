@@ -31,7 +31,6 @@ your_document.assets/
 
 - Sync dependencies with `uv sync`
 - Avoid creating task-local virtual environments under the user's working directory or download directory
-- `python3 scripts/run_export.py ...` is only a wrapper around `uv`
 - Missing `bs4`: run `uv sync`
 - Missing images in Obsidian: check generated `.assets` paths and URL encoding
 - Wrong table rendering: re-export with the bundled parser because it normalizes Markdown spacing

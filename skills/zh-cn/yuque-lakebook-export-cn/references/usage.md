@@ -31,7 +31,6 @@ your_document.assets/
 
 - 先执行 `uv sync` 同步依赖
 - 不要在用户当前工作目录或下载目录下创建临时虚拟环境
-- `python3 scripts/run_export.py ...` 仅作为 `uv` 的包装入口
 - 缺少 `bs4`：执行 `uv sync`
 - Obsidian 图片不显示：检查 `.assets` 路径和链接编码
 - 表格渲染异常：重新导出，脚本会做 Markdown 规范化
