@@ -20,9 +20,8 @@ def run_git_log(repo_path, since, until, author=None, no_merges=True):
     cmd.append(f"--until={until} 23:59:59")
     if author:
         cmd.append(f"--author={author}")
-    cmd.append(
-        '--format={"hash":"%H","short_hash":"%h","author":"%an","date":"%aI","subject":"%s","body":"%b","refs":"%D"}'
-    )
+    # %x00 = NUL (record separator), %x01 = SOH (field separator)
+    cmd.append("--format=%H%x01%h%x01%an%x01%aI%x01%s%x01%b%x01%D%x00")
 
     try:
         result = subprocess.run(
@@ -37,17 +36,26 @@ def run_git_log(repo_path, since, until, author=None, no_merges=True):
         return []
 
     commits = []
-    for line in result.stdout.strip().split("\n"):
-        line = line.strip()
-        if not line:
+    for record in result.stdout.split("\x00"):
+        record = record.strip()
+        if not record:
             continue
-        try:
-            entry = json.loads(line)
-            if len(entry.get("body", "")) > MAX_BODY_LENGTH:
-                entry["body"] = entry["body"][:MAX_BODY_LENGTH] + "..."
-            commits.append(entry)
-        except json.JSONDecodeError:
-            print(f"Warning: skipping unparseable line: {line[:80]}", file=sys.stderr)
+        parts = record.split("\x01")
+        if len(parts) < 7:
+            print(f"Warning: skipping malformed record: {record[:80]}", file=sys.stderr)
+            continue
+        body = parts[5].strip()
+        if len(body) > MAX_BODY_LENGTH:
+            body = body[:MAX_BODY_LENGTH] + "..."
+        commits.append({
+            "hash": parts[0],
+            "short_hash": parts[1],
+            "author": parts[2],
+            "date": parts[3],
+            "subject": parts[4],
+            "body": body,
+            "refs": parts[6],
+        })
 
     return commits
 
