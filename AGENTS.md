@@ -8,11 +8,21 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/multi-lang-readme/`
   - `skills/en/conversation-json-to-md/`
   - `skills/en/topic-bookmarks-reorganizer/`
+  - `skills/en/wechat-theme-extractor/`
+  - `skills/en/mac-software-storage-cleanup/`
+  - `skills/en/ui-layout-analyzer/`
+  - `skills/en/yuque-lakebook-export/`
+  - `skills/en/git-weekly-report/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
   - `skills/zh-cn/conversation-json-to-md-cn/`
   - `skills/zh-cn/topic-bookmarks-reorganizer-cn/`
+  - `skills/zh-cn/wechat-theme-extractor-cn/`
+  - `skills/zh-cn/mac-software-storage-cleanup-cn/`
+  - `skills/zh-cn/ui-layout-analyzer-cn/`
+  - `skills/zh-cn/yuque-lakebook-export-cn/`
+  - `skills/zh-cn/git-weekly-report-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata
@@ -65,3 +75,12 @@ PRs should include:
 - Linked issue/task if available
 
 Keep each PR focused on one logical change.
+
+## Skill Directory Maintenance
+
+When a skill is added or removed, update the following locations to keep the directory in sync:
+
+1. This file (`AGENTS.md`) — Project Structure & Module Organization section
+2. `README.md` — Available Skills table and Trigger Examples section
+3. `README.zh-CN.md` — 可用技能 table and 触发示例 section
+4. Badge count in `README.md` and `README.zh-CN.md`
