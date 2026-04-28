@@ -5,6 +5,8 @@
 
 [English](README.md) | **中文**
 
+**项目地址**：https://github.com/YangsonHung/awesome-agent-skills
+
 为 Claude Code 等智能助手提供专业领域能力的 AI Agent Skills 技能包集合。
 
 ## 特性

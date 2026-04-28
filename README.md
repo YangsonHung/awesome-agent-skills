@@ -5,6 +5,8 @@
 
 **English** | [中文](README.zh-CN.md)
 
+**Repository**: https://github.com/YangsonHung/awesome-agent-skills
+
 A collection of AI Agent Skills that provide professional domain capabilities for intelligent assistants like Claude Code.
 
 ## Features
