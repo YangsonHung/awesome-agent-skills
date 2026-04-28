@@ -22,7 +22,7 @@ Do not use this skill when:
 - The user only wants article text extraction without theme analysis
 - The target project does not contain `markdown-wechat-converter` or `markdown-to-wechat.html`
 
-## Usage
+## Instructions
 
 1. Run `scripts/extract.py` to fetch the article HTML and extract the title and `js_content`.
 2. Read `.extracted_content.html` and analyze style traits directly from the HTML.

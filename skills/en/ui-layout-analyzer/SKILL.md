@@ -11,7 +11,14 @@ Analyze the provided UI screenshot and output structured layout description and 
 
 Use this skill when the user provides a UI image and requests analysis.
 
-## Output Format
+## Do not use
+
+Do not use this skill for:
+- Non-UI images (photos, diagrams, charts that are not interface screenshots)
+- Requests to design or create UI (use ui-ux-pro-max instead)
+- Code review of UI implementation (use code-reviewer instead)
+
+## Instructions
 
 Follow this format exactly:
 
