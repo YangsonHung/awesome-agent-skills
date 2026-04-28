@@ -1,19 +1,21 @@
 ---
 name: git-weekly-report
-description: Summarize git commit logs into a structured weekly report with sections for completed work, in-progress items, highlights, next-week plans, and risks. Use when the user asks to generate a weekly report (周报), summarize recent git activity, review commits by project over a date range, or asks "what did I do this week".
+description: Summarize git commit logs into a structured weekly or daily report (周报, 日报) with sections for completed work, in-progress items, highlights, plans, and risks. Use when the user asks to generate a weekly report, daily report, summarize yesterday's git commits, review what they did today/this week, summarize recent git activity, or categorize commits by project. Triggers on keywords like git log, commit history, daily standup, work summary, 周报, 日报, 昨天做了什么, 今天的工作, 总结昨天, 本周工作, git活动, 提交记录.
 ---
 
 # Git Weekly Report
 
-Extract git commit logs and generate a structured weekly report.
+Extract git commit logs and generate a structured weekly or daily report.
 
 ## When to Use
 
 Use this skill when the user asks for:
-- Generating a weekly report (周报) from git commits
+- Generating a weekly report (周报) or daily report (日报) from git commits
+- Summarizing yesterday's or today's git activity
 - Summarizing recent git activity across one or more repositories
 - Reviewing what work was done over a date range
 - Compiling commit history into a categorized report
+- Preparing a daily standup summary from commits
 
 ## Do not use
 
@@ -25,7 +27,10 @@ Do not use this skill for:
 
 ## Instructions
 
-1. Determine the date range. Default: last 7 days (Monday to Sunday if the user says "this week"). Accept user overrides.
+1. Determine the date range and report type:
+   - **Daily report (日报)**: if user says "yesterday", "today", "昨天", "今天", "日报" — default `--since` to yesterday, `--until` to today
+   - **Weekly report (周报)**: if user says "this week", "本周", "周报" — default `--since` to last Monday, `--until` to today
+   - Otherwise: default to last 7 days. Accept user overrides.
 2. Determine the author filter if the user specifies one. Default: all authors.
 3. Determine repository path(s). Default: current working directory. If the user mentions multiple projects, collect all paths.
 4. Run the script:
@@ -37,7 +42,7 @@ python3 scripts/git_weekly_report.py --since <YYYY-MM-DD> --until <YYYY-MM-DD> [
 5. Read the JSON output. The script provides structured commit data grouped by repository.
 6. Use [weekly-report-format.md](references/weekly-report-format.md) as the categorization guide to classify commits by type.
 7. Use [weekly-report-template.md](assets/templates/weekly-report-template.md) as the output structure when generating the final report.
-8. For "next-week plans" and "risks" sections: ask the user if they have items to add, since these are not derivable from git logs.
+8. For "next-week plans" and "risks" sections: ask the user if they have items to add, since these are not derivable from git logs. For daily reports, omit these sections unless the user requests them.
 9. Present the final Markdown report. Save to a file if the user requests it.
 
 ## Script Usage
