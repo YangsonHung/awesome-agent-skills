@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-10-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-11-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -27,6 +27,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
 | [ui-layout-analyzer](skills/en/ui-layout-analyzer/SKILL.md) | English | Analyze UI screenshots and describe layout plus functional structure | UI structure recognition, interaction analysis, element inventory, layout explanation |
 | [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
+| [tweetclaw-twitter-automation](skills/en/tweetclaw-twitter-automation/SKILL.md) | English | Use TweetClaw safely for approved X/Twitter automation from agents | Tweet scraping, reply search, follower export, user lookup, media, DMs, monitors, webhooks, giveaway draws, approved posts/replies |
 | [git-weekly-report](skills/en/git-weekly-report/SKILL.md) | English | Summarize git commit logs into structured weekly reports | Multi-repo extraction, date range filtering, commit categorization, weekly report generation |
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
 
@@ -75,6 +76,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "convert my lakebook into an Obsidian folder"
 - "batch convert multiple .lakebook files"
 - "fix missing images and broken internal links from Yuque export"
+
+**tweetclaw-twitter-automation:**
+- "scrape tweets with TweetClaw"
+- "search tweet replies for this post"
+- "post this approved tweet through OpenClaw"
+- "export followers and summarize the result"
 
 **git-weekly-report:**
 - "generate a weekly report from my git commits"
