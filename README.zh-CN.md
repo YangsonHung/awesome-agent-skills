@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-10-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-11-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -27,6 +27,7 @@
 | [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | 审计 macOS 软件占用并执行分级清理 | 软件清单盘点、空间统计、安全清理、回收建议 |
 | [ui-layout-analyzer-cn](skills/zh-cn/ui-layout-analyzer-cn/SKILL.md) | 中文 | 分析界面截图并输出布局与功能说明 | 界面结构识别、交互分析、元素清单、布局说明 |
 | [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
+| [tweetclaw-twitter-automation-cn](skills/zh-cn/tweetclaw-twitter-automation-cn/SKILL.md) | 中文 | 使用 TweetClaw 安全执行用户批准的 X/Twitter 自动化 | 推文抓取、回复搜索、粉丝导出、用户查询、媒体、私信、监控、Webhook、抽奖、批准后的发帖/回复 |
 | [git-weekly-report-cn](skills/zh-cn/git-weekly-report-cn/SKILL.md) | 中文 | 将 Git 提交日志汇总为结构化周报 | 多仓库提取、日期范围过滤、提交分类、周报生成 |
 | [git-push-secondary-merge-primary-cn](skills/zh-cn/git-push-secondary-merge-primary-cn/SKILL.md) | 中文 | 提交并推送副分支，再合并到主分支并推送，最后切回副分支 | 双分支同步、分支自动识别、Conventional Commits、保留合并提交、安全推送 |
 
@@ -76,6 +77,12 @@
 - "把语雀知识库迁移到 Obsidian"
 - "批量转换多个 .lakebook 文件"
 - "修复语雀导出后的图片、裁剪图和内部链接问题"
+
+**tweetclaw-twitter-automation-cn:**
+- "用 TweetClaw 抓取推文"
+- "搜索这条推文的回复"
+- "通过 OpenClaw 发布这条已确认的推文"
+- "导出粉丝并总结结果"
 
 **git-weekly-report-cn:**
 - "帮我生成一份周报"
