@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-10-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-11-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -29,6 +29,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
 | [git-weekly-report](skills/en/git-weekly-report/SKILL.md) | English | Summarize git commit logs into structured weekly reports | Multi-repo extraction, date range filtering, commit categorization, weekly report generation |
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
+| [x-twitter-scraper](skills/en/x-twitter-scraper/SKILL.md) | English | Plan X/Twitter data workflows with Xquik | Tweet search, profile timelines, follower export, media download, monitors, webhooks, MCP |
 
 ### Trigger Examples
 
@@ -87,6 +88,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "push the work branch then merge to master"
 - "提交推送副分支，然后合并到主分支并推送"
 - "把 develop 合到 main 上并推送，最后切回 develop"
+
+**x-twitter-scraper:**
+- "search X posts for this keyword"
+- "export followers for this account"
+- "set up an X monitor with a webhook"
+- "choose the right Xquik endpoint for this workflow"
 
 ## Quick Start
 
