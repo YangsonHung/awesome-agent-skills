@@ -37,6 +37,10 @@ Do not use this skill for:
 6. If currently on the primary branch and no secondary branch was specified, prefer an existing `dev`, then `develop`.
 7. If the branches still cannot be determined safely, ask the user for the 主分支 and 副分支 names.
 
+## Instructions
+
+Follow the workflow below exactly, preserving user changes and stopping on unsafe branch, merge, or push conditions.
+
 ## Workflow
 
 1. Inspect repository state.
