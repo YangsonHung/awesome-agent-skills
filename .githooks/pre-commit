@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -eu
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+echo "Running skill validation..."
+python3 scripts/validate_skills.py --strict
+
+if command -v node >/dev/null 2>&1; then
+  node scripts/validate-skills.js --strict
+else
+  echo "Skipping legacy Node validator: node not found."
+fi

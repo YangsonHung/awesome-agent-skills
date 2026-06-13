@@ -27,6 +27,10 @@ Do not use this skill for:
 - Generating reports from git history (use `git-weekly-report` instead)
 - Reviewing code changes (use `code-reviewer` or `frontend-code-review` instead)
 
+## Instructions
+
+Follow the branch detection rules first, then execute the workflow in order. Stop and report the blocker instead of guessing when branch names, merge conflicts, dirty worktrees, or rejected pushes cannot be handled safely.
+
 ## Branch Detection
 
 1. Prefer explicit branch names from the user.

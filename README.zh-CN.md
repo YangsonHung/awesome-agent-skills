@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-10-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-11-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -29,6 +29,7 @@
 | [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
 | [git-weekly-report-cn](skills/zh-cn/git-weekly-report-cn/SKILL.md) | 中文 | 将 Git 提交日志汇总为结构化周报 | 多仓库提取、日期范围过滤、提交分类、周报生成 |
 | [git-push-secondary-merge-primary-cn](skills/zh-cn/git-push-secondary-merge-primary-cn/SKILL.md) | 中文 | 提交并推送副分支，再合并到主分支并推送，最后切回副分支 | 双分支同步、分支自动识别、Conventional Commits、保留合并提交、安全推送 |
+| [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 
 ### 触发示例
 
@@ -88,6 +89,12 @@
 - "提交推送 dev，然后合并到 main"
 - "把 develop 合到 master 上推送，最后切回 develop"
 - "把工作分支推上去再合到主分支并切回来"
+
+**frontend-quality-guardrails-cn:**
+- "检查这个 React 组件的超长文本和布局溢出问题"
+- "修复这个仪表盘在移动端的溢出和对齐问题"
+- "打磨这个表单并验证响应式状态"
+- "检查这个表格的截断、换行和浏览器布局踩坑点"
 
 ## 快速开始
 
@@ -205,6 +212,16 @@ node scripts/validate-skills.js --strict
 ```
 
 以上命令都应返回退出码 `0`。
+
+### Git Hooks
+
+在本地启用仓库 pre-commit hook：
+
+```bash
+git config core.hooksPath .githooks
+```
+
+该 hook 会在每次提交前运行两个严格模式技能校验脚本。
 
 ### Skill Format
 

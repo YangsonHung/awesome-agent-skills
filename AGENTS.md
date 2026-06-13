@@ -14,6 +14,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/yuque-lakebook-export/`
   - `skills/en/git-weekly-report/`
   - `skills/en/git-push-secondary-merge-primary/`
+  - `skills/en/frontend-quality-guardrails/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
@@ -25,6 +26,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/yuque-lakebook-export-cn/`
   - `skills/zh-cn/git-weekly-report-cn/`
   - `skills/zh-cn/git-push-secondary-merge-primary-cn/`
+  - `skills/zh-cn/frontend-quality-guardrails-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata

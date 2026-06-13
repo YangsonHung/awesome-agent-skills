@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-10-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-11-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -29,6 +29,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
 | [git-weekly-report](skills/en/git-weekly-report/SKILL.md) | English | Summarize git commit logs into structured weekly reports | Multi-repo extraction, date range filtering, commit categorization, weekly report generation |
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
+| [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 
 ### Trigger Examples
 
@@ -87,6 +88,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "push the work branch then merge to master"
 - "提交推送副分支，然后合并到主分支并推送"
 - "把 develop 合到 main 上并推送，最后切回 develop"
+
+**frontend-quality-guardrails:**
+- "review this React component for long text and layout overflow"
+- "fix the mobile overflow and alignment issues in this dashboard"
+- "polish this form and verify responsive UI states"
+- "check this table for truncation, wrapping, and browser layout pitfalls"
 
 ## Quick Start
 
@@ -204,6 +211,16 @@ node scripts/validate-skills.js --strict
 ```
 
 Both commands must exit with code `0`.
+
+### Git Hooks
+
+Enable the repository pre-commit hook locally:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+The hook runs both strict skill validators before each commit.
 
 ### Skill Format
 
