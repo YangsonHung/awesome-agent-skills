@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-11-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-12-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -13,6 +13,7 @@
 
 - **模块化设计** - 按需加载技能
 - **中英双语** - 每个技能都必须同时提供英文版和中文版
+- **语言守卫** - 英文版 `SKILL.md` 不允许出现中文或其他汉字字符，`multi-lang-readme` 的语言名称示例除外
 - **资源丰富** - 每个技能都有完整的参考资料和模板
 
 ## 可用技能
@@ -29,6 +30,7 @@
 | [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
 | [git-weekly-report-cn](skills/zh-cn/git-weekly-report-cn/SKILL.md) | 中文 | 将 Git 提交日志汇总为结构化周报 | 多仓库提取、日期范围过滤、提交分类、周报生成 |
 | [git-push-secondary-merge-primary-cn](skills/zh-cn/git-push-secondary-merge-primary-cn/SKILL.md) | 中文 | 提交并推送副分支，再合并到主分支并推送，最后切回副分支 | 双分支同步、分支自动识别、Conventional Commits、保留合并提交、安全推送 |
+| [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 
 ### 触发示例
@@ -89,6 +91,12 @@
 - "提交推送 dev，然后合并到 main"
 - "把 develop 合到 master 上推送，最后切回 develop"
 - "把工作分支推上去再合到主分支并切回来"
+
+**git-pushing-fast-cn:**
+- "提交推送"
+- "把当前改动提交并推送"
+- "推上去，提交正文按模块分段说明"
+- "commit and push these changes"
 
 **frontend-quality-guardrails-cn:**
 - "检查这个 React 组件的超长文本和布局溢出问题"
@@ -193,11 +201,12 @@ https://github.com/vercel-labs/skills/blob/main/README.md
    - `references/` - 参考资料（可选）
    - `assets/` - 模板与资源（可选）
 4. 确保中英文两个技能一起提交，且内容和触发场景保持同步
-5. 提交 Pull Request
+5. 英文版 `skills/en/**/SKILL.md` 不得包含中文或其他汉字字符；中文示例、触发语和本地化表达只写入对应 `skills/zh-cn/**/SKILL.md`。例外是 `skills/en/multi-lang-readme/SKILL.md`，其中的语言切换示例可以展示语言原生名称。
+6. 提交 Pull Request
 
 ### 测试 SKILL.md
 
-提交 PR 前，请先在本地校验技能文件：
+提交 PR 前，请先在本地校验技能文件。校验会检查技能结构、中英文配对，以及英文版 `SKILL.md` 的语言规则：
 
 ```bash
 python3 scripts/validate_skills.py
@@ -221,7 +230,7 @@ node scripts/validate-skills.js --strict
 git config core.hooksPath .githooks
 ```
 
-该 hook 会在每次提交前运行两个严格模式技能校验脚本。
+该 hook 会在每次提交前运行严格模式技能校验脚本，包括英文版技能语言检查。
 
 ### Skill Format
 

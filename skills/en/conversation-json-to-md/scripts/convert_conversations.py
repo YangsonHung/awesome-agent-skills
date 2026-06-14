@@ -66,16 +66,16 @@ def to_text(value: Any) -> str:
 
 
 def clean_filename(raw: str, max_len: int = 120) -> str:
-    text = (raw or "").strip() or "未命名会话"
+    text = (raw or "").strip() or "Untitled conversation"
     text = re.sub(r'[\\/:*?"<>|\r\n\t]+', " ", text)
     text = re.sub(r"\s+", " ", text).strip(" .")
     text = text[:max_len].rstrip(" .")
-    return text or "未命名会话"
+    return text or "Untitled conversation"
 
 
 def question_heading(raw: str) -> str:
     single_line = re.sub(r"\s+", " ", (raw or "").strip())
-    return single_line or "（空问题）"
+    return single_line or "(Empty question)"
 
 
 def demote_response_headings(markdown: str) -> str:
@@ -592,11 +592,11 @@ def extract_qa_lines(turns: list[Turn]) -> list[str]:
             continue
         if role == "assistant":
             if not current_question_exists:
-                lines.append("## （未标注问题）")
+                lines.append("## (Unlabeled question)")
                 lines.append("")
                 current_question_exists = True
-            lines.append("### 回答")
-            lines.append(demote_response_headings(body) or "（无回答内容）")
+            lines.append("### Answer")
+            lines.append(demote_response_headings(body) or "(No answer content)")
             lines.append("")
 
     return lines
@@ -643,7 +643,7 @@ def main() -> int:
             lines.extend(qa_lines)
             exported_with_qa += 1
         else:
-            lines.append("（无可导出的问答内容）")
+            lines.append("(No exportable Q/A content)")
             lines.append("")
 
         (output_dir / filename).write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

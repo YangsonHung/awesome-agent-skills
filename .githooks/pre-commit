@@ -4,7 +4,7 @@ set -eu
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
-echo "Running skill validation..."
+echo "Running skill validation and English skill language checks..."
 python3 scripts/validate_skills.py --strict
 
 if command -v node >/dev/null 2>&1; then

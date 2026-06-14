@@ -14,6 +14,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/yuque-lakebook-export/`
   - `skills/en/git-weekly-report/`
   - `skills/en/git-push-secondary-merge-primary/`
+  - `skills/en/git-pushing-fast/`
   - `skills/en/frontend-quality-guardrails/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
@@ -26,6 +27,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/yuque-lakebook-export-cn/`
   - `skills/zh-cn/git-weekly-report-cn/`
   - `skills/zh-cn/git-push-secondary-merge-primary-cn/`
+  - `skills/zh-cn/git-pushing-fast-cn/`
   - `skills/zh-cn/frontend-quality-guardrails-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
@@ -38,6 +40,9 @@ This repository has no compile/build pipeline. Typical contributor commands are:
 
 - `git status` — inspect local changes before committing
 - `git diff` — review exact content changes
+- `python3 scripts/validate_skills.py --strict` — validate skill structure, bilingual counterparts, and English skill language rules
+- `node scripts/validate-skills.js --strict` — run the legacy/alternative strict validator
+- `git config core.hooksPath .githooks` — enable the local pre-commit validation hook
 - `cp -r skills/ ~/.claude/skills/` — install skills locally for manual validation
 - `find skills -maxdepth 3 -type f` — quick structure check before PR
 
@@ -50,6 +55,7 @@ Use concise, instructional Markdown with clear headings.
   - Chinese skills append `-cn`
   - Keep the folder name and `SKILL.md` frontmatter `name` aligned with the command name
   - Every skill must have both English and Chinese variants, and the pair must stay aligned in purpose, structure, and trigger coverage
+  - English `skills/en/**/SKILL.md` files must not contain Chinese/Han characters; put Chinese examples, triggers, and localized wording in the matching `skills/zh-cn/**/SKILL.md`. The only exception is `skills/en/multi-lang-readme/SKILL.md`, where language-switch examples may show native language names.
 - Required skill file: `SKILL.md`
 - Optional files/folders (add only when needed): `README.md`, `scripts/`, `references/`, `assets/`
 - Keep bilingual docs separated (English default in `README.md`, Chinese in `README.zh-CN.md`)
@@ -62,8 +68,9 @@ Testing is documentation-driven and manual:
 1. Verify links and paths in all edited Markdown files.
 2. Validate trigger examples are clear and actionable.
 3. If skill logic changes, install locally and run at least one prompt per trigger example.
+4. Run both strict validators before committing: `python3 scripts/validate_skills.py --strict` and `node scripts/validate-skills.js --strict`.
 
-There is currently no automated test framework or coverage gate.
+The `.githooks/pre-commit` hook runs strict skill validation, including the English skill language rule, when `core.hooksPath` points to `.githooks`.
 
 ## Commit & Pull Request Guidelines
 Follow Conventional Commits as seen in project history:

@@ -391,7 +391,7 @@ When practical, verify with these strings:
 This is a normal sentence that should wrap naturally without breaking the layout.
 SuperLongUnbrokenOrganizationNameWithNoSpacesAndManyCharacters1234567890
 https://example.com/a/very/long/path/with/query?search=frontend-layout-overflow-and-wrapping
-张三李四王五赵六前端页面超长文本混排ABCDEFGHIJKLMN1234567890
+UserLocaleLongTextWithoutSpacesMixedWithAsciiABCDEFGHIJKLMN1234567890
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 

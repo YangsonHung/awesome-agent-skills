@@ -9,7 +9,7 @@ description: Commit and push the secondary branch, then switch to the primary br
 
 Execute the standard two-branch handoff: finish work on the secondary branch, push it, merge it into the primary branch, push the primary branch, then return to the secondary branch.
 
-Use "副分支" for the branch that contains the current work, such as `dev`, `develop`, or another integration branch. Use "主分支" for the protected/release branch, such as `main` or `master`.
+Use "secondary branch" for the branch that contains the current work, such as `dev`, `develop`, or another integration branch. Use "primary branch" for the protected/release branch, such as `main` or `master`.
 
 ## When to Use
 
@@ -39,7 +39,7 @@ Follow the branch detection rules first, then execute the workflow in order. Sto
 4. If remote HEAD is unavailable, prefer an existing `main`, then `master`.
 5. Detect the secondary branch from the current branch when it is not the primary branch.
 6. If currently on the primary branch and no secondary branch was specified, prefer an existing `dev`, then `develop`.
-7. If the branches still cannot be determined safely, ask the user for the 主分支 and 副分支 names.
+7. If the branches still cannot be determined safely, ask the user for the primary and secondary branch names.
 
 ## Workflow
 
@@ -68,7 +68,7 @@ Follow the branch detection rules first, then execute the workflow in order. Sto
 5. Merge into `<primary_branch>`.
    - Run `git checkout <primary_branch>`.
    - Run `git pull --ff-only origin <primary_branch>`.
-   - Run `git merge --no-ff <secondary_branch> -m "chore(<primary_branch>): 合并 <secondary_branch> 到 <primary_branch>"` to preserve a merge commit when `<primary_branch>` does not already contain `<secondary_branch>`.
+   - Run `git merge --no-ff <secondary_branch> -m "chore(<primary_branch>): merge <secondary_branch> into <primary_branch>"` to preserve a merge commit when `<primary_branch>` does not already contain `<secondary_branch>`.
    - If there are merge conflicts, stop after Git reports them and tell the user which files need resolution.
 
 6. Push `<primary_branch>`.

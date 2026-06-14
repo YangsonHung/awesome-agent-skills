@@ -13,7 +13,7 @@ Use this skill when the user asks for:
 - Splitting one JSON chat export into many `.md` files
 - One conversation per markdown file
 - Keeping only question/answer content from user and assistant
-- Renaming response section to `回答`
+- Renaming response sections to `Answer`
 - Normalizing exported files with a second formatting pass
 
 ## Do not use
@@ -31,7 +31,7 @@ Do not use this skill for:
 4. Keep only user/assistant Q&A content.
 5. Format each Q/A block as:
    - `## <question text>`
-   - `### 回答`
+   - `### Answer`
 6. Preserve answer markdown and demote answer-internal heading levels by one level.
 7. Run an independent second-pass formatting check and fix naming/title structure before final delivery.
 
@@ -63,11 +63,11 @@ Each output file uses this structure:
 # <conversation title>
 
 ## <user question 1>
-### 回答
+### Answer
 <assistant answer markdown>
 
 ## <user question 2>
-### 回答
+### Answer
 <assistant answer markdown>
 ```
 
@@ -83,7 +83,7 @@ After export, run a second-pass check/fix on output files:
 2. Heading normalization:
 - Keep only one H1: `# <conversation title>`
 - Ensure questions are H2
-- Ensure responses are exactly `### 回答`
+- Ensure responses are exactly `### Answer`
 
 3. Body normalization:
 - Keep answer body markdown
@@ -97,5 +97,5 @@ After export, run a second-pass check/fix on output files:
 - File count equals detected conversation count
 - No random suffixes in filenames
 - No `## REQUEST` or `## RESPONSE` headers in output
-- Response blocks are present as `### 回答`
+- Response blocks are present as `### Answer`
 - Output preserves markdown rendering correctly

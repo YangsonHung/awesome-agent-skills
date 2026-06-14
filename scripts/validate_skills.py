@@ -11,8 +11,39 @@ WHEN_TO_USE_PATTERNS = [
     re.compile(r"^##\s+使用场景", re.MULTILINE),
 ]
 
+HAN_CHARACTER_PATTERN = re.compile(
+    r"[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF"
+    r"\U00020000-\U0002A6DF\U0002A700-\U0002B73F"
+    r"\U0002B740-\U0002B81F\U0002B820-\U0002CEAF"
+    r"\U0002CEB0-\U0002EBEF\U00030000-\U0003134F]"
+)
+
+HAN_LANGUAGE_CHECK_EXEMPT_SKILLS = {
+    "en/multi-lang-readme",
+}
+
 def has_when_to_use_section(content):
     return any(pattern.search(content) for pattern in WHEN_TO_USE_PATTERNS)
+
+def is_english_skill_dir(rel_dir):
+    normalized = rel_dir.replace(os.sep, '/')
+    return normalized == 'en' or normalized.startswith('en/')
+
+def should_check_english_skill_language(rel_dir):
+    normalized = rel_dir.replace(os.sep, '/')
+    return is_english_skill_dir(rel_dir) and normalized not in HAN_LANGUAGE_CHECK_EXEMPT_SKILLS
+
+def find_han_character_lines(content):
+    matches = []
+    for line_number, line in enumerate(content.splitlines(), start=1):
+        match = HAN_CHARACTER_PATTERN.search(line)
+        if not match:
+            continue
+        snippet = line.strip()
+        if len(snippet) > 120:
+            snippet = f"{snippet[:117]}..."
+        matches.append((line_number, match.start() + 1, snippet))
+    return matches
 
 def counterpart_skill_relpath(rel_dir):
     normalized = rel_dir.replace(os.sep, '/')
@@ -74,6 +105,13 @@ def validate_skills(skills_dir, strict_mode=False):
             except Exception as e:
                 errors.append(f"❌ {rel_path}: Unreadable file - {str(e)}")
                 continue
+
+            if should_check_english_skill_language(rel_dir):
+                for line_number, column_number, snippet in find_han_character_lines(content):
+                    errors.append(
+                        f"❌ {rel_path}:{line_number}:{column_number}: "
+                        f"English SKILL.md must not contain Chinese/Han characters: {snippet}"
+                    )
             
             # 1. Frontmatter Check
             metadata = parse_frontmatter(content)

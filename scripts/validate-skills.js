@@ -48,6 +48,11 @@ const USE_SECTION_PATTERNS = [
   /^##\s+使用场景/m,
 ];
 
+const HAN_CHARACTER_PATTERN = /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\u{20000}-\u{2A6DF}\u{2A700}-\u{2B73F}\u{2B740}-\u{2B81F}\u{2B820}-\u{2CEAF}\u{2CEB0}-\u{2EBEF}\u{30000}-\u{3134F}]/u;
+const HAN_LANGUAGE_CHECK_EXEMPT_SKILLS = new Set([
+  'en/multi-lang-readme',
+]);
+
 function hasUseSection(content) {
   return USE_SECTION_PATTERNS.some(pattern => pattern.test(content));
 }
@@ -140,6 +145,34 @@ function getSkillFolderName(skillId) {
   return parts.length ? parts[parts.length - 1] : skillId;
 }
 
+function isEnglishSkill(skillId) {
+  const normalized = skillId.split(path.sep).join('/');
+  return normalized === 'en' || normalized.startsWith('en/');
+}
+
+function shouldCheckEnglishSkillLanguage(skillId) {
+  const normalized = skillId.split(path.sep).join('/');
+  return isEnglishSkill(skillId) && !HAN_LANGUAGE_CHECK_EXEMPT_SKILLS.has(normalized);
+}
+
+function findHanCharacterLines(content) {
+  const matches = [];
+  content.split(/\r?\n/).forEach((line, index) => {
+    const match = line.match(HAN_CHARACTER_PATTERN);
+    if (!match) return;
+    let snippet = line.trim();
+    if (snippet.length > 120) {
+      snippet = `${snippet.slice(0, 117)}...`;
+    }
+    matches.push({
+      line: index + 1,
+      column: match.index + 1,
+      snippet,
+    });
+  });
+  return matches;
+}
+
 function getCounterpartSkillId(skillId) {
   const normalized = skillId.split(path.sep).join('/');
   const parts = normalized.split('/').filter(Boolean);
@@ -180,6 +213,14 @@ function run() {
     const content = fs.readFileSync(skillPath, 'utf8');
     const { data, errors: fmErrors, hasFrontmatter } = parseFrontmatter(content);
     const lineCount = content.split(/\r?\n/).length;
+
+    if (shouldCheckEnglishSkillLanguage(skillId)) {
+      for (const match of findHanCharacterLines(content)) {
+        addError(
+          `English SKILL.md must not contain Chinese/Han characters (${skillId}:${match.line}:${match.column}): ${match.snippet}`,
+        );
+      }
+    }
 
     if (!hasFrontmatter) {
       addError(`Missing frontmatter: ${skillId}`);

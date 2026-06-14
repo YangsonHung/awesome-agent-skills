@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-11-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-12-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -13,6 +13,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 
 - **Modular Design** - Load skills on demand
 - **Bilingual Support** - Every skill is maintained as an English and Chinese pair
+- **Language Guardrails** - English `SKILL.md` files stay English-only, except native language names in `multi-lang-readme`
 - **Rich Resources** - Complete references and templates for each skill
 
 ## Available Skills
@@ -29,6 +30,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
 | [git-weekly-report](skills/en/git-weekly-report/SKILL.md) | English | Summarize git commit logs into structured weekly reports | Multi-repo extraction, date range filtering, commit categorization, weekly report generation |
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
+| [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 
 ### Trigger Examples
@@ -80,14 +82,20 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 **git-weekly-report:**
 - "generate a weekly report from my git commits"
 - "summarize what I did this week across my projects"
-- "create a 周报 from recent git activity"
+- "create a weekly report from recent git activity"
 - "review commits by project from last week"
 
 **git-push-secondary-merge-primary:**
 - "commit and push dev, then merge it into main and push"
 - "push the work branch then merge to master"
-- "提交推送副分支，然后合并到主分支并推送"
-- "把 develop 合到 main 上并推送，最后切回 develop"
+- "merge develop into main, push both branches, and switch back to develop"
+- "finish the work branch and sync it to the primary branch"
+
+**git-pushing-fast:**
+- "commit and push these changes"
+- "push this work to the current branch"
+- "save this work to remote"
+- "commit with a segmented body and push"
 
 **frontend-quality-guardrails:**
 - "review this React component for long text and layout overflow"
@@ -192,11 +200,12 @@ Contributions are welcome! To add a new skill:
    - `references/` - Optional reference materials
    - `assets/` - Optional templates and resources
 4. Ensure both language variants are added together and kept in sync
-5. Submit a pull request
+5. Keep English `SKILL.md` files free of Chinese/Han characters; add Chinese examples and localized wording only to the paired `skills/zh-cn/` skill. The exception is `skills/en/multi-lang-readme/SKILL.md`, where language-switch examples may show native language names.
+6. Submit a pull request
 
 ### Test SKILL.md
 
-Before opening a PR, validate skill files locally:
+Before opening a PR, validate skill files locally. The validators check skill structure, bilingual counterparts, and the English `SKILL.md` language rule:
 
 ```bash
 python3 scripts/validate_skills.py
@@ -220,7 +229,7 @@ Enable the repository pre-commit hook locally:
 git config core.hooksPath .githooks
 ```
 
-The hook runs both strict skill validators before each commit.
+The hook runs strict skill validators, including the English skill language check, before each commit.
 
 ### Skill Format
 

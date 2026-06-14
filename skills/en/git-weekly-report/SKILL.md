@@ -1,6 +1,6 @@
 ---
 name: git-weekly-report
-description: Summarize git commit logs into a structured weekly or daily report (周报, 日报) with sections for completed work, in-progress items, highlights, plans, and risks. Use when the user asks to generate a weekly report, daily report, summarize yesterday's git commits, review what they did today/this week, summarize recent git activity, or categorize commits by project. Triggers on keywords like git log, commit history, daily standup, work summary, 周报, 日报, 昨天做了什么, 今天的工作, 总结昨天, 本周工作, git活动, 提交记录.
+description: Summarize git commit logs into a structured weekly or daily report with sections for completed work, in-progress items, highlights, plans, and risks. Use when the user asks to generate a weekly report, daily report, summarize yesterday's git commits, review what they did today/this week, summarize recent git activity, or categorize commits by project. Triggers on keywords like git log, commit history, daily standup, work summary, daily report, weekly report, recent work, and commit history.
 ---
 
 # Git Weekly Report
@@ -10,7 +10,7 @@ Extract git commit logs and generate a structured weekly or daily report.
 ## When to Use
 
 Use this skill when the user asks for:
-- Generating a weekly report (周报) or daily report (日报) from git commits
+- Generating a weekly report or daily report from git commits
 - Summarizing yesterday's or today's git activity
 - Summarizing recent git activity across one or more repositories
 - Reviewing what work was done over a date range
@@ -28,8 +28,8 @@ Do not use this skill for:
 ## Instructions
 
 1. Determine the date range and report type:
-   - **Daily report (日报)**: if user says "yesterday", "today", "昨天", "今天", "日报" — default `--since` to yesterday, `--until` to today
-   - **Weekly report (周报)**: if user says "this week", "本周", "周报" — default `--since` to last Monday, `--until` to today
+   - **Daily report**: if user says "yesterday", "today", or "daily report", default `--since` to yesterday and `--until` to today.
+   - **Weekly report**: if user says "this week" or "weekly report", default `--since` to last Monday and `--until` to today.
    - Otherwise: default to last 7 days. Accept user overrides.
 2. Determine the author filter if the user specifies one. Default: all authors.
 3. Determine repository path(s). Default: current working directory. If the user mentions multiple projects, collect all paths.
