@@ -209,7 +209,12 @@ https://github.com/vercel-labs/skills/blob/main/README.md
    - `assets/` - 模板与资源（可选）
 4. 确保中英文两个技能一起提交，且内容和触发场景保持同步
 5. 英文版 `skills/en/**/SKILL.md` 不得包含中文或其他汉字字符；中文示例、触发语和本地化表达只写入对应 `skills/zh-cn/**/SKILL.md`。例外是 `skills/en/multi-lang-readme/SKILL.md`，其中的语言切换示例可以展示语言原生名称。
-6. 提交 Pull Request
+6. 保持 frontmatter `description` 简洁，因为它是模型选择技能的路由入口：
+   - 英文版 description 必须以 `Use when ...` 开头
+   - 中文版 description 使用自然中文触发句式，例如 `当用户……时使用。`，不要用英文 `Use when` 开头
+   - description 不要指定某个智能体，例如不要写 `Use when Codex is asked ...`，只描述用户需求或任务场景
+   - 较长的目标、能力范围、产出和边界说明放到 `## Overview`
+7. 提交 Pull Request
 
 ### 测试 SKILL.md
 
@@ -244,12 +249,20 @@ git config core.hooksPath .githooks
 ```markdown
 ---
 name: skill-name
-description: Brief description of the skill and trigger examples
+description: 当用户需要执行某个简洁明确的任务场景时使用。
 ---
 
 # Skill Name
 
-Detailed skill instructions...
+## Overview
+
+说明技能目标、能力范围、产出和边界。
+
+## 何时使用
+
+当用户提出以下需求时使用本技能：
+- 具体触发示例
+- 另一个支持的任务
 ```
 
 ## 许可证

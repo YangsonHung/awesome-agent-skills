@@ -1,11 +1,13 @@
 ---
 name: conversation-json-to-md-cn
-description: 将聊天导出 JSON 批量转换为多个 Markdown 文件（一会话一文件）。当用户要求拆分 AI 对话记录、仅保留用户与助手问答、将问题作为标题并统一回答区块、导出后再做二次格式化时使用。
+description: 当用户需要将聊天导出 JSON 拆分为按会话保存的 Markdown，并保留用户与助手问答结构时使用。
 ---
 
 # Conversation JSON 转 Markdown（中文）
 
-将用户提供的聊天导出 JSON 转换为多个 Markdown 文件，并统一为问答结构。
+## Overview
+
+将用户提供的聊天导出 JSON 转换为多个结构清晰的 Markdown 文件，并统一为问答结构。流程会按会话拆分文件，只保留用户与助手问答，保留回答中的 Markdown，并在导出后做一次命名和标题结构的二次整理。
 
 ## 何时使用
 

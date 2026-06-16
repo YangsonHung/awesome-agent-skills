@@ -58,6 +58,13 @@ Use concise, instructional Markdown with clear headings.
   - Keep the folder name and `SKILL.md` frontmatter `name` aligned with the command name
   - Every skill must have both English and Chinese variants, and the pair must stay aligned in purpose, structure, and trigger coverage
   - English `skills/en/**/SKILL.md` files must not contain Chinese/Han characters; put Chinese examples, triggers, and localized wording in the matching `skills/zh-cn/**/SKILL.md`. The only exception is `skills/en/multi-lang-readme/SKILL.md`, where language-switch examples may show native language names.
+- Skill metadata and opening structure:
+  - Treat frontmatter `description` as routing metadata for model skill selection. Keep it short and focused on when the skill should be used.
+  - English skill descriptions must start with `Use when ...`.
+  - Chinese skill descriptions must use natural Chinese trigger wording, such as `当用户……时使用。`; do not start Chinese descriptions with English `Use when`.
+  - Do not mention a specific agent in descriptions, such as `Use when Codex is asked ...`; describe the user need or task instead.
+  - Move longer purpose, capabilities, outputs, and boundaries into the first body section, `## Overview`.
+  - Keep `## When to Use` / `## 何时使用` as the concrete trigger checklist after `## Overview` so validators and readers can find usage rules.
 - Required skill file: `SKILL.md`
 - Optional files/folders (add only when needed): `README.md`, `scripts/`, `references/`, `assets/`
 - Keep bilingual docs separated (English default in `README.md`, Chinese in `README.zh-CN.md`)

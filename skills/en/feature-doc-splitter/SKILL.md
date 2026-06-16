@@ -1,13 +1,15 @@
 ---
 name: feature-doc-splitter
-description: "Split rough feature requirement notes into three build-ready documents: an overview document, a frontend implementation document, and a backend implementation document. Use when Codex is asked to read an initial feature doc, inspect an existing codebase, separate frontend and backend delivery plans, require Mermaid diagrams in the overview document, define API contracts, or ask whether optional Pencil placeholders should be reserved for new UI surfaces."
+description: Use when splitting rough feature notes into overview, frontend, and backend implementation docs with codebase context and contracts.
 ---
 
 # Feature Doc Splitter
 
-## Purpose
+## Overview
 
-Use this skill to turn an early feature note into a small documentation set that engineers can implement independently. The output must connect the request to the real codebase, separate frontend and backend responsibilities, and make unknowns explicit.
+Use this skill to turn an early feature note into a small documentation set that engineers can implement independently. The output is three build-ready documents: an overview document, a frontend implementation document, and a backend implementation document.
+
+The documentation must connect the request to the real codebase, separate frontend and backend responsibilities, define shared contracts, include required Mermaid diagrams, and make unknowns explicit. For new UI surfaces, the workflow also decides whether optional Pencil placeholders should be reserved.
 
 ## When to Use
 

@@ -1,11 +1,13 @@
 ---
 name: git-weekly-report
-description: Summarize git commit logs into a structured weekly or daily report with sections for completed work, in-progress items, highlights, plans, and risks. Use when the user asks to generate a weekly report, daily report, summarize yesterday's git commits, review what they did today/this week, summarize recent git activity, or categorize commits by project. Triggers on keywords like git log, commit history, daily standup, work summary, daily report, weekly report, recent work, and commit history.
+description: Use when summarizing git commit history into a structured daily or weekly work report.
 ---
 
 # Git Weekly Report
 
-Extract git commit logs and generate a structured weekly or daily report.
+## Overview
+
+Extract git commit logs and generate a structured daily or weekly report. The output groups recent work into completed items, in-progress work, highlights, plans, and risks so commit history can be reused for standups, daily reports, weekly reports, or project summaries.
 
 ## When to Use
 

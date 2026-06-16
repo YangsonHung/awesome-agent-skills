@@ -208,7 +208,12 @@ Contributions are welcome! To add a new skill:
    - `assets/` - Optional templates and resources
 4. Ensure both language variants are added together and kept in sync
 5. Keep English `SKILL.md` files free of Chinese/Han characters; add Chinese examples and localized wording only to the paired `skills/zh-cn/` skill. The exception is `skills/en/multi-lang-readme/SKILL.md`, where language-switch examples may show native language names.
-6. Submit a pull request
+6. Keep frontmatter `description` concise because it is used as routing metadata for skill selection:
+   - English descriptions must start with `Use when ...`
+   - Chinese descriptions must use natural Chinese trigger wording, not the English phrase `Use when`
+   - Do not mention a specific agent in descriptions; describe the user need or task
+   - Put longer purpose, capabilities, outputs, and boundaries in `## Overview`
+7. Submit a pull request
 
 ### Test SKILL.md
 
@@ -243,12 +248,20 @@ The hook runs strict skill validators, including the English skill language chec
 ```markdown
 ---
 name: skill-name
-description: Brief description of the skill and trigger examples
+description: Use when performing a concise task-specific trigger condition.
 ---
 
 # Skill Name
 
-Detailed skill instructions...
+## Overview
+
+Explain the skill's purpose, capabilities, outputs, and boundaries.
+
+## When to Use
+
+Use this skill when the user asks for:
+- Concrete trigger example
+- Another supported task
 ```
 
 ## License

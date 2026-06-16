@@ -1,6 +1,6 @@
 ---
 name: git-push-secondary-merge-primary
-description: Commit and push the secondary branch, then switch to the primary branch, merge the secondary branch into it, create the merge commit when needed, push the primary branch, and switch back to the secondary branch. Use when the user asks to push the work branch then merge to the main branch, push dev/develop then merge into main/master, or run an equivalent two-branch release-sync Git workflow.
+description: Use when committing and pushing a work branch, then merging it into the primary branch and pushing both branches.
 ---
 
 # Git Push Secondary Merge Primary
@@ -10,6 +10,8 @@ description: Commit and push the secondary branch, then switch to the primary br
 Execute the standard two-branch handoff: finish work on the secondary branch, push it, merge it into the primary branch, push the primary branch, then return to the secondary branch.
 
 Use "secondary branch" for the branch that contains the current work, such as `dev`, `develop`, or another integration branch. Use "primary branch" for the protected/release branch, such as `main` or `master`.
+
+This workflow is for safe release-sync handoffs where both branches need to be pushed and the primary branch should preserve a clear merge result.
 
 ## When to Use
 

@@ -1,12 +1,14 @@
 ---
 name: topic-bookmarks-reorganizer
-description: Reorganize exported browser bookmarks under one user-specified topic folder into cleaner categories, remove duplicate URLs, and generate an importable Netscape HTML file. Use when users ask to analyze a bookmarks export, extract one topic directory, regroup links and subfolders, and output a browser-importable HTML file.
+description: Use when reorganizing a browser bookmarks export by topic, deduplicating URLs, and producing an importable HTML file.
 license: MIT
 ---
 
 # Topic Bookmarks Reorganizer
 
-Reorganize one topic folder from a browser bookmarks export into a cleaner importable file.
+## Overview
+
+Reorganize one user-specified topic folder from a browser bookmarks export into a cleaner importable Netscape HTML file. The workflow analyzes the source export, extracts the target topic directory, regroups links and subfolders, removes duplicate URLs, and keeps the output browser-importable.
 
 ## When to Use
 

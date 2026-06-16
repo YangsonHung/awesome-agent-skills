@@ -1,11 +1,13 @@
 ---
 name: conversation-json-to-md
-description: Convert chat export JSON files into multiple Markdown files (one conversation per file). Use when users ask to split AI chat logs, preserve only user-assistant Q/A, format question as heading, keep response Markdown, and normalize filenames/headings after export.
+description: Use when converting chat export JSON into per-conversation Markdown files with preserved user-assistant Q/A and normalized headings.
 ---
 
 # Conversation JSON To MD
 
-Convert a user-provided chat-export JSON into multiple Markdown files with consistent Q/A formatting.
+## Overview
+
+Convert a user-provided chat-export JSON into multiple Markdown files with consistent Q/A formatting. The workflow keeps only user-assistant exchanges, writes one conversation per Markdown file, preserves answer Markdown, and runs a second pass to normalize filenames and heading structure.
 
 ## When to Use
 

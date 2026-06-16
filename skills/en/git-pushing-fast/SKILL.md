@@ -1,6 +1,6 @@
 ---
 name: git-pushing-fast
-description: Fast single-branch Git commit and push workflow. Use when the user asks to commit and push current changes, push this work, save changes to remote, or complete a normal one-branch Git handoff with a Conventional Commits subject and a concise segmented commit body.
+description: Use when committing and pushing current changes on one branch with a Conventional Commit message.
 ---
 
 # Git Pushing Fast
@@ -10,6 +10,8 @@ description: Fast single-branch Git commit and push workflow. Use when the user 
 Commit and push the current repository's local changes on the current branch with a fast, safe single-branch workflow.
 
 The default output is one focused Conventional Commit plus a push to the tracked remote branch. For non-trivial changes, write a segmented commit body so reviewers can quickly see what changed by topic.
+
+This workflow handles ordinary single-branch handoff requests such as saving current work to the remote, without branch merging, history rewriting, or PR creation.
 
 ## When to Use
 

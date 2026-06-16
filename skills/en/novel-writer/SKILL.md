@@ -1,21 +1,13 @@
 ---
 name: novel-writer
-description: >-
-  Novel writing assistant supporting creating novels from scratch, continuing
-  chapters, character design, and worldbuilding. Works with all genres
-  (sci-fi, fantasy, mystery, romance, wuxia, etc.). Triggers: (1) User
-  requests to write a novel, e.g., "help me write a sci-fi novel", "create a
-  mystery story"; (2) Continue or modify existing content, e.g., "write the
-  next chapter", "modify this character"; (3) Character-related tasks, e.g.,
-  "design a villain", "create a love interest for the protagonist"; (4)
-  Worldbuilding, e.g., "design a magic system", "build a cyberpunk world".
+description: Use when writing, continuing, revising, or planning novels, characters, and fictional worlds.
 ---
 
 # Novel Writer
 
-Professional novel writing support covering ideation, planning, writing, and revision.
+## Overview
 
----
+Provide professional novel writing support covering ideation, planning, drafting, continuation, and revision. The skill handles new fiction projects, chapter continuation, character design, character arcs, worldbuilding, and prose revision across genres such as science fiction, fantasy, mystery, romance, and wuxia.
 
 ## When to Use
 

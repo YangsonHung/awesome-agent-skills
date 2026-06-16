@@ -1,11 +1,13 @@
 ---
 name: frontend-quality-guardrails
-description: Build, modify, or review frontend UI with strict checks for long text, overflow, wrapping, alignment, spacing, responsive behavior, component states, accessibility, internationalization, visual polish, project-level code review, browser screenshot verification, and UI style pitfalls. Use for HTML, CSS, JavaScript, TypeScript, React, Vue, Svelte, Next.js, Tailwind, shadcn/ui, Ant Design, dashboards, forms, tables, cards, navigation, mobile layouts, and any task where frontend layout quality matters.
+description: Use when building, modifying, or reviewing frontend UI where text overflow, layout, responsiveness, accessibility, and visual polish must be verified.
 ---
 
 # Frontend Quality Guardrails
 
-## Core Rule
+## Overview
+
+Use this skill as a frontend quality gate for UI implementation and review. It covers long text, overflow, wrapping, truncation, alignment, spacing, responsive behavior, component states, accessibility, internationalization, visual polish, project-level code review, browser screenshot verification, and common UI style pitfalls.
 
 Treat every UI as hostile to perfect content. Assume labels, names, URLs, IDs, prices, translated strings, user input, errors, table cells, badges, breadcrumbs, tabs, and button text can be longer than the mockup.
 

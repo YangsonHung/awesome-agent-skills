@@ -1,12 +1,14 @@
 ---
 name: yuque-lakebook-export
-description: Export Yuque knowledge bases, Yuque documents, or .lakebook files into local Markdown folders for Obsidian. Use when users want to export Yuque, convert lakebook to Markdown, migrate a Yuque knowledge base to Obsidian, batch-convert multiple .lakebook files, or fix Yuque export issues such as missing images, cropped image mismatches, broken internal links, wrong folder hierarchy, and Markdown table rendering problems.
+description: Use when exporting Yuque or .lakebook content to local Markdown for Obsidian migration or cleanup.
 license: MIT
 ---
 
 # Yuque Lakebook Export
 
-Convert one or more Yuque `.lakebook` files into local Markdown folders, with images and internal document links prepared for Obsidian.
+## Overview
+
+Convert Yuque knowledge bases, Yuque documents, or `.lakebook` files into local Markdown folders prepared for Obsidian. The workflow supports single or batch exports and cleanup for common migration issues such as missing images, cropped image mismatches, broken internal links, wrong folder hierarchy, and Markdown table rendering problems.
 
 ## When to Use
 

@@ -1,12 +1,14 @@
 ---
 name: yuque-lakebook-export-cn
-description: 将语雀知识库、语雀文档或 .lakebook 文件导出并转换为本地 Markdown 目录，适配 Obsidian 使用。适用于导出语雀、把 lakebook 转成 Markdown、迁移语雀知识库到 Obsidian、批量转换多个 .lakebook、处理语雀导出后的图片与附件、裁剪图片、内部文档链接、目录结构、Markdown 表格渲染等问题。当用户提到 语雀、lakebook、导出 Markdown、导入 Obsidian、知识库迁移、批量转换、图片不显示、链接丢失、裁剪失效、目录层级不对、表格显示异常 等场景时触发。
+description: 当用户需要将语雀或 .lakebook 内容导出为本地 Markdown，用于 Obsidian 迁移或整理时使用。
 license: MIT
 ---
 
 # 语雀 Lakebook 导出
 
-将一个或多个语雀 `.lakebook` 文件导出为本地 Markdown 目录，并优先适配 Obsidian。
+## Overview
+
+将语雀知识库、语雀文档或 `.lakebook` 文件导出并转换为本地 Markdown 目录，优先适配 Obsidian 使用。流程支持单个或批量导出，并处理常见迁移问题，如图片缺失、裁剪图不匹配、内部链接损坏、目录层级错误和 Markdown 表格渲染异常。
 
 ## 何时使用
 

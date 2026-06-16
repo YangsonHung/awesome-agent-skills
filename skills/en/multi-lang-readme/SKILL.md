@@ -1,11 +1,13 @@
 ---
 name: multi-lang-readme
-description: Create multilingual README files by translating an existing README into target languages. Use when users ask for bilingual or multilingual README output, such as "create bilingual README", "translate README to Japanese", or "add Chinese README". Supports English, German (de), Japanese (ja), Korean (ko), and Chinese (zh-CN).
+description: Use when creating bilingual or multilingual README files from an existing README while preserving Markdown structure.
 ---
 
 # Multi-Lang README
 
-Create multilingual README files by translating an existing README while preserving markdown structure.
+## Overview
+
+Create multilingual README files by translating an existing README while preserving Markdown structure, links, code blocks, and language-switch navigation. The workflow supports bilingual and multilingual README sets without rewriting unrelated project documentation.
 
 ## When to Use
 

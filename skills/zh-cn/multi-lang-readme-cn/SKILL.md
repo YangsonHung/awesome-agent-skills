@@ -1,11 +1,13 @@
 ---
 name: multi-lang-readme-cn
-description: 创建多语言 README。用于用户要求“中英 README”“多语言 README”“把 README 翻译成某语言”等场景。支持英文、德语、日语、韩语、中文，并保持 Markdown 结构与链接一致。
+description: 当用户需要基于现有 README 创建中英或多语言 README，并保持 Markdown 结构时使用。
 ---
 
 # Multi-Lang README（中文）
 
-将现有 README 翻译为多语言版本，并保持 Markdown 结构稳定。
+## Overview
+
+将现有 README 翻译为多语言版本，并保持 Markdown 结构、链接、代码块和语言切换导航稳定。流程支持中英双语和多语言 README 集合，不处理与 README 无关的通用文档改写。
 
 ## 何时使用
 

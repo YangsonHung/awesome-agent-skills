@@ -1,11 +1,13 @@
 ---
 name: ui-layout-analyzer
-description: Analyze UI images and output layout description with functional analysis. Triggers when user sends a UI screenshot and says "analyze this UI", "describe this interface layout", "what does this UI do", or "output UI layout and function description".
+description: Use when analyzing a UI screenshot to describe layout structure and interface functionality.
 ---
 
 # UI Layout Analyzer
 
-Analyze the provided UI screenshot and output structured layout description and functional analysis.
+## Overview
+
+Analyze a provided UI screenshot and output a structured layout description plus functional analysis. The skill focuses on interface screenshots, describing page structure, visual sections, hierarchy, controls, and likely user workflows without designing new UI or reviewing implementation code.
 
 ## When to Use
 

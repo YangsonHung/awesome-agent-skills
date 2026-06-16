@@ -1,13 +1,15 @@
 ---
 name: mac-software-storage-cleanup
-description: Audit installed macOS software storage usage and run prioritized cleanup. Use when the user asks to inspect installed apps, list storage-heavy software, clean priority-1 caches and simulator data, or get reclaim recommendations.
+description: Use when auditing macOS app storage, cleaning priority caches, or recommending reclaimable disk space.
 ---
 
 # Mac Software Storage Cleanup
 
-Audit installed software and storage usage on macOS, produce prioritized cleanup recommendations, and execute low-risk cleanup only after confirmation.
+## Overview
 
-## When to use
+Audit installed software and storage usage on macOS, produce prioritized cleanup recommendations, and execute low-risk cleanup only after confirmation. The skill separates app inventory, cache cleanup, simulator data, and medium-risk application data so destructive actions remain explicit and reversible where possible.
+
+## When to Use
 
 Use this skill when the user:
 - Wants to inspect software installed under `/Applications`, `~/Applications`, Homebrew Formula, or Homebrew Cask
