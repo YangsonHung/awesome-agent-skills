@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-12-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-13-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -32,6 +32,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
+| [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
 
 ### Trigger Examples
 
@@ -102,6 +103,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "fix the mobile overflow and alignment issues in this dashboard"
 - "polish this form and verify responsive UI states"
 - "check this table for truncation, wrapping, and browser layout pitfalls"
+
+**feature-doc-splitter:**
+- "split this rough feature doc into overview, frontend, and backend docs"
+- "turn this initial product note into implementation documents"
+- "read the codebase and write frontend/backend build docs"
+- "add Mermaid flows and ask whether to reserve design placeholders"
 
 ## Quick Start
 
