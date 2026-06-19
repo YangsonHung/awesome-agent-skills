@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-13-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-14-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -25,6 +25,7 @@
 | [conversation-json-to-md-cn](skills/zh-cn/conversation-json-to-md-cn/SKILL.md) | 中文 | 中文版对话 JSON 转 Markdown 技能 | 自动识别结构、保留问答、统一回答区块、二次格式化 |
 | [topic-bookmarks-reorganizer-cn](skills/zh-cn/topic-bookmarks-reorganizer-cn/SKILL.md) | 中文 | 主题书签重整技能（中文版） | 提取主题目录、链接重分类、URL 去重、导出可导入 HTML |
 | [wechat-theme-extractor-cn](skills/zh-cn/wechat-theme-extractor-cn/SKILL.md) | 中文 | 从微信公众号文章中提取样式并生成主题配置 | 抽取文章 HTML、分析样式、生成主题、写入工具配置 |
+| [weixin-article-to-obsidian-cn](skills/zh-cn/weixin-article-to-obsidian-cn/SKILL.md) | 中文 | 将微信公众号文章保存为 Obsidian Markdown 并本地化图片 | opencli 下载、HTML 兜底解析、图片本地化、Obsidian 资源双链 |
 | [mac-software-storage-cleanup-cn](skills/zh-cn/mac-software-storage-cleanup-cn/SKILL.md) | 中文 | 审计 macOS 软件占用并执行分级清理 | 软件清单盘点、空间统计、安全清理、回收建议 |
 | [ui-layout-analyzer-cn](skills/zh-cn/ui-layout-analyzer-cn/SKILL.md) | 中文 | 分析界面截图并输出布局与功能说明 | 界面结构识别、交互分析、元素清单、布局说明 |
 | [yuque-lakebook-export-cn](skills/zh-cn/yuque-lakebook-export-cn/SKILL.md) | 中文 | 将语雀 `.lakebook` 导出为适配 Obsidian 的 Markdown 目录 | 语雀导出、lakebook 转换、Obsidian 迁移、图片附件处理、裁剪图支持 |
@@ -63,6 +64,11 @@
 - "从这个微信公众号文章链接提取主题样式"
 - "帮我生成一个 markdown-wechat-converter 主题"
 - "把这个微信文章风格写入 markdown-to-wechat.html"
+
+**weixin-article-to-obsidian-cn:**
+- "把这个微信公众号文章抓成 Obsidian Markdown"
+- "下载这篇 mp.weixin.qq.com 文章的正文和图片"
+- "把这篇微信文章放到知识库合适目录，并本地化图片"
 
 **mac-software-storage-cleanup-cn:**
 - "检查我 Mac 上安装的软件都占了多少空间"

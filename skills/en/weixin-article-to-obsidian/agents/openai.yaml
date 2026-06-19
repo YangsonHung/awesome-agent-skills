@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weixin Article to Obsidian"
+  short_description: "Save WeChat articles into Obsidian with local images"
+  default_prompt: "Download this WeChat article into my Obsidian vault with local images."

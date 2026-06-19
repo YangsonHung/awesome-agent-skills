@@ -9,6 +9,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/conversation-json-to-md/`
   - `skills/en/topic-bookmarks-reorganizer/`
   - `skills/en/wechat-theme-extractor/`
+  - `skills/en/weixin-article-to-obsidian/`
   - `skills/en/mac-software-storage-cleanup/`
   - `skills/en/ui-layout-analyzer/`
   - `skills/en/yuque-lakebook-export/`
@@ -23,6 +24,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/conversation-json-to-md-cn/`
   - `skills/zh-cn/topic-bookmarks-reorganizer-cn/`
   - `skills/zh-cn/wechat-theme-extractor-cn/`
+  - `skills/zh-cn/weixin-article-to-obsidian-cn/`
   - `skills/zh-cn/mac-software-storage-cleanup-cn/`
   - `skills/zh-cn/ui-layout-analyzer-cn/`
   - `skills/zh-cn/yuque-lakebook-export-cn/`

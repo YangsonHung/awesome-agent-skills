@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信公众号文章转 Obsidian"
+  short_description: "抓取微信公众号文章正文和图片并落库到 Obsidian"
+  default_prompt: "把这个微信公众号文章抓成 Obsidian Markdown，并下载本地图片。"

@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-13-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-14-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -25,6 +25,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [conversation-json-to-md](skills/en/conversation-json-to-md/SKILL.md) | English | Convert chat-export JSON into one-conversation-per-file Markdown | Auto-detect formats, Q/A extraction, heading normalization, second-pass formatting |
 | [topic-bookmarks-reorganizer](skills/en/topic-bookmarks-reorganizer/SKILL.md) | English | Reorganize one topic folder from bookmarks export into clean importable HTML | Topic extraction, link regrouping, URL dedupe, browser-importable output |
 | [wechat-theme-extractor](skills/en/wechat-theme-extractor/SKILL.md) | English | Extract theme styles from WeChat articles and update converter config | WeChat HTML extraction, style analysis, theme generation, config injection |
+| [weixin-article-to-obsidian](skills/en/weixin-article-to-obsidian/SKILL.md) | English | Save Weixin articles into Obsidian with local images | opencli download, HTML fallback parsing, image localization, Obsidian asset links |
 | [mac-software-storage-cleanup](skills/en/mac-software-storage-cleanup/SKILL.md) | English | Audit macOS software storage usage and run prioritized cleanup | Installed software inventory, storage audit, safe cleanup, reclaim recommendations |
 | [ui-layout-analyzer](skills/en/ui-layout-analyzer/SKILL.md) | English | Analyze UI screenshots and describe layout plus functional structure | UI structure recognition, interaction analysis, element inventory, layout explanation |
 | [yuque-lakebook-export](skills/en/yuque-lakebook-export/SKILL.md) | English | Export Yuque `.lakebook` files into Markdown folders for Obsidian | Yuque export, lakebook conversion, Obsidian migration, image/assets handling, cropped image support |
@@ -62,6 +63,11 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "extract a theme from this WeChat article URL"
 - "generate a markdown-wechat-converter theme from this article"
 - "write the extracted style into markdown-to-wechat.html"
+
+**weixin-article-to-obsidian:**
+- "save this Weixin article into my Obsidian vault with local images"
+- "download this mp.weixin.qq.com article as Markdown"
+- "convert this WeChat article to an Obsidian note and localize images"
 
 **mac-software-storage-cleanup:**
 - "audit installed software sizes on my Mac"
