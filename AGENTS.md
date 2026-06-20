@@ -18,6 +18,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/git-pushing-fast/`
   - `skills/en/frontend-quality-guardrails/`
   - `skills/en/feature-doc-splitter/`
+  - `skills/en/ax-extract-workflow/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
@@ -33,6 +34,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/git-pushing-fast-cn/`
   - `skills/zh-cn/frontend-quality-guardrails-cn/`
   - `skills/zh-cn/feature-doc-splitter-cn/`
+  - `skills/zh-cn/ax-extract-workflow-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata
