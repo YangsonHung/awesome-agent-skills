@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-15-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -34,6 +34,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
+| [ax-extract-workflow](skills/en/ax-extract-workflow/SKILL.md) | English | Reconstruct shipped work from local ax session evidence | Session lookup, tool and skill tracing, decision recovery, repeatable workflow brief |
 
 ### Trigger Examples
 
@@ -115,6 +116,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "turn this initial product note into implementation documents"
 - "read the codebase and write frontend/backend build docs"
 - "add Mermaid flows and ask whether to reserve design placeholders"
+
+**ax-extract-workflow:**
+- "how did we ship this feature"
+- "extract workflow from this commit"
+- "what made this PR work"
+- "reconstruct the recipe behind yesterday's demo"
 
 ## Quick Start
 

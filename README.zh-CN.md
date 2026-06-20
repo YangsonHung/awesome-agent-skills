@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-14-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-15-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -34,6 +34,7 @@
 | [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
+| [ax-extract-workflow-cn](skills/zh-cn/ax-extract-workflow-cn/SKILL.md) | 中文 | 根据本机 ax 会话证据复盘已交付成果 | 会话查找、工具与技能追踪、决策复原、可复用流程摘要 |
 
 ### 触发示例
 
@@ -116,6 +117,12 @@
 - "结合代码把功能需求整理成可开发文档"
 - "分别写前端和后端实现说明"
 - "补充 Mermaid 流程图，并询问是否预留设计稿占位"
+
+**ax-extract-workflow-cn:**
+- "复盘这个功能是怎么交付的"
+- "从这个提交提取工作流"
+- "这个 PR 当时为什么能跑通"
+- "把昨天 demo 背后的流程整理出来"
 
 ## 快速开始
 
