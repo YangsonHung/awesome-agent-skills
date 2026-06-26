@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-15-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -33,10 +33,16 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
+| [linkedin](skills/en/linkedin/SKILL.md) | English | Automate LinkedIn from the command line via the linkedin CLI | Profile/company fetch and search, messaging, connection requests, posting, reactions and comments, data extraction |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
 
 ### Trigger Examples
 
+**linkedin:**
+- "send a LinkedIn connection request to this profile"
+- "message this person on LinkedIn"
+- "search LinkedIn for marketing managers and extract their profiles"
+- "post this update to my LinkedIn"
 **novel-writer:**
 - "help me write a sci-fi novel"
 - "write the next chapter"

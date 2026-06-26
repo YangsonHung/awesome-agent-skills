@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-14-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-15-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -33,10 +33,16 @@
 | [git-push-secondary-merge-primary-cn](skills/zh-cn/git-push-secondary-merge-primary-cn/SKILL.md) | 中文 | 提交并推送副分支，再合并到主分支并推送，最后切回副分支 | 双分支同步、分支自动识别、Conventional Commits、保留合并提交、安全推送 |
 | [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
+| [linkedin-cn](skills/zh-cn/linkedin-cn/SKILL.md) | 中文 | 通过 linkedin 命令行工具自动化操作 LinkedIn | 主页/公司获取与搜索、私信、连接请求、发布动态、点赞评论、数据提取 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
 
 ### 触发示例
 
+**linkedin-cn:**
+- "给这个 LinkedIn 主页发送连接请求"
+- "在 LinkedIn 上给这个人发私信"
+- "在 LinkedIn 上搜索市场经理并提取主页信息"
+- "把这条动态发布到我的 LinkedIn"
 **novel-writer-cn:**
 - "帮我写一部中文科幻小说"
 - "继续这个故事，再写一章"
