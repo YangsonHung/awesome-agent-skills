@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -34,6 +34,9 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
+| [routerbase-api-integration](skills/en/routerbase-api-integration/SKILL.md) | English | Integrate applications with [routerbase](https://routerbase.com/) as an OpenAI-compatible gateway | SDK migration, base URL setup, streaming, tool calling, safe API keys |
+| [routerbase-model-routing](skills/en/routerbase-model-routing/SKILL.md) | English | Plan [routerbase](https://routerbase.com/) model routing, fallback, cost, and latency policies | Model selection, fallback chains, rollout checks, routing assumptions |
+| [routerbase-media-generation](skills/en/routerbase-media-generation/SKILL.md) | English | Build [routerbase](https://routerbase.com/) image, audio, and video generation workflows | Endpoint selection, retries, polling, asset handling, safety checks |
 
 ### Trigger Examples
 
@@ -115,6 +118,21 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "turn this initial product note into implementation documents"
 - "read the codebase and write frontend/backend build docs"
 - "add Mermaid flows and ask whether to reserve design placeholders"
+
+**routerbase-api-integration:**
+- "migrate this OpenAI SDK call to RouterBase"
+- "set up RouterBase as an OpenAI-compatible endpoint"
+- "write a safe RouterBase API integration example"
+
+**routerbase-model-routing:**
+- "choose RouterBase models for this workload"
+- "design a fallback chain for RouterBase"
+- "write cost-aware model routing rules"
+
+**routerbase-media-generation:**
+- "build a RouterBase image generation workflow"
+- "handle RouterBase video generation polling"
+- "add safety checks for generated media assets"
 
 ## Quick Start
 

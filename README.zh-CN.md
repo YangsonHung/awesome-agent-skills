@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-14-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-17-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -34,6 +34,9 @@
 | [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
+| [routerbase-api-integration-cn](skills/zh-cn/routerbase-api-integration-cn/SKILL.md) | 中文 | 将应用接入 [routerbase](https://routerbase.com/) OpenAI 兼容网关 | SDK 迁移、base URL 配置、流式输出、tool calling、安全 API Key |
+| [routerbase-model-routing-cn](skills/zh-cn/routerbase-model-routing-cn/SKILL.md) | 中文 | 规划 [routerbase](https://routerbase.com/) 模型路由、fallback、成本和延迟策略 | 模型选择、fallback 链路、上线验证、路由假设 |
+| [routerbase-media-generation-cn](skills/zh-cn/routerbase-media-generation-cn/SKILL.md) | 中文 | 构建 [routerbase](https://routerbase.com/) 图片、音频和视频生成流程 | 端点选择、重试轮询、资产管理、安全检查 |
 
 ### 触发示例
 
@@ -116,6 +119,21 @@
 - "结合代码把功能需求整理成可开发文档"
 - "分别写前端和后端实现说明"
 - "补充 Mermaid 流程图，并询问是否预留设计稿占位"
+
+**routerbase-api-integration-cn:**
+- "把这段 OpenAI SDK 调用迁移到 RouterBase"
+- "把 RouterBase 配成 OpenAI 兼容 endpoint"
+- "写一个安全的 RouterBase API 接入示例"
+
+**routerbase-model-routing-cn:**
+- "为这个工作负载选择 RouterBase 模型"
+- "设计 RouterBase fallback 链路"
+- "写一套兼顾成本的模型路由规则"
+
+**routerbase-media-generation-cn:**
+- "构建 RouterBase 图片生成流程"
+- "处理 RouterBase 视频生成轮询"
+- "给生成媒体资产加安全检查"
 
 ## 快速开始
 
