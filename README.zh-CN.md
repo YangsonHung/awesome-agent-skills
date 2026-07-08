@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-14-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-15-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -34,6 +34,7 @@
 | [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
+| [tree-ring-memory-cn](skills/zh-cn/tree-ring-memory-cn/SKILL.md) | 中文 | 使用 Tree Ring Memory 管理本地优先的 AI Agent 记忆生命周期 | 召回、证据化经验、隐私安全记录、审计、脱敏、遗忘 |
 
 ### 触发示例
 
@@ -116,6 +117,12 @@
 - "结合代码把功能需求整理成可开发文档"
 - "分别写前端和后端实现说明"
 - "补充 Mermaid 流程图，并询问是否预留设计稿占位"
+
+**tree-ring-memory-cn:**
+- "修改这个仓库前先召回之前的决策"
+- "把这条经验连同证据一起记住"
+- "发布前审计一下项目记忆"
+- "脱敏或遗忘这个任务里的过时记忆"
 
 ## 快速开始
 

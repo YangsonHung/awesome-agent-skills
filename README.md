@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-14-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-15-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -34,6 +34,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
+| [tree-ring-memory](skills/en/tree-ring-memory/SKILL.md) | English | Use Tree Ring Memory for local-first AI agent memory lifecycle work | Recall, evidence-linked lessons, privacy-safe capture, audit, redaction, forgetting |
 
 ### Trigger Examples
 
@@ -115,6 +116,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "turn this initial product note into implementation documents"
 - "read the codebase and write frontend/backend build docs"
 - "add Mermaid flows and ask whether to reserve design placeholders"
+
+**tree-ring-memory:**
+- "recall what we decided before changing this repo"
+- "remember this lesson with evidence"
+- "audit project memory before this release"
+- "redact or forget stale memory about this task"
 
 ## Quick Start
 
