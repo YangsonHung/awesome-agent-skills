@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-15-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-16-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -35,6 +35,7 @@
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [logo-design-board-cn](skills/zh-cn/logo-design-board-cn/SKILL.md) | 中文 | 用设计师人格蒸馏委员会设计和评审 Logo 概念 | 品牌简报、设计师镜片、概念方向、生图提示词、Logo 质量评分 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
+| [xquik-data-cn](skills/zh-cn/xquik-data-cn/SKILL.md) | 中文 | 规划 Xquik REST、OpenAPI、MCP、webhook 和 SDK 数据工作流 | X 数据采集、API 规划、MCP 配置、webhook 交接、可追溯报告 |
 
 ### 触发示例
 
@@ -123,6 +124,12 @@
 - "结合代码把功能需求整理成可开发文档"
 - "分别写前端和后端实现说明"
 - "补充 Mermaid 流程图，并询问是否预留设计稿占位"
+
+**xquik-data-cn:**
+- "用 Xquik 采集 X 帖子并汇总结果"
+- "帮我设计一个 Xquik API 监控工作流"
+- "用 Xquik MCP server 做这个社媒数据任务"
+- "把这些 Xquik webhook 事件整理成交接报告"
 
 ## 快速开始
 

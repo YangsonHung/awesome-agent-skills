@@ -19,6 +19,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/frontend-quality-guardrails/`
   - `skills/en/logo-design-board/`
   - `skills/en/feature-doc-splitter/`
+  - `skills/en/xquik-data/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
@@ -35,6 +36,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/frontend-quality-guardrails-cn/`
   - `skills/zh-cn/logo-design-board-cn/`
   - `skills/zh-cn/feature-doc-splitter-cn/`
+  - `skills/zh-cn/xquik-data-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata
@@ -44,13 +46,13 @@ When adding a new skill, you must add both language variants together: `skills/e
 ## Build, Test, and Development Commands
 This repository has no compile/build pipeline. Typical contributor commands are:
 
-- `git status` — inspect local changes before committing
-- `git diff` — review exact content changes
-- `python3 scripts/validate_skills.py --strict` — validate skill structure, bilingual counterparts, and English skill language rules
-- `node scripts/validate-skills.js --strict` — run the legacy/alternative strict validator
-- `git config core.hooksPath .githooks` — enable the local pre-commit validation hook
-- `cp -r skills/ ~/.claude/skills/` — install skills locally for manual validation
-- `find skills -maxdepth 3 -type f` — quick structure check before PR
+- `git status` - inspect local changes before committing
+- `git diff` - review exact content changes
+- `python3 scripts/validate_skills.py --strict` - validate skill structure, bilingual counterparts, and English skill language rules
+- `node scripts/validate-skills.js --strict` - run the legacy/alternative strict validator
+- `git config core.hooksPath .githooks` - enable the local pre-commit validation hook
+- `cp -r skills/ ~/.claude/skills/` - install skills locally for manual validation
+- `find skills -maxdepth 3 -type f` - quick structure check before PR
 
 ## Coding Style & Naming Conventions
 Use concise, instructional Markdown with clear headings.
@@ -104,7 +106,7 @@ Keep each PR focused on one logical change.
 
 When a skill is added or removed, update the following locations to keep the directory in sync:
 
-1. This file (`AGENTS.md`) — Project Structure & Module Organization section
-2. `README.md` — Available Skills table and Trigger Examples section
-3. `README.zh-CN.md` — 可用技能 table and 触发示例 section
+1. This file (`AGENTS.md`) - Project Structure & Module Organization section
+2. `README.md` - Available Skills table and Trigger Examples section
+3. `README.zh-CN.md` - 可用技能 table and 触发示例 section
 4. Badge count in `README.md` and `README.zh-CN.md`

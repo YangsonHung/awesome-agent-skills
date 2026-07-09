@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-15-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-16-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -35,6 +35,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
+| [xquik-data](skills/en/xquik-data/SKILL.md) | English | Plan Xquik REST, OpenAPI, MCP, webhook, and SDK workflows for X/Twitter data | X data collection, API planning, MCP setup, webhook handoff, traceable reports |
 
 ### Trigger Examples
 
@@ -122,6 +123,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "turn this initial product note into implementation documents"
 - "read the codebase and write frontend/backend build docs"
 - "add Mermaid flows and ask whether to reserve design placeholders"
+
+**xquik-data:**
+- "collect X posts with Xquik and summarize the results"
+- "design an Xquik API workflow for this monitor"
+- "use the Xquik MCP server for this social data task"
+- "turn these Xquik webhook events into a handoff report"
 
 ## Quick Start
 
