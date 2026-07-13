@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit Only"
+  short_description: "Create one Conventional Commit without pushing."
+  default_prompt: "Commit the current changes without pushing."

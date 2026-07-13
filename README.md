@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-15-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-16-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -32,6 +32,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-weekly-report](skills/en/git-weekly-report/SKILL.md) | English | Summarize git commit logs into structured weekly reports | Multi-repo extraction, date range filtering, commit categorization, weekly report generation |
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
+| [git-commit-only](skills/en/git-commit-only/SKILL.md) | English | Create one local Conventional Commit without pushing | Status inspection, staging, Conventional Commits, segmented body, no push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
@@ -104,6 +105,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "push this work to the current branch"
 - "save this work to remote"
 - "commit with a segmented body and push"
+
+**git-commit-only:**
+- "commit these changes without pushing"
+- "create a local commit"
+- "commit current changes only"
+- "save this work locally as a commit"
 
 **frontend-quality-guardrails:**
 - "review this React component for long text and layout overflow"

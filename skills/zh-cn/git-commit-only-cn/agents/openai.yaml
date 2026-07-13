@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit Only 中文版"
+  short_description: "只创建一个 Conventional Commit，不推送。"
+  default_prompt: "只提交当前改动，不推送。"
