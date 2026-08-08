@@ -44,6 +44,7 @@
 | [routerbase-media-generation-cn](skills/zh-cn/routerbase-media-generation-cn/SKILL.md) | 中文 | 构建 [routerbase](https://routerbase.com/) 图片、音频和视频生成流程 | 端点选择、重试轮询、资产管理、安全检查 |
 | [x-twitter-scraper-cn](skills/zh-cn/x-twitter-scraper-cn/SKILL.md) | 中文 | 使用 Xquik 规划 X/Twitter 数据工作流 | 推文搜索、账号时间线、粉丝导出、媒体下载、监控、Webhook、MCP |
 | [ax-extract-workflow-cn](skills/zh-cn/ax-extract-workflow-cn/SKILL.md) | 中文 | 根据本机 ax 会话证据复盘已交付成果 | 会话查找、工具与技能追踪、决策复原、可复用流程摘要 |
+| [tree-ring-memory-cn](skills/zh-cn/tree-ring-memory-cn/SKILL.md) | 中文 | 使用 Tree Ring Memory 管理本地优先的 AI Agent 记忆生命周期 | 召回、证据化经验、隐私安全记录、审计、脱敏、遗忘 |
 
 ### 触发示例
 
@@ -180,6 +181,11 @@
 - "从这个提交提取工作流"
 - "这个 PR 当时为什么能跑通"
 - "把昨天 demo 背后的流程整理出来"
+**tree-ring-memory-cn:**
+- "修改这个仓库前先召回之前的决策"
+- "把这条经验连同证据一起记住"
+- "发布前审计一下项目记忆"
+- "脱敏或遗忘这个任务里的过时记忆"
 
 ## 快速开始
 

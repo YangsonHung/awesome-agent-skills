@@ -44,6 +44,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [routerbase-media-generation](skills/en/routerbase-media-generation/SKILL.md) | English | Build [routerbase](https://routerbase.com/) image, audio, and video generation workflows | Endpoint selection, retries, polling, asset handling, safety checks |
 | [x-twitter-scraper](skills/en/x-twitter-scraper/SKILL.md) | English | Plan X/Twitter data workflows with Xquik | Tweet search, profile timelines, follower export, media download, monitors, webhooks, MCP |
 | [ax-extract-workflow](skills/en/ax-extract-workflow/SKILL.md) | English | Reconstruct shipped work from local ax session evidence | Session lookup, tool and skill tracing, decision recovery, repeatable workflow brief |
+| [tree-ring-memory](skills/en/tree-ring-memory/SKILL.md) | English | Use Tree Ring Memory for local-first AI agent memory lifecycle work | Recall, evidence-linked lessons, privacy-safe capture, audit, redaction, forgetting |
 
 ### Trigger Examples
 
@@ -180,6 +181,11 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "extract workflow from this commit"
 - "what made this PR work"
 - "reconstruct the recipe behind yesterday's demo"
+**tree-ring-memory:**
+- "recall what we decided before changing this repo"
+- "remember this lesson with evidence"
+- "audit project memory before this release"
+- "redact or forget stale memory about this task"
 
 ## Quick Start
 
