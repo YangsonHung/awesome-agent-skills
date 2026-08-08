@@ -41,6 +41,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [routerbase-api-integration](skills/en/routerbase-api-integration/SKILL.md) | English | Integrate applications with [routerbase](https://routerbase.com/) as an OpenAI-compatible gateway | SDK migration, base URL setup, streaming, tool calling, safe API keys |
 | [routerbase-model-routing](skills/en/routerbase-model-routing/SKILL.md) | English | Plan [routerbase](https://routerbase.com/) model routing, fallback, cost, and latency policies | Model selection, fallback chains, rollout checks, routing assumptions |
 | [routerbase-media-generation](skills/en/routerbase-media-generation/SKILL.md) | English | Build [routerbase](https://routerbase.com/) image, audio, and video generation workflows | Endpoint selection, retries, polling, asset handling, safety checks |
+| [x-twitter-scraper](skills/en/x-twitter-scraper/SKILL.md) | English | Plan X/Twitter data workflows with Xquik | Tweet search, profile timelines, follower export, media download, monitors, webhooks, MCP |
 
 ### Trigger Examples
 
@@ -161,6 +162,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "build a RouterBase image generation workflow"
 - "handle RouterBase video generation polling"
 - "add safety checks for generated media assets"
+
+**x-twitter-scraper:**
+- "search X posts for this keyword"
+- "export followers for this account"
+- "set up an X monitor with a webhook"
+- "choose the right Xquik endpoint for this workflow"
 
 ## Quick Start
 

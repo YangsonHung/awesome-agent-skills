@@ -43,6 +43,10 @@ Follow the branch detection rules first, then execute the workflow in order. Sto
 6. If currently on the primary branch and no secondary branch was specified, prefer an existing `dev`, then `develop`.
 7. If the branches still cannot be determined safely, ask the user for the primary and secondary branch names.
 
+## Instructions
+
+Follow the workflow below exactly, preserving user changes and stopping on unsafe branch, merge, or push conditions.
+
 ## Workflow
 
 1. Inspect repository state.

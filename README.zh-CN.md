@@ -41,6 +41,7 @@
 | [routerbase-api-integration-cn](skills/zh-cn/routerbase-api-integration-cn/SKILL.md) | 中文 | 将应用接入 [routerbase](https://routerbase.com/) OpenAI 兼容网关 | SDK 迁移、base URL 配置、流式输出、tool calling、安全 API Key |
 | [routerbase-model-routing-cn](skills/zh-cn/routerbase-model-routing-cn/SKILL.md) | 中文 | 规划 [routerbase](https://routerbase.com/) 模型路由、fallback、成本和延迟策略 | 模型选择、fallback 链路、上线验证、路由假设 |
 | [routerbase-media-generation-cn](skills/zh-cn/routerbase-media-generation-cn/SKILL.md) | 中文 | 构建 [routerbase](https://routerbase.com/) 图片、音频和视频生成流程 | 端点选择、重试轮询、资产管理、安全检查 |
+| [x-twitter-scraper-cn](skills/zh-cn/x-twitter-scraper-cn/SKILL.md) | 中文 | 使用 Xquik 规划 X/Twitter 数据工作流 | 推文搜索、账号时间线、粉丝导出、媒体下载、监控、Webhook、MCP |
 
 ### 触发示例
 
@@ -162,6 +163,11 @@
 - "构建 RouterBase 图片生成流程"
 - "处理 RouterBase 视频生成轮询"
 - "给生成媒体资产加安全检查"
+**x-twitter-scraper-cn:**
+- "搜索包含这个关键词的 X 推文"
+- "导出这个账号的粉丝"
+- "设置一个带 Webhook 的 X 监控"
+- "帮我选择合适的 Xquik 接口"
 
 ## 快速开始
 
