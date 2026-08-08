@@ -37,6 +37,9 @@
 | [react-component-hook-guidelines-cn](skills/zh-cn/react-component-hook-guidelines-cn/SKILL.md) | 中文 | 按职责边界审视并拆分 React 组件与 Hook | 职责边界、props 设计、状态流转、分支控制、页面编排 |
 | [logo-design-board-cn](skills/zh-cn/logo-design-board-cn/SKILL.md) | 中文 | 用设计师人格蒸馏委员会设计和评审 Logo 概念 | 品牌简报、设计师镜片、概念方向、生图提示词、Logo 质量评分 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
+| [routerbase-api-integration-cn](skills/zh-cn/routerbase-api-integration-cn/SKILL.md) | 中文 | 将应用接入 [routerbase](https://routerbase.com/) OpenAI 兼容网关 | SDK 迁移、base URL 配置、流式输出、tool calling、安全 API Key |
+| [routerbase-model-routing-cn](skills/zh-cn/routerbase-model-routing-cn/SKILL.md) | 中文 | 规划 [routerbase](https://routerbase.com/) 模型路由、fallback、成本和延迟策略 | 模型选择、fallback 链路、上线验证、路由假设 |
+| [routerbase-media-generation-cn](skills/zh-cn/routerbase-media-generation-cn/SKILL.md) | 中文 | 构建 [routerbase](https://routerbase.com/) 图片、音频和视频生成流程 | 端点选择、重试轮询、资产管理、安全检查 |
 
 ### 触发示例
 
@@ -137,6 +140,21 @@
 - "结合代码把功能需求整理成可开发文档"
 - "分别写前端和后端实现说明"
 - "补充 Mermaid 流程图，并询问是否预留设计稿占位"
+
+**routerbase-api-integration-cn:**
+- "把这段 OpenAI SDK 调用迁移到 RouterBase"
+- "把 RouterBase 配成 OpenAI 兼容 endpoint"
+- "写一个安全的 RouterBase API 接入示例"
+
+**routerbase-model-routing-cn:**
+- "为这个工作负载选择 RouterBase 模型"
+- "设计 RouterBase fallback 链路"
+- "写一套兼顾成本的模型路由规则"
+
+**routerbase-media-generation-cn:**
+- "构建 RouterBase 图片生成流程"
+- "处理 RouterBase 视频生成轮询"
+- "给生成媒体资产加安全检查"
 
 ## 快速开始
 

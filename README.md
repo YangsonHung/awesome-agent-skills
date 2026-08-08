@@ -37,6 +37,9 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [react-component-hook-guidelines](skills/en/react-component-hook-guidelines/SKILL.md) | English | Review and split React components and custom Hooks by responsibility boundaries | Responsibility boundaries, props design, state flow, branch control, page orchestration |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
+| [routerbase-api-integration](skills/en/routerbase-api-integration/SKILL.md) | English | Integrate applications with [routerbase](https://routerbase.com/) as an OpenAI-compatible gateway | SDK migration, base URL setup, streaming, tool calling, safe API keys |
+| [routerbase-model-routing](skills/en/routerbase-model-routing/SKILL.md) | English | Plan [routerbase](https://routerbase.com/) model routing, fallback, cost, and latency policies | Model selection, fallback chains, rollout checks, routing assumptions |
+| [routerbase-media-generation](skills/en/routerbase-media-generation/SKILL.md) | English | Build [routerbase](https://routerbase.com/) image, audio, and video generation workflows | Endpoint selection, retries, polling, asset handling, safety checks |
 
 ### Trigger Examples
 
@@ -136,6 +139,21 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "turn this initial product note into implementation documents"
 - "read the codebase and write frontend/backend build docs"
 - "add Mermaid flows and ask whether to reserve design placeholders"
+
+**routerbase-api-integration:**
+- "migrate this OpenAI SDK call to RouterBase"
+- "set up RouterBase as an OpenAI-compatible endpoint"
+- "write a safe RouterBase API integration example"
+
+**routerbase-model-routing:**
+- "choose RouterBase models for this workload"
+- "design a fallback chain for RouterBase"
+- "write cost-aware model routing rules"
+
+**routerbase-media-generation:**
+- "build a RouterBase image generation workflow"
+- "handle RouterBase video generation polling"
+- "add safety checks for generated media assets"
 
 ## Quick Start
 
