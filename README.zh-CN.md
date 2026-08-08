@@ -42,6 +42,7 @@
 | [routerbase-model-routing-cn](skills/zh-cn/routerbase-model-routing-cn/SKILL.md) | 中文 | 规划 [routerbase](https://routerbase.com/) 模型路由、fallback、成本和延迟策略 | 模型选择、fallback 链路、上线验证、路由假设 |
 | [routerbase-media-generation-cn](skills/zh-cn/routerbase-media-generation-cn/SKILL.md) | 中文 | 构建 [routerbase](https://routerbase.com/) 图片、音频和视频生成流程 | 端点选择、重试轮询、资产管理、安全检查 |
 | [x-twitter-scraper-cn](skills/zh-cn/x-twitter-scraper-cn/SKILL.md) | 中文 | 使用 Xquik 规划 X/Twitter 数据工作流 | 推文搜索、账号时间线、粉丝导出、媒体下载、监控、Webhook、MCP |
+| [ax-extract-workflow-cn](skills/zh-cn/ax-extract-workflow-cn/SKILL.md) | 中文 | 根据本机 ax 会话证据复盘已交付成果 | 会话查找、工具与技能追踪、决策复原、可复用流程摘要 |
 
 ### 触发示例
 
@@ -168,6 +169,11 @@
 - "导出这个账号的粉丝"
 - "设置一个带 Webhook 的 X 监控"
 - "帮我选择合适的 Xquik 接口"
+**ax-extract-workflow-cn:**
+- "复盘这个功能是怎么交付的"
+- "从这个提交提取工作流"
+- "这个 PR 当时为什么能跑通"
+- "把昨天 demo 背后的流程整理出来"
 
 ## 快速开始
 

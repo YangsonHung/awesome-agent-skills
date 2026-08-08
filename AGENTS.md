@@ -22,6 +22,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/logo-design-board/`
   - `skills/en/feature-doc-splitter/`
   - `skills/en/x-twitter-scraper/`
+  - `skills/en/ax-extract-workflow/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
@@ -41,6 +42,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/logo-design-board-cn/`
   - `skills/zh-cn/feature-doc-splitter-cn/`
   - `skills/zh-cn/x-twitter-scraper-cn/`
+  - `skills/zh-cn/ax-extract-workflow-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata

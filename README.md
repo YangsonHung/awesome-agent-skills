@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -42,6 +43,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [routerbase-model-routing](skills/en/routerbase-model-routing/SKILL.md) | English | Plan [routerbase](https://routerbase.com/) model routing, fallback, cost, and latency policies | Model selection, fallback chains, rollout checks, routing assumptions |
 | [routerbase-media-generation](skills/en/routerbase-media-generation/SKILL.md) | English | Build [routerbase](https://routerbase.com/) image, audio, and video generation workflows | Endpoint selection, retries, polling, asset handling, safety checks |
 | [x-twitter-scraper](skills/en/x-twitter-scraper/SKILL.md) | English | Plan X/Twitter data workflows with Xquik | Tweet search, profile timelines, follower export, media download, monitors, webhooks, MCP |
+| [ax-extract-workflow](skills/en/ax-extract-workflow/SKILL.md) | English | Reconstruct shipped work from local ax session evidence | Session lookup, tool and skill tracing, decision recovery, repeatable workflow brief |
 
 ### Trigger Examples
 
@@ -168,6 +170,11 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "export followers for this account"
 - "set up an X monitor with a webhook"
 - "choose the right Xquik endpoint for this workflow"
+**ax-extract-workflow:**
+- "how did we ship this feature"
+- "extract workflow from this commit"
+- "what made this PR work"
+- "reconstruct the recipe behind yesterday's demo"
 
 ## Quick Start
 
