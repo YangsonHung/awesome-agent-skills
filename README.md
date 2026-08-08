@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-26-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -45,6 +45,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [x-twitter-scraper](skills/en/x-twitter-scraper/SKILL.md) | English | Plan X/Twitter data workflows with Xquik | Tweet search, profile timelines, follower export, media download, monitors, webhooks, MCP |
 | [ax-extract-workflow](skills/en/ax-extract-workflow/SKILL.md) | English | Reconstruct shipped work from local ax session evidence | Session lookup, tool and skill tracing, decision recovery, repeatable workflow brief |
 | [tree-ring-memory](skills/en/tree-ring-memory/SKILL.md) | English | Use Tree Ring Memory for local-first AI agent memory lifecycle work | Recall, evidence-linked lessons, privacy-safe capture, audit, redaction, forgetting |
+| [xquik-data](skills/en/xquik-data/SKILL.md) | English | Plan Xquik REST, OpenAPI, MCP, webhook, and SDK workflows for X/Twitter data | X data collection, API planning, MCP setup, webhook handoff, traceable reports |
 
 ### Trigger Examples
 
@@ -186,6 +187,11 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "remember this lesson with evidence"
 - "audit project memory before this release"
 - "redact or forget stale memory about this task"
+**xquik-data:**
+- "collect X posts with Xquik and summarize the results"
+- "design an Xquik API workflow for this monitor"
+- "use the Xquik MCP server for this social data task"
+- "turn these Xquik webhook events into a handoff report"
 
 ## Quick Start
 

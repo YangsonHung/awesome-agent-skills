@@ -25,6 +25,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/ax-extract-workflow/`
   - `skills/en/linkedin/`
   - `skills/en/tree-ring-memory/`
+  - `skills/en/xquik-data/`
 - `skills/zh-cn/`: all Chinese skills
   - `skills/zh-cn/novel-writer-cn/`
   - `skills/zh-cn/multi-lang-readme-cn/`
@@ -47,6 +48,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/ax-extract-workflow-cn/`
   - `skills/zh-cn/linkedin-cn/`
   - `skills/zh-cn/tree-ring-memory-cn/`
+  - `skills/zh-cn/xquik-data-cn/`
 - `README.md`: default English project overview
 - `README.zh-CN.md`: Chinese overview
 - `LICENSE`, `.gitignore`: repository-level metadata

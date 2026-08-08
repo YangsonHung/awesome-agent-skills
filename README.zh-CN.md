@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-17-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-26-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -45,6 +45,7 @@
 | [x-twitter-scraper-cn](skills/zh-cn/x-twitter-scraper-cn/SKILL.md) | 中文 | 使用 Xquik 规划 X/Twitter 数据工作流 | 推文搜索、账号时间线、粉丝导出、媒体下载、监控、Webhook、MCP |
 | [ax-extract-workflow-cn](skills/zh-cn/ax-extract-workflow-cn/SKILL.md) | 中文 | 根据本机 ax 会话证据复盘已交付成果 | 会话查找、工具与技能追踪、决策复原、可复用流程摘要 |
 | [tree-ring-memory-cn](skills/zh-cn/tree-ring-memory-cn/SKILL.md) | 中文 | 使用 Tree Ring Memory 管理本地优先的 AI Agent 记忆生命周期 | 召回、证据化经验、隐私安全记录、审计、脱敏、遗忘 |
+| [xquik-data-cn](skills/zh-cn/xquik-data-cn/SKILL.md) | 中文 | 规划 Xquik REST、OpenAPI、MCP、webhook 和 SDK 数据工作流 | X 数据采集、API 规划、MCP 配置、webhook 交接、可追溯报告 |
 
 ### 触发示例
 
@@ -186,6 +187,11 @@
 - "把这条经验连同证据一起记住"
 - "发布前审计一下项目记忆"
 - "脱敏或遗忘这个任务里的过时记忆"
+**xquik-data-cn:**
+- "用 Xquik 采集 X 帖子并汇总结果"
+- "帮我设计一个 Xquik API 监控工作流"
+- "用 Xquik MCP server 做这个社媒数据任务"
+- "把这些 Xquik webhook 事件整理成交接报告"
 
 ## 快速开始
 
