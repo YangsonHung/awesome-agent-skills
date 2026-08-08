@@ -13,6 +13,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/mac-software-storage-cleanup/`
   - `skills/en/ui-layout-analyzer/`
   - `skills/en/yuque-lakebook-export/`
+  - `skills/en/tweetclaw-twitter-automation/`
   - `skills/en/git-weekly-report/`
   - `skills/en/git-push-secondary-merge-primary/`
   - `skills/en/git-pushing-fast/`
@@ -30,6 +31,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/mac-software-storage-cleanup-cn/`
   - `skills/zh-cn/ui-layout-analyzer-cn/`
   - `skills/zh-cn/yuque-lakebook-export-cn/`
+  - `skills/zh-cn/tweetclaw-twitter-automation-cn/`
   - `skills/zh-cn/git-weekly-report-cn/`
   - `skills/zh-cn/git-push-secondary-merge-primary-cn/`
   - `skills/zh-cn/git-pushing-fast-cn/`
@@ -106,7 +108,7 @@ Keep each PR focused on one logical change.
 
 When a skill is added or removed, update the following locations to keep the directory in sync:
 
-1. This file (`AGENTS.md`) — Project Structure & Module Organization section
-2. `README.md` — Available Skills table and Trigger Examples section
-3. `README.zh-CN.md` — 可用技能 table and 触发示例 section
+1. This file (`AGENTS.md`) - Project Structure & Module Organization section
+2. `README.md` - Available Skills table and Trigger Examples section
+3. `README.zh-CN.md` - 可用技能 table and 触发示例 section
 4. Badge count in `README.md` and `README.zh-CN.md`
