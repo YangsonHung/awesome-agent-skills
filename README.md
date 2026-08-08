@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
-[![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -38,6 +37,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [react-component-hook-guidelines](skills/en/react-component-hook-guidelines/SKILL.md) | English | Review and split React components and custom Hooks by responsibility boundaries | Responsibility boundaries, props design, state flow, branch control, page orchestration |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
+| [linkedin](skills/en/linkedin/SKILL.md) | English | Automate LinkedIn from the command line via the linkedin CLI | Profile/company fetch and search, messaging, connection requests, posting, reactions and comments, data extraction |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
 | [routerbase-api-integration](skills/en/routerbase-api-integration/SKILL.md) | English | Integrate applications with [routerbase](https://routerbase.com/) as an OpenAI-compatible gateway | SDK migration, base URL setup, streaming, tool calling, safe API keys |
 | [routerbase-model-routing](skills/en/routerbase-model-routing/SKILL.md) | English | Plan [routerbase](https://routerbase.com/) model routing, fallback, cost, and latency policies | Model selection, fallback chains, rollout checks, routing assumptions |
@@ -47,6 +47,11 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 
 ### Trigger Examples
 
+**linkedin:**
+- "send a LinkedIn connection request to this profile"
+- "message this person on LinkedIn"
+- "search LinkedIn for marketing managers and extract their profiles"
+- "post this update to my LinkedIn"
 **novel-writer:**
 - "help me write a sci-fi novel"
 - "write the next chapter"

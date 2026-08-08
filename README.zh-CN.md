@@ -37,6 +37,7 @@
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [react-component-hook-guidelines-cn](skills/zh-cn/react-component-hook-guidelines-cn/SKILL.md) | 中文 | 按职责边界审视并拆分 React 组件与 Hook | 职责边界、props 设计、状态流转、分支控制、页面编排 |
 | [logo-design-board-cn](skills/zh-cn/logo-design-board-cn/SKILL.md) | 中文 | 用设计师人格蒸馏委员会设计和评审 Logo 概念 | 品牌简报、设计师镜片、概念方向、生图提示词、Logo 质量评分 |
+| [linkedin-cn](skills/zh-cn/linkedin-cn/SKILL.md) | 中文 | 通过 linkedin 命令行工具自动化操作 LinkedIn | 主页/公司获取与搜索、私信、连接请求、发布动态、点赞评论、数据提取 |
 | [feature-doc-splitter-cn](skills/zh-cn/feature-doc-splitter-cn/SKILL.md) | 中文 | 将初版功能需求拆成总览、前端和后端落地文档 | 代码梳理、前后端职责拆分、Mermaid 流程图、接口契约、可选设计稿占位 |
 | [routerbase-api-integration-cn](skills/zh-cn/routerbase-api-integration-cn/SKILL.md) | 中文 | 将应用接入 [routerbase](https://routerbase.com/) OpenAI 兼容网关 | SDK 迁移、base URL 配置、流式输出、tool calling、安全 API Key |
 | [routerbase-model-routing-cn](skills/zh-cn/routerbase-model-routing-cn/SKILL.md) | 中文 | 规划 [routerbase](https://routerbase.com/) 模型路由、fallback、成本和延迟策略 | 模型选择、fallback 链路、上线验证、路由假设 |
@@ -46,6 +47,11 @@
 
 ### 触发示例
 
+**linkedin-cn:**
+- "给这个 LinkedIn 主页发送连接请求"
+- "在 LinkedIn 上给这个人发私信"
+- "在 LinkedIn 上搜索市场经理并提取主页信息"
+- "把这条动态发布到我的 LinkedIn"
 **novel-writer-cn:**
 - "帮我写一部中文科幻小说"
 - "继续这个故事，再写一章"
