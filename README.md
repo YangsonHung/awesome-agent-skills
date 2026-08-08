@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-16-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-17-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -34,6 +34,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [git-commit-only](skills/en/git-commit-only/SKILL.md) | English | Create one local Conventional Commit without pushing | Status inspection, staging, Conventional Commits, segmented body, no push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
+| [react-component-hook-guidelines](skills/en/react-component-hook-guidelines/SKILL.md) | English | Review and split React components and custom Hooks by responsibility boundaries | Responsibility boundaries, props design, state flow, branch control, page orchestration |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
 | [feature-doc-splitter](skills/en/feature-doc-splitter/SKILL.md) | English | Split rough feature notes into overview, frontend, and backend implementation docs | Codebase inspection, frontend/backend separation, Mermaid flows, API contracts, optional design placeholders |
 
@@ -117,6 +118,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "fix the mobile overflow and alignment issues in this dashboard"
 - "polish this form and verify responsive UI states"
 - "check this table for truncation, wrapping, and browser layout pitfalls"
+
+**react-component-hook-guidelines:**
+- "review this React component for split boundaries"
+- "split this god component into Hooks and presentation components"
+- "refactor this page to reduce props and state coupling"
+- "check whether this Hook should move logic into utils"
 
 **logo-design-board:**
 - "design a logo for this AI note-taking app"
