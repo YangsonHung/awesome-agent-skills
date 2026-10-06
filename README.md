@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-26-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-27-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -46,8 +46,14 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [ax-extract-workflow](skills/en/ax-extract-workflow/SKILL.md) | English | Reconstruct shipped work from local ax session evidence | Session lookup, tool and skill tracing, decision recovery, repeatable workflow brief |
 | [tree-ring-memory](skills/en/tree-ring-memory/SKILL.md) | English | Use Tree Ring Memory for local-first AI agent memory lifecycle work | Recall, evidence-linked lessons, privacy-safe capture, audit, redaction, forgetting |
 | [xquik-data](skills/en/xquik-data/SKILL.md) | English | Plan Xquik REST, OpenAPI, MCP, webhook, and SDK workflows for X/Twitter data | X data collection, API planning, MCP setup, webhook handoff, traceable reports |
+| [shipvela-publish](skills/en/shipvela-publish/SKILL.md) | English | Publish through an explicitly chosen Shipvela account; MIT client, proprietary hosting with plan limits | Owner-confirmed staging, GitHub publishing, exact job tracking, allowance and logs |
 
 ### Trigger Examples
+
+**shipvela-publish:**
+- "Use Shipvela to check my hosting allowance."
+- "Publish my built landing page with Shipvela."
+- "Deploy the latest GitHub changes to my existing Shipvela project."
 
 **linkedin:**
 - "send a LinkedIn connection request to this profile"
