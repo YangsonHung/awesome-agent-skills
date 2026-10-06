@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-26-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-27-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -46,8 +46,14 @@
 | [ax-extract-workflow-cn](skills/zh-cn/ax-extract-workflow-cn/SKILL.md) | 中文 | 根据本机 ax 会话证据复盘已交付成果 | 会话查找、工具与技能追踪、决策复原、可复用流程摘要 |
 | [tree-ring-memory-cn](skills/zh-cn/tree-ring-memory-cn/SKILL.md) | 中文 | 使用 Tree Ring Memory 管理本地优先的 AI Agent 记忆生命周期 | 召回、证据化经验、隐私安全记录、审计、脱敏、遗忘 |
 | [xquik-data-cn](skills/zh-cn/xquik-data-cn/SKILL.md) | 中文 | 规划 Xquik REST、OpenAPI、MCP、webhook 和 SDK 数据工作流 | X 数据采集、API 规划、MCP 配置、webhook 交接、可追溯报告 |
+| [shipvela-publish-cn](skills/zh-cn/shipvela-publish-cn/SKILL.md) | 中文 | 通过用户明确选择的 Shipvela 账户发布；MIT 客户端、受套餐限制的专有托管 | 所有者确认暂存、GitHub 发布、精确任务追踪、配额与日志 |
 
 ### 触发示例
+
+**shipvela-publish-cn:**
+- "用 Shipvela 查看我的托管额度。"
+- "通过 Shipvela 发布构建完成的落地页。"
+- "把最新 GitHub 改动部署到我已有的 Shipvela 项目。"
 
 **linkedin-cn:**
 - "给这个 LinkedIn 主页发送连接请求"
