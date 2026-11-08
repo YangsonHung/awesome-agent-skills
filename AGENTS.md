@@ -17,6 +17,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/en/git-weekly-report/`
   - `skills/en/git-push-secondary-merge-primary/`
   - `skills/en/git-pushing-fast/`
+  - `skills/en/git-stepwise-commit/`
   - `skills/en/frontend-quality-guardrails/`
   - `skills/en/react-component-hook-guidelines/`
   - `skills/en/logo-design-board/`
@@ -40,6 +41,7 @@ This repository is a skill pack for AI agents, organized by skill directories un
   - `skills/zh-cn/git-weekly-report-cn/`
   - `skills/zh-cn/git-push-secondary-merge-primary-cn/`
   - `skills/zh-cn/git-pushing-fast-cn/`
+  - `skills/zh-cn/git-stepwise-commit-cn/`
   - `skills/zh-cn/frontend-quality-guardrails-cn/`
   - `skills/zh-cn/react-component-hook-guidelines-cn/`
   - `skills/zh-cn/logo-design-board-cn/`

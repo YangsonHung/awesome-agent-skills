@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![许可证](https://img.shields.io/badge/许可证-MIT-blue.svg)](LICENSE)
-[![技能数](https://img.shields.io/badge/技能-26-green.svg)](skills)
+[![技能数](https://img.shields.io/badge/技能-27-green.svg)](skills)
 
 [English](README.md) | **中文**
 
@@ -34,6 +34,7 @@
 | [git-push-secondary-merge-primary-cn](skills/zh-cn/git-push-secondary-merge-primary-cn/SKILL.md) | 中文 | 提交并推送副分支，再合并到主分支并推送，最后切回副分支 | 双分支同步、分支自动识别、Conventional Commits、保留合并提交、安全推送 |
 | [git-pushing-fast-cn](skills/zh-cn/git-pushing-fast-cn/SKILL.md) | 中文 | 快速执行单分支提交推送，并为非简单改动生成分段提交正文 | 状态检查、暂存改动、Conventional Commits、分段正文、安全推送 |
 | [git-commit-only-cn](skills/zh-cn/git-commit-only-cn/SKILL.md) | 中文 | 只创建一个本地 Conventional Commit，不推送 | 状态检查、暂存改动、Conventional Commits、分段正文、不推送 |
+| [git-stepwise-commit-cn](skills/zh-cn/git-stepwise-commit-cn/SKILL.md) | 中文 | 将改动整理为经过验证的逻辑提交序列 | 按依赖分组、固定批次主题、保留暂存内容、按需推送 |
 | [frontend-quality-guardrails-cn](skills/zh-cn/frontend-quality-guardrails-cn/SKILL.md) | 中文 | 前端 UI 文本、布局、视觉和浏览器验证质量守门技能 | 超长文本处理、溢出修复、视觉规范、代码审查、响应式验证 |
 | [react-component-hook-guidelines-cn](skills/zh-cn/react-component-hook-guidelines-cn/SKILL.md) | 中文 | 按职责边界审视并拆分 React 组件与 Hook | 职责边界、props 设计、状态流转、分支控制、页面编排 |
 | [logo-design-board-cn](skills/zh-cn/logo-design-board-cn/SKILL.md) | 中文 | 用设计师人格蒸馏委员会设计和评审 Logo 概念 | 品牌简报、设计师镜片、概念方向、生图提示词、Logo 质量评分 |
@@ -133,6 +134,12 @@
 - "提交当前改动"
 - "创建一个本地提交"
 - "commit current changes without pushing"
+
+**git-stepwise-commit-cn:**
+- "提交一下当前改动"
+- "按模块把这些改动分批提交"
+- "前后端分开提交，然后推送"
+- "建议一下这些改动怎么拆分提交"
 
 **frontend-quality-guardrails-cn:**
 - "检查这个 React 组件的超长文本和布局溢出问题"

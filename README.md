@@ -1,7 +1,7 @@
 # Awesome Agent Skills
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-26-green.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-27-green.svg)](skills)
 
 **English** | [中文](README.zh-CN.md)
 
@@ -34,6 +34,7 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 | [git-push-secondary-merge-primary](skills/en/git-push-secondary-merge-primary/SKILL.md) | English | Commit & push secondary branch, then merge into the primary branch | Two-branch sync, branch detection, conventional commit, merge commit preservation, safe push |
 | [git-pushing-fast](skills/en/git-pushing-fast/SKILL.md) | English | Fast single-branch commit and push workflow with segmented commit body | Status inspection, staging, Conventional Commits, segmented body, safe push |
 | [git-commit-only](skills/en/git-commit-only/SKILL.md) | English | Create one local Conventional Commit without pushing | Status inspection, staging, Conventional Commits, segmented body, no push |
+| [git-stepwise-commit](skills/en/git-stepwise-commit/SKILL.md) | English | Organize changes into a verified sequence of logical commits | Dependency-aware grouping, fixed batch topic, staged change preservation, optional push |
 | [frontend-quality-guardrails](skills/en/frontend-quality-guardrails/SKILL.md) | English | Build and review frontend UI with text, layout, visual, and browser QA guardrails | Long text handling, overflow fixes, visual standards, code review, responsive verification |
 | [react-component-hook-guidelines](skills/en/react-component-hook-guidelines/SKILL.md) | English | Review and split React components and custom Hooks by responsibility boundaries | Responsibility boundaries, props design, state flow, branch control, page orchestration |
 | [logo-design-board](skills/en/logo-design-board/SKILL.md) | English | Design and critique logo concepts with a distilled designer board | Brand intake, designer lenses, concept territories, visual prompts, logo quality scoring |
@@ -132,6 +133,12 @@ A collection of AI Agent Skills that provide professional domain capabilities fo
 - "create a local commit"
 - "commit current changes only"
 - "save this work locally as a commit"
+
+**git-stepwise-commit:**
+- "commit these changes"
+- "split these changes into commits by module"
+- "commit frontend and backend separately, then push"
+- "suggest how to split these changes into commits"
 
 **frontend-quality-guardrails:**
 - "review this React component for long text and layout overflow"
